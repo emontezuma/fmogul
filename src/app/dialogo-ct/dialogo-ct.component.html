@@ -1,0 +1,31 @@
+<div class="contenidoDemo" class="mat-typography">
+  <div mat-dialog-title class="cabecera">
+    <mat-icon class="iconoDialogo" svgIcon="propioTurno"></mat-icon>
+      <p class="tituloDialogo">CAMBIO DE TURNO</p>
+    </div>
+  <div mat-dialog-content class="contenido" >
+    </div>
+    <br>
+    <div class="formulario" >
+      <mat-card class="posicion">
+          <mat-card-content>
+            <mat-form-field class="parte">
+              <mat-select [(ngModel)]="miTurno" placeholder="Seleccione el turno" required>
+                <mat-option *ngFor="let turno of turnos" [(value)]="turno.id">{{turno.referencia}}  </mat-option>
+              </mat-select>
+              <mat-error class="ayuda" *ngIf="fallaF.hasError('required')">Seleccione un turno de la lista</mat-error>
+              <mat-hint class="ayuda" align="start"><strong>Este campo es obligatorio</strong> </mat-hint>
+              </mat-form-field>
+          </mat-card-content>
+      </mat-card>
+  </div>
+  <div mat-dialog-actions class="pie">
+    <button class="botonSi" mat-raised-button (click)="validar()">Cambiar de turno
+        <mat-icon class="iconoRedonde" svgIcon="propioVobo"></mat-icon>
+    </button>
+    <button class="botonNo" *ngIf="!obligarCT"  mat-raised-button (click)="cancelar()">Cancelar</button>
+    <div class="tiempo" *ngIf="obligarCT">
+        {{ tiempoRestante }}
+    </div>
+  </div>
+</div>

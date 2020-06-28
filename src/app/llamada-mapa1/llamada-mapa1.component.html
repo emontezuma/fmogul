@@ -1,0 +1,30 @@
+<div id="todo" ng-app="app" ng-controller="AppCtrl" class="mat-typography"> 
+    <div class="regresar" *ngIf="vieneArbol">
+       <button class="botonDerecho" mat-fab color (click)="regresar()" matTooltip = "{{ toolTipRegresar }}" matTooltipClass = "toolTip">
+        <mat-icon class="miIcon" svgIcon="propioRegresar"></mat-icon>
+      </button>
+     </div>
+    <div class="detalleOperaciones" *ngIf="!sinRegistros"> 
+      <mat-grid-list id="gOperaciones" #gridOperaciones class="acciones" [cols]="gridCols" rowHeight="220px">
+        <ng-container *ngFor="let maquina of maquinas; let i = index">
+          <mat-grid-tile>
+            <div [ngClass]="{operacionFondo:!itemSeleccionado[i], operacionFondoSel:itemSeleccionado[i]}">
+              <button [ngClass]="{operacionTarjeta:!itemSeleccionado[i], operacionTarjetaSel:itemSeleccionado[i]}" [style.background-color]="maquina.colorhexa" mat-button (click)="seleccionarMaquina(i)">
+                <div class="elBoton" fxLayout="column" fxLayoutAlign="space-evenly center" >
+                    <div class="operacionCelula"><div class="parrafo">{{ maquina.prefijopadre }}</div></div>
+                    <div class="operacionIcono"><img src="{{ maquina.imagen }}" class="operacionImagen"></div>
+                    <div class="operacionMadre"><div class="parrafo">{{ maquina.prefijo }}</div></div>
+                  <div class="cajaIconE">
+                      <mat-icon *ngIf="maquina.esperando>0" class="miIconE" svgIcon="propioEnLlamada"></mat-icon>
+                      <div class="miIconS"></div>
+                      <mat-icon *ngIf="maquina.reparando>0" class="miIconE2" svgIcon="propioConTecnicoAzul"></mat-icon>
+                    </div>
+                </div>
+              </button>
+            </div>
+          </mat-grid-tile>
+        </ng-container>
+      </mat-grid-list>
+  </div>
+  
+  

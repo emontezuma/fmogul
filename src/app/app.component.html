@@ -1,0 +1,209 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="todo" (keyup.f9)="changeOver()" ng-app="app" ng-controller="AppCtrl" class="mat-typography">
+  <div *ngIf="verProceso" class="marcoProceso">
+    <div class="barraProceso">
+      <mat-progress-spinner class="proceso" diameter="80"
+        mode="indeterminate">
+      </mat-progress-spinner>
+      <div class="tituloProceso"><span>Trabajando...</span></div>
+    </div>
+  </div>
+  <mat-toolbar id="barraNavegacion" *ngIf="verMenuSuperior" class="mat-elevation-z3">
+    <mat-toolbar-row>
+      <button class = "botonesHam" mat-raised-button matTooltip = "{{ menuHamburguesaTT }}" matTooltipClass = "hamburguesaTool" matTooltipShowDelay = "100" (click) = "menuIzquierdo()">
+      <mat-icon class="iconos" svgIcon="{{ iconoHamburguesa }}"></mat-icon>
+      </button>
+      <span><img class="miLogo" src="{{ iconoCompania }}"></span>
+      <span class="example-spacer">{{ version }}</span>
+      <button class = "botonescl" mat-stroked-button matTooltip = "Turno actual" matTooltipClass = "hamburguesaTool" matTooltipShowDelay = "100" (click) = "anteTurno()"> 
+        <mat-icon class="iconos" svgIcon="propioTurno"></mat-icon>
+        {{turnoActual}}        
+      </button>
+      
+      <button [ngClass]="{botonescl:hayUsuario,iconoDisabled:!hayUsuario}" mat-stroked-button matTooltip = "Usuario actual" matTooltipClass = "hamburguesaTool" matTooltipShowDelay = "100" [matMenuTriggerFor]="menu" [disabled]="!hayUsuario">
+        <mat-icon class="iconos" svgIcon="{{ iconoCandado }}"></mat-icon>
+        {{usuarioActual}}
+        
+      </button>
+      <mat-menu #menu="matMenu" class="emenu">
+          <button mat-menu-item class = "botonescl2" (click)="cambioUsuario()">
+              <mat-icon class = "iconos" class="iconos" svgIcon="propioCambioUser"></mat-icon>
+              Cambio de usuario...
+          </button>
+        <button mat-menu-item class = "botonescl2" (click)="cambioClave()">
+            <mat-icon class = "iconos" class="iconos" svgIcon="propioiniPass"></mat-icon>
+            Cambiar contraseña
+        </button>
+        <button mat-menu-item class = "botonescl2" (click)="cerrarSesion()">
+            <mat-icon class = "iconos" class="iconos" svgIcon="propioCerrarSesion"></mat-icon>
+            Cerrar sesión
+        </button>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container id="contenedor" fullscreen>
+    <mat-sidenav opened="false"  
+    id="menuIzquierdo" class="mat-elevation-z3" #barraIzquierda mode="over">
+    <div class ="contenido">
+        <mat-accordion class="acordeon" [multi]="true">
+            <mat-expansion-panel class="primerPanel" hideToggle [expanded]="true">
+                <mat-expansion-panel-header>
+                  <mat-panel-title class="acordionPrimario">
+                    VISTA
+                  </mat-panel-title>
+                  <mat-icon class="acordeonIcon" svgIcon="propioPantalla"></mat-icon>
+                </mat-expansion-panel-header>
+                  <button class="itemBoton" mat-stroked-button (click)="opcion10()">
+                    <mat-icon class="itemIcon" svgIcon="propioLlamadas"></mat-icon>
+                    Solicitud de atención
+                  </button> 
+                  <button class="itemBoton" mat-stroked-button (click)="opcion20()">
+                    <mat-icon class="itemIcon" svgIcon="propioConTecnicoAzul"></mat-icon>
+                    Respuesta a solicitudes
+                  </button>
+                  <button class="itemBoton" mat-stroked-button (click)="opcion50()">
+                    <mat-icon class="itemIcon" svgIcon="propioChange"></mat-icon>
+                    SMED - Changeover
+                  </button> 
+                  <button class="itemBoton" mat-stroked-button (click)="opcion30()">
+                    <mat-icon class="itemIcon" svgIcon="propioPantalla"></mat-icon>
+                    Panel de control
+                  </button>
+                  <button class="itemBoton" mat-stroked-button (click)="opcion40()">
+                    <mat-icon class="itemIcon" svgIcon="propioPies"></mat-icon>
+                    Gráficos
+                  </button>
+              </mat-expansion-panel>
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header class="acordeonTitulo">
+                  <mat-panel-title class="acordionPrimario">
+                    CATÁLOGOS
+                  </mat-panel-title>
+                  <mat-icon class="acordeonIcon" svgIcon="propioCatalogos"></mat-icon>
+                </mat-expansion-panel-header>
+                <button class="itemBoton" mat-stroked-button (click)="celulas()">
+                    <mat-icon class="itemIcon" svgIcon="propioCelula"></mat-icon>
+                    Células
+                  </button>
+                <button class="itemBoton" mat-stroked-button (click)="maquinas()">
+                    <mat-icon class="itemIcon" svgIcon="propioMaquinas"></mat-icon>
+                    Máquinas
+                  </button>
+                <button class="itemBoton" mat-stroked-button (click)="areas()">
+                  <mat-icon class="itemIcon" svgIcon="propioAreas"></mat-icon>
+                  Áreas de atención
+                </button>
+                <button class="itemBoton" mat-stroked-button (click)="fallas()">
+                    <mat-icon class="itemIcon" svgIcon="propioFallas"></mat-icon>
+                    Fallas/Defectos
+                  </button>
+                <button class="itemBoton" mat-stroked-button (click)="generales()">
+                  <mat-icon class="itemIcon" svgIcon="propioTablas"></mat-icon>
+                  Tablas generales
+                </button>
+                <button class="itemBoton" mat-stroked-button (click)="disponibilidad()">
+                  <mat-icon class="itemIcon" svgIcon="propioAtenciones"></mat-icon>
+                  Registro de paros
+                </button>
+                <button class="itemBoton" mat-stroked-button (click)="pagers()">
+                  <mat-icon class="itemIcon" svgIcon="propioChange"></mat-icon>
+                  Pagers (SMED)
+                </button>
+                <button class="itemBoton" mat-stroked-button (click)="partes()">
+                  <mat-icon class="itemIcon" svgIcon="propioNpartes"></mat-icon>
+                  # de parte (SMED)
+                </button>
+                <button class="itemBoton" mat-stroked-button (click)="turnos()">
+                  <mat-icon class="itemIcon" svgIcon="propioTurno"></mat-icon>
+                  Turnos
+                </button>
+            </mat-expansion-panel>
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header class="acordeonTitulo">
+                  <mat-panel-title class="acordionPrimario">
+                    REPORTES
+                  </mat-panel-title>
+                  <mat-icon class="acordeonIcon" svgIcon="propioReportes"></mat-icon>
+                </mat-expansion-panel-header>
+                <button class="itemBoton" mat-stroked-button (click)="historico()">
+                  <mat-icon class="itemIcon" svgIcon="propioDescargar"></mat-icon>
+                  Descargar histórico
+                </button>
+                <button class="itemBoton" mat-stroked-button (click)="reproducir()">
+                    <mat-icon class="itemIcon" svgIcon="propioPlay"></mat-icon>
+                    Reproductor
+                  </button>
+              </mat-expansion-panel>
+            <mat-expansion-panel hideToggle>
+                <mat-expansion-panel-header class="acordeonTitulo">
+                  <mat-panel-title class="acordionPrimario">
+                    SEGURIDAD
+                  </mat-panel-title>
+                  <mat-icon class="acordeonIcon" svgIcon="propioGrupos"></mat-icon>
+                </mat-expansion-panel-header>
+                <button class="itemBoton" mat-stroked-button (click)="usuarios()">
+                    <mat-icon class="itemIcon" svgIcon="propioUsuarios"></mat-icon>
+                    Gestión de usuarios
+                  </button>
+                  
+                <button class="itemBoton" mat-stroked-button (click)="politicas()">
+                  <mat-icon class="itemIcon" svgIcon="propioPoliticas"></mat-icon>
+                  Políticas de seguridad
+                </button>
+                <button class="itemBoton" mat-stroked-button (click)="roles()">
+                  <mat-icon class="itemIcon" svgIcon="propioRoles"></mat-icon>
+                  Roles de usuarios
+                </button>
+              </mat-expansion-panel>
+              <mat-expansion-panel hideToggle>
+                  <mat-expansion-panel-header class="acordeonTitulo">
+                    <mat-panel-title class="acordionPrimario">
+                      CONFIGURACIÓN
+                    </mat-panel-title>
+                    <mat-icon class="acordeonIcon" svgIcon="propioConfigurar"></mat-icon>
+                  </mat-expansion-panel-header>
+                  <button class="itemBoton" mat-stroked-button (click)="configurar()">
+                    <mat-icon class="itemIcon" svgIcon="propioParametros"></mat-icon>
+                    Parámetros del sistema
+                  </button>
+                  <button class="itemBoton" mat-stroked-button (click)="configurarPlay()">
+                      <mat-icon class="itemIcon" svgIcon="propioPlayConfig"></mat-icon>
+                      Reproductor
+                    </button>
+                  <button class="itemBoton" mat-stroked-button (click)="cancelarRep()">
+                    <mat-icon class="itemIcon" svgIcon="propioCancelarReporte"></mat-icon>
+                      Contabilizar reportes
+                    </button>
+                  <button class="itemBoton" mat-stroked-button (click)="opcion10()">
+                    <mat-icon class="itemIcon" svgIcon="propioLicencia"></mat-icon>
+                    Licenciamiento
+                  </button>
+                </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    </mat-sidenav>
+    <mat-sidenav-content class="scrolear" (scroll)="miScroll($event)" cdkScrollable >
+    <div class="contenidoPagina" [@routerTransition]="getState(o)">
+      <router-outlet #o="outlet"></router-outlet>
+      </div>
+      
+      <div class="irArriba" *ngIf="verIrArriba">
+      <button class="botonDerecho" mat-fab color (click)="irArriba()" matTooltip = "{{ irArribaTT }}" matTooltipClass = "toolTip" *ngIf="verIrArriba">
+        <mat-icon class="miIcon" svgIcon="propioIrArriba"></mat-icon>
+      </button>
+    </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+  <mat-toolbar id="pie" *ngIf="verPie" class="mat-elevation-y3">
+    <mat-toolbar-row>
+      <div class="mensajeEstadoBar" *ngIf="estado.length>0"><mat-icon class="iconoEstado" svgIcon="propioInfo"></mat-icon><span class="mensajeEstado">{{ estado }}</span></div>
+      <span class="mensajeBarra">{{ accion }}</span>
+      <button class = "botonCronos" mat-raised-button (click) = "irCronos()">
+        <img class="logoCronos" src="{{ iconoCronos }}">
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" width="32" height="32" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve" viewbox="0 0 32 32">
+
+<g>
+	<defs>
+		<path id="575339323_SVGID_1_" d="M41,44c0,1.104-0.896,2-2,2H9c-1.104,0-2-0.896-2-2V7c0-1.104,0.896-2,2-2h30c1.104,0,2,0.896,2,2V44z"></path>
+	</defs>
+	<use xlink:href="#575339323_SVGID_1_" style="overflow:visible;fill:#DEDCD9;"></use>
+	<clipPath id="575339323_SVGID_2_">
+		<use xlink:href="#575339323_SVGID_1_" style="overflow:visible;"></use>
+	</clipPath>
+	<polygon class="st1" points="7,5 41,5 41,54.246 27.599,47.417 7,11.738  " style="clip-path:url(#575339323_SVGID_2_);fill:#FFFFFF;fill-opacity:0.3;;"></polygon>
+	<path class="st2" d="M35,13H18v-2h17V13z M35,25H18v2h17V25z M35,18H18v2h17V18z M35,32H18v2h17V32z M35,39H18v2h17V39z" style="clip-path:url(#575339323_SVGID_2_);fill:#231F20;fill-opacity:0.3;;"></path>
+	<path class="st2" d="M15,13h-2v-2h2V13z M15,25h-2v2h2V25z M15,18h-2v2h2V18z M15,32h-2v2h2V32z M15,39h-2v2h2V39z" style="clip-path:url(#575339323_SVGID_2_);fill:#231F20;fill-opacity:0.3;;"></path>
+</g>
+<g>
+	<defs>
+		<path id="575339323_SVGID_3_" d="M24.122,60c-1.116,0-2.147-0.596-2.705-1.563c-0.558-0.965-0.558-2.158,0-3.123L38.293,26.08    c0.559-0.967,1.592-1.562,2.706-1.562s2.147,0.596,2.705,1.562l16.877,29.234c0.559,0.965,0.559,2.158,0,3.123    C60.024,59.404,58.992,60,57.877,60H24.122z"></path>
+	</defs>
+	<use xlink:href="#575339323_SVGID_3_" class="stshockcolor" style="fill: rgb(3, 90, 161); overflow: visible;" data-st="fill:#DE7047;;overflow:visible;"></use>
+	<clipPath id="575339323_SVGID_4_">
+		<use xlink:href="#575339323_SVGID_3_" style="overflow:visible;"></use>
+	</clipPath>
+	<path class="st3" d="M42.498,46h-2.996L38,35.001h6L42.498,46z M41,48.001c-1.658,0-3,1.343-3,3.001C38,52.658,39.342,54,41,54   s3-1.342,3-2.998C44,49.344,42.658,48.001,41,48.001z" style="clip-path:url(#575339323_SVGID_4_);fill:#FFFFFF;;"></path>
+	<rect x="40.999" y="24.518" class="st0" width="20.002" height="35.429" style="opacity:0.2;clip-path:url(#575339323_SVGID_4_);;"></rect>
+</g>
+</svg>

@@ -1,0 +1,112 @@
+.seleccion .mat-select-panel {
+    background: rgba(3,90,161,0.1); 
+  }
+  
+  .cabecera {
+    width: 100% !important;
+    height: 32px !important; 
+    padding: 2px;
+    color: #035AA1 !important;
+    background-color: rgba(3,90,161,0.1); 
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    }
+
+
+    .noticia {
+        width: 100% !important;
+        height: 28px !important; 
+        padding: 2px;
+        color: #035AA1 !important;
+        background-color: rgba(3,90,161,0.1); 
+        font-size: 18px !important;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        }
+
+        .contenido {
+    font-size: 18px !important;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    }
+
+    .pie {
+        margin-top: 10px !important;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        background-color: whitesmoke !important;
+        height: 40px !important;
+    }
+
+.botonSi {
+    font-size: 20px !important;
+    background-color: lightgreen;
+    font-weight: 600;
+    height: 45px;;
+    }
+
+    .botonOtro {
+        font-size: 20px !important;
+        height: 45px;;
+        }
+
+.botonNo {
+        font-size: 20px !important;
+        height: 45px;;
+        }
+    .detalle, .parte, .pager {
+        width: 100%;
+        font-size: 19px !important;
+        margin-top: 10px;
+      }
+    
+    
+    .ayuda, .etiquetas {
+        font-size: 16px !important;
+    }
+
+    .etiquetas {
+        font-size: 19px !important;
+        color:  #035AA1;
+    }
+    
+
+    .mat-focused .etiquetas {
+        color:  red;
+        font-size: 19px !important;
+        font-weight: 600;
+    }
+    
+    .posicion
+        { margin-top: 5px;
+            margin-bottom: 10px;
+        }
+    .iconoDialogo {
+        text-align: left !important;
+        height: 32px;
+        widows: 32px;
+        flex: 1;
+    }
+   
+    .tituloDialogo {
+        flex: 15;
+        text-align: center;
+        margin: auto;
+    }
+
+    .iconoRedonde
+   {
+       margin-top: -5px;
+   }
+
+   .lista {
+    height: 400px !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+ }

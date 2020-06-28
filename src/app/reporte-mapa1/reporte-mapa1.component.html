@@ -1,0 +1,44 @@
+<div id="todo" (keyup.control.b)="buscar()"  ng-app="app" ng-controller="AppCtrl" class="mat-typography">
+    <div>
+      <mat-grid-list id="cabecera" #gridAcciones class="acciones" [cols]="gridCols" rowHeight="56px">
+        <mat-grid-tile>
+          <div class="accion">
+            <button [ngClass]="{itemBoton:!seleccion01, itemBotonSeleccionado:seleccion01}" mat-button (click)="opcion10()">
+              <mat-icon class="itemIcon" svgIcon="propioLlamadas"></mat-icon>
+              Solicitudes no atendidas
+            </button>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="accion">
+            <button [ngClass]="{itemBoton:!seleccion02, itemBotonSeleccionado:seleccion02}" mat-button (click)="opcion20()">
+              <mat-icon class="itemIcon" svgIcon="propioConTecnicoAzul"></mat-icon>
+              Solicitudes en reparación
+            </button>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile [ngClass]="{noBuscador:!verBuscar, buscador:verBuscar}">
+          <div *ngIf="verBuscar">
+            <mat-form-field floatLabel="never">
+              <input #txtBuscar matInput class="etiquetas"type="text" [(ngModel)]="textoBuscar" (keydown.enter)="filtrar()">
+              <mat-placeholder class="etiquetas">Filtrar</mat-placeholder>
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile class="gridBotones">
+          <button class="botonDerecho" mat-fab color (click)="buscar()" matTooltip = "{{ toolTipBuscar }}" matTooltipClass = "toolTip">
+            <mat-icon class="miIcon" svgIcon="propioBuscar"></mat-icon>
+          </button>
+           <button class="botonDerecho" mat-fab color (click)="refrescar()" matTooltip = "{{ toolTipRefrescar }}" matTooltipClass = "toolTip">
+            <mat-icon class="miIcon" svgIcon="propioRefrescar"></mat-icon>
+          </button>
+          
+        </mat-grid-tile>        
+        
+      </mat-grid-list>   
+    </div>
+
+    <div class="contenidoPagina" [@routerTransition2]="getState(o)">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
+  </div>

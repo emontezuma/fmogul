@@ -1,0 +1,52 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div class="cabecera">
+      
+    <mat-icon class="iconoDialogo" svgIcon="propioCancelarReporte"></mat-icon>
+      <p class="tituloDialogo">CONTABILIZACIÓN DE REPORTES</p>
+    </div>
+  
+      <div class="formulario" >
+        <mat-card class="posicion">
+          <mat-card-content>
+              <div class ="lista">
+                  <div class="tituloLineaN2" *ngIf="ultimo!=''">{{ultimo}}</div>
+                <mat-form-field class="textoCompleto">
+            <input #txtBuscar matInput [(ngModel)]="nombre" type="number" maxlength="20" placeholder="Numero del reporte" autocomplete="off" (input)="inactivar()">
+            
+            </mat-form-field>
+            <button class="botonBuscar" mat-raised-button (click)="buscar()">
+              <mat-icon class="iconoRedonde2" svgIcon="propioBuscar"></mat-icon>
+              Buscar...
+          </button>
+          
+          <mat-checkbox class="tipoFecha4" [(ngModel)]="estatus" color="primary">Contabilizar el reporte (mostrarlo en las gráficas)</mat-checkbox>                
+          <div class="tituloLinea" >Información de la solicitud</div>
+          <div class="tituloLineaN" >Máquina: {{maquina}}</div>
+          <div class="tituloLineaN" >Area: {{area}}</div>
+          <div class="tituloLineaN" >Falla reportada: {{falla}}</div>
+          <div class="tituloLineaN" >Falla confirmada: {{fallaA}}</div>
+          <div class="tituloLineaN" >Célula: {{celula}}</div>
+          <div class="tituloLineaN" >Fecha del reporte: {{fecha}}</div>
+          <div class="tituloLineaN" >Fceha/Hora solicitud: {{fechaS}}</div>
+          <div class="tituloLineaN" >Tiempo de la reparación: {{tiempoR}}</div>
+          <div class="tituloLineaN" >Tiempo total: {{tiempo}}</div>
+          <div class="tituloLineaN" >Detalle de la falla: {{fallaD}}</div>
+          <div class="tituloLineaN" >Comentarios al cierre de la falla: {{fallaC}}</div>
+          <div class="tituloLineaN" >Solicitada por: {{user1}}</div>
+          <div class="tituloLineaN" >Atendida por: {{user3}}</div>
+          <div class="tituloLineaN" >Cerrada por: {{user2}}</div>
+          </div>
+          </mat-card-content>
+        </mat-card>
+        
+    </div>
+    <div mat-dialog-actions class="pie">
+      <button class="botonSi" mat-raised-button (click)="aceptar()" [disabled]="miBoton">
+          <mat-icon class="iconoRedonde" svgIcon="propioVobo"></mat-icon>
+          Actualizar
+      </button>
+      <button class="botonNo" mat-raised-button (click)="cancelar()">
+          <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+          Cerrar</button>
+    </div>
+  </div>

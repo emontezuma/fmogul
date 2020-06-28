@@ -1,0 +1,74 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div class="cabecera">
+      <mat-icon class="iconoDialogo" svgIcon="propioTurno"></mat-icon>
+      <p class="tituloDialogo">MANTENIMIENTO DE TURNOS</p>
+    </div>
+    
+    <mat-card class="posicion">
+      <mat-card-content>
+        <div class ="lista">
+          <div class="tituloLinea" *ngIf="idParo>'0'">ID asignado por el sistema: {{idParo}}</div>
+          <div class="cadenaLarga">
+            <mat-form-field class="textoCompleto">
+            <input matInput [(ngModel)]="referencia" maxlength="30" placeholder="Referencia/Nombre" autocomplete="off" [formControl]="referencia1">
+            <div class="ayuda" *ngIf="hayError1">Especifique la referencia/nombre del turno</div>
+            <mat-hint class="ayuda2" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+            <mat-hint class="ayuda2" align="end">Quedan {{30 - referencia1.value.length}} carácter(es)</mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="cadenaLarga">
+            <mat-form-field class="textoMitad">
+            <input matInput type="number" [(ngModel)]="desde" maxlength="6" placeholder="Hora/Inicio" autocomplete="off" [formControl]="desde1" required>
+            <div class="ayuda" *ngIf="hayError2">Especifique una hora válida</div>
+            
+            <mat-hint class="ayuda2" align="start"><strong>En formato HHMMSS (militar)</strong> </mat-hint>
+            </mat-form-field>
+            <mat-form-field class="textoMitad">
+                <div class="ayuda" *ngIf="hayError3">Especifique una hora válida</div>
+            <input matInput type="number" [(ngModel)]="hasta" maxlength="6" placeholder="Hora/Finalización" autocomplete="off" [formControl]="hasta1" required>
+            <mat-hint class="ayuda2" align="start"><strong>En formato HHMMSS (militar)</strong> </mat-hint>
+            </mat-form-field>
+            
+          </div>
+          <div class="micheck"><mat-checkbox class="tipoFecha4" [(ngModel)]="cambio" color="primary">Turno a dos días</mat-checkbox></div>                
+          <div class="cadenaLarga">
+            <mat-form-field class="textoCompleto">
+              <mat-select [(value)]="mover" placeholder="Cambio en la fecha del reporte">
+              <mat-option value="N">NO CAMBIA</mat-option>
+              <mat-option value="S">DIA SIGUIENTE</mat-option>
+              <mat-option value="A">DIA ANTERIOR</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="micheck"><mat-checkbox class="tipoFecha4" [(ngModel)]="estatus" color="primary">Turno activo</mat-checkbox></div>
+          <div class="cadenaFinal">
+              <div class="pies">Creado por: {{creador}}</div><div class="pies2">{{fcreacion}}</div>
+            </div>
+            <div class="cadenaFinal">
+              <div class="pies">Modificado por: {{modificador}}</div><div class="pies2">{{fmodificacion}}</div>
+            </div>
+            
+           </div>
+
+    </mat-card-content>
+    </mat-card>
+  
+    <div mat-dialog-actions class="pie">
+        <button class="botonSi" mat-raised-button (click)="validar()">
+          <mat-icon class="iconoRedonde" svgIcon="propioGuardar"></mat-icon>
+          Guardar
+        </button>
+        <button class="botonNo" mat-raised-button (click)="eliminar()" *ngIf="idParo>'0'  && estatusantes=='A'">
+            <mat-icon class="iconoRedonde" svgIcon="propioInactivar"></mat-icon>
+            Inactivar
+          </button>
+          <button class="botonNo" mat-raised-button (click)="copiar()" *ngIf="idParo>'0'">
+              <mat-icon class="iconoRedonde" svgIcon="propioCopiar"></mat-icon>
+              Copiar
+            </button>
+        <button class="botonNo" mat-raised-button (click)="cancelar()">
+            <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+          Cerrar
+      </button>
+    </div>
+</div>

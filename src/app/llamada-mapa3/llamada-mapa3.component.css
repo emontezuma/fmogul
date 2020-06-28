@@ -1,0 +1,286 @@
+#todo {
+    position: relative;
+    width: 100%;    
+    height: 100%;
+}
+
+.detalleOperaciones {
+    align-content: center;
+    text-align: center;
+}
+
+.operacionTarjeta {
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #035AA1;
+    border-radius: 4px 16px;
+    height: 90%;
+    width: 90%;
+}
+
+.operacionTarjetaSel {
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #035AA1;
+    border-radius: 4px 16px;
+    width: 90%;
+    height: 90%;
+}
+
+.operacionTarjetaGris {
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: gray;
+    color: darkgray;
+    border-radius: 4px 16px;
+    width: 90%;
+    height: 90%;
+    cursor: no-drop;
+}
+.operacionFondo {
+    width: 97%;
+    height: 97%;
+    background-color: transparent;
+}
+
+.operacionFondoSel {
+    width: 97%;
+    height: 97%;
+    background: #035AA1;
+    border-style: solid;
+    border-width: 3px;
+    border-color:orangered;
+    border-radius: 4px 16px;
+}
+
+.operacionTitulo {
+    flex: 1;
+    margin-top: 100px !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #035AA1 !important;
+    
+}
+
+.elBoton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    
+}
+
+.operacionMadre {
+    width: 100% !important;
+    color: #035AA1;
+    background-color: rgb(221,240,254); 
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    max-height: 40px;
+    min-height: 40px;
+        height: 40px;
+    flex: 1;
+    margin-top: -10px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(14, 110, 189)
+    
+}
+
+    .operacionMadre > .parrafo {
+        padding: 2px;
+        flex: 1;
+        width: 100%;
+        min-width: 0;
+        line-height: 20px;
+        white-space: normal;
+        overflow: hidden;
+        color: #035AA1;
+        margin: auto;
+        
+            }
+
+
+            .operacionMadreGris {
+                width: 100% !important;
+                color: lightgray;
+                background-color:lightgray;
+                font-size: 18px !important;
+                font-weight: 600 !important;
+                display: flex;
+                justify-content: center; 
+                align-items: top;
+                max-height: 40px !important;
+                    min-height: 40px !important;
+                    height: 40px !important;
+                flex: 1;
+                margin-top: -10px;
+                overflow: hidden;
+                border-style: solid;
+                border-width: 1px;
+                border-color: rgba(3,90,161,0.2);
+                
+            }
+            
+                .operacionMadreGris > .parrafo {
+                    padding: 2px;
+                    flex: 1;
+                    width: 100%;
+                    min-width: 0;
+                    line-height: 20px;
+                    white-space: normal;
+                    overflow: hidden;
+                    color: gray;
+                    margin: auto;
+                    
+                        }
+            
+
+
+
+            .operacionCelula {
+        width: 100% !important;
+        color: white;
+        background-color:  #035AA1;  
+        font-size: 18px !important;
+        font-weight: 600 !important;
+        display: flex;
+        justify-content: center; 
+        align-items: top;
+        max-height: 40px !important;
+        min-height: 40px !important;
+        height: 40px !important;
+        flex: 1;
+        margin-top: -3px;
+        overflow: hidden;
+        border-style: solid;
+        border-width: 1px;
+        border-color: black;
+        }
+    
+        .operacionCelulaGris {
+            width: 100% !important;
+            color: white;
+            background-color:  gray;  
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            display: flex;
+            justify-content: center; 
+            align-items: top;
+            max-height: 40px !important;
+            min-height: 40px !important;
+            height: 40px !important;
+            flex: 1;
+            margin-top: -3px;
+            overflow: hidden;
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+            }
+        
+
+        .operacionCelula > .parrafo {
+            flex: 1;
+            width: 100%;
+            min-width: 0;
+            line-height: 20px;
+            white-space: normal;
+            overflow: hidden;
+            color: white;
+            margin: auto;
+                }
+    
+                .operacionCelulaGris > .parrafo {
+                    flex: 1;
+                    width: 100%;
+                    min-width: 0;
+                    line-height: 20px;
+                    white-space: normal;
+                    overflow: hidden;
+                    color: lightgray;
+                    margin: auto;
+                        }
+                    
+
+.operacionEstatus {
+    font-weight: 600 !important;
+    font-size: 16px !important;
+}
+
+.operacionUltimaFalla {
+    font-size: 14px !important;
+    margin-top: -10px;
+}
+
+
+.operacionImagen {
+    height: 72px;
+    width: 72px;
+}
+
+.operacionIcono {
+    padding: 5px;
+}
+
+
+.operacionIconoGris {
+    padding: 5px;
+    filter: grayscale(1);
+    opacity: 0.2;
+}
+
+.botonDerecho {
+    margin-right: 10px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #035AA1;
+}
+
+.miIcon {
+    height: 50px !important;
+    width: 50px !important;
+    align-content: center;
+    margin-top: -17px !important;
+    margin-left: -1px !important;
+}
+
+.cajaIconE {
+    flex: 1;
+    margin-top: 60px !important;
+    width: 100% !important;
+    padding: 5px;
+    position: absolute; 
+    
+}
+
+.nombreCelula {
+    border-style: solid;
+    border-width: 4px;
+    border-color: #035AA1;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: whitesmoke !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    padding: 5px;
+    
+}
+  .mat-icon svg
+{
+   fill : #fff;
+}
+
+.miIconE svg
+{
+    fill : black !important;
+ }
+ 
+
+

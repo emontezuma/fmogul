@@ -1,0 +1,56 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div class="cabecera">
+      <mat-icon class="iconoDialogo" svgIcon="propioChange"></mat-icon>
+      <p class="tituloDialogo">MANTENIMIENTO DE # DE PARTES</p>
+    </div>
+    
+    <mat-card class="posicion">
+      <mat-card-content>
+        <div class ="lista">
+        <div class="camposDiv">
+        <mat-form-field class="maquina">
+          <input matInput [(ngModel)]="numero" maxlength="30" placeholder="Número de parte" autocomplete="off" [formControl]="numero1" required>
+          <div class="ayuda" *ngIf="hayError1">Indíque el número de parte</div>
+          <mat-hint class="ayuda" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+        </mat-form-field>      
+        </div>
+        <div class="camposDiv">
+            <mat-form-field class="maquina">
+                <mat-select [(ngModel)]="maquinasSeleccionadas" name="maquina" placeholder="Máquina(s) asociada(s)" multiple required #seleccion="ngModel" [compareWith]="equals">
+                  <mat-option disabled="disabled" class="filter-option">
+                  <button 
+                    mat-raised-button 
+                    class="mat-primary fill text-sm" 
+                    (click)="selectAll(seleccion, maquinas)">
+                    Seleccionar todo
+                  </button>
+                  <button 
+                    mat-raised-button 
+                    class="mat-accent fill text-sm" 
+                    (click)="deselectAll(seleccion)">
+                    Desmarcar todo
+                  </button>
+                </mat-option>
+                <mat-option *ngFor="let maquina of maquinas" [value]="maquina">{{maquina.prefijo}}  </mat-option>
+                </mat-select>
+                <div class="ayuda" *ngIf="hayError2">Seleccione al menos una máquina</div>
+                <mat-hint class="ayuda" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+                </mat-form-field>
+            </div>
+      </div>
+    </mat-card-content>
+    </mat-card>
+  <div mat-dialog-actions class="pie">
+    <button class="botonSi" mat-raised-button (click)="validar()">
+      <mat-icon class="iconoRedonde" svgIcon="propioGuardar"></mat-icon>
+      Guardar
+    </button>
+    <button class="botonNo" mat-raised-button (click)="eliminar()" *ngIf="idParo>'0'">
+        <mat-icon class="iconoRedonde" svgIcon="propioEliminar"></mat-icon>
+        Eliminar
+      </button>
+    <button class="botonNo" mat-raised-button (click)="cancelar()">
+        <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+      Cancelar</button>
+  </div>
+  </div>

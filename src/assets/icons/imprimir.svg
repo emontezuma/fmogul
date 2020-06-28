@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" width="32" height="32" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve" preserveAspectRatio="none" viewbox="0 0 32 32">
+
+<g>
+	<g>
+		<defs>
+			<rect id="574330376_SVGID_1_" x="18" y="5" width="28" height="18"></rect>
+		</defs>
+		<use xlink:href="#574330376_SVGID_1_" style="overflow:visible;fill:#DEDCD9;"></use>
+		<clipPath id="574330376_SVGID_2_">
+			<use xlink:href="#574330376_SVGID_1_" style="overflow:visible;"></use>
+		</clipPath>
+		<polygon class="st1" points="18,20.581 44.987,5 18,5   " style="clip-path:url(#574330376_SVGID_2_);fill:#FFFFFF;fill-opacity:0.5;;"></polygon>
+	</g>
+	<g>
+		<defs>
+			<path id="574330376_SVGID_3_" d="M58,26c0-3-4-6-26-6S6,23,6,26v19c0,1.657,1.343,3,3,3h7v13h32V48h7c1.657,0,3-1.343,3-3V26z"></path>
+		</defs>
+		<use xlink:href="#574330376_SVGID_3_" class="stshockcolor" style="fill: rgb(3, 90, 161); overflow: visible;" data-st="fill:#616276;;overflow:visible;"></use>
+		<clipPath id="574330376_SVGID_4_">
+			<use xlink:href="#574330376_SVGID_3_" style="overflow:visible;"></use>
+		</clipPath>
+		<g class="st3" style="clip-path:url(#574330376_SVGID_4_);;">
+			<path class="st2" d="M48,42H16V20h32V42z M48,48H16v13h32V48z" style="fill:#FFFFFF;fill-opacity:0.3;;"></path>
+			<polygon class="st2" points="58,20 6,20 6,26.227 16,32 48,32 58,26.227    " style="fill:#FFFFFF;fill-opacity:0.3;;"></polygon>
+			<rect x="16" y="42" class="st4" width="32" height="6" style="fill-opacity:0.3;;"></rect>
+		</g>
+	</g>
+	<g>
+		<g>
+			<rect x="18" y="44" class="st5" width="28" height="13" style="fill:#DEDCD9;;"></rect>
+			<rect x="18" y="44" class="st0" width="28" height="13" style="opacity:0.6;fill:#FFFFFF;;"></rect>
+		</g>
+		<path class="st4" d="M41,53H23v-2h18V53z M41,46H23v2h18V46z" style="fill-opacity:0.3;;"></path>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,377 @@
+#todo {
+    position: relative;
+    width: 100%;    
+    min-height: 100%;
+}
+
+.scrolear
+{
+    overflow: auto;
+  height: 100%;
+}
+
+#barraNavegacion 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 50px;
+    min-height: 50px !important;
+    background-color: whitesmoke;
+    filter: drop-shadow(0px 1px 2px gray);
+}
+
+.miLogo 
+{
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.logoCronos 
+{
+    width: 220px !important;
+    height: 50px !important;
+    top: -10;
+    left: 0;
+    -ms-transform: skewX(40deg); /* IE 9 */
+    -webkit-transform: skewX(40deg); /* Safari */
+    transform: skewX(40deg);
+    padding: 20px;
+}
+
+.botonCronos 
+{
+    background-color: rgb(250, 183, 2) !important;
+    -ms-transform: skew(-40deg); /* IE 9 */
+    -webkit-transform: skew(-40deg); /* Safari */
+    transform: skew(-40deg);
+    margin-top: -20px;
+}
+
+.botonescl 
+{
+    font-size: 17px;
+    padding-left: 1px;
+    padding-right: 3px;
+    margin-left: 5px;
+}
+
+.botonescl2 
+{
+    font-size: 17px;
+    padding-left: 1px;
+    padding-right: 3px;
+    margin-left: 5px;
+    max-width: 400px !important;
+    width: 400px !important;
+    
+}
+.iconos 
+{
+    padding: 0 5px;
+    cursor: pointer;
+    min-width: 30px !important;
+    width: 36px !important;
+    height: 36px !important;
+    color: #035AA1;
+  }
+
+
+  .iconoEstado 
+{
+    width: 24px !important;
+    height: 24px !important;
+    margin: auto;
+  }
+
+
+.botonesHam 
+{
+    min-width: 60px !important;
+    padding: 0;
+}
+
+::ng-deep .mat-tooltip {
+    font-size: 15px !important;
+  }
+
+  .iconoDisabled {
+    filter: grayscale(0.4);
+    font-size: 17px;
+    padding-left: 1px;
+    padding-right: 3px;
+    margin-left: 5px;
+  }
+
+.example-spacer {
+    flex: 1 1 auto;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .mensajeBarra {
+    flex: 1 1 auto;
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    text-align: center;
+    margin-top: -20px;
+  }
+
+  .mensajeEstadoBar {
+    flex: 1 1 auto;
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    text-align: left;
+    max-width: 500px;
+    width: 500px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(3,90,161,0.15) !important;;
+    background-color: rgba(3,90,161,0.05) !important;
+    height: 30px;
+    display: flex;
+    margin-top: -20px;
+  }
+
+  .mensajeEstado {
+      flex: 1;
+    margin-top: 0 auto !important;
+    text-align: left;
+    color: #035AA1;
+    align-content: center;
+    margin-left: 5px;
+  }
+
+  .iconos {
+      width: 24;
+      height: 24px;
+  }
+
+#contenedor {
+    margin-top: 51px;
+    margin-bottom: 45px;
+    background: linear-gradient(to bottom, rgba(3,90,161,1) 0%,rgba(135,188,234,1) 48%,rgba(3,90,161,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+mat-sidenav, mat-sidenav.mat-locked-open, mat-sidenav.mat-closed.mat-locked-open-add-active {
+    width: 300px !important;
+   }
+
+.acordeon .mat-expansion-panel-header-title, 
+.acordeon .mat-expansion-panel-header-description {
+flex-basis: 0;
+}
+
+.acordeon .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menuIzquierdo {
+    background-color: whitesmoke;
+  }
+
+
+  .mat-menu-panel.emenu {
+    max-width: 600px !important;
+    width: 600px !important;
+  }
+
+  .acordeonIcon {
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    font-size: 24px !important;
+    margin: auto;
+  }
+
+ .itemBoton {
+    width: 260px !important;
+    text-align: left !important;
+    margin-left: -10px !important;
+    margin-bottom: 5px !important;
+    border-radius: 4px 16px !important;
+    border-color: grey !important;
+    background-color: whitesmoke !important;
+    height: 55px !important;;
+    font-size: 18px !important;
+    }
+
+.itemIcon {
+    margin-top: -5px !important;
+    margin-left: -10px !important;
+    margin-right: 5px !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+ .acordionPrimario
+    {
+    font-size: 16px  !important;
+    font-weight: 650;
+    margin-top: 8px;
+    }
+
+ .primerPanel
+    {
+    font-size: 16px  !important;
+    font-weight: 650;
+    background-color: lightsteelblue !important;
+    
+    }
+
+ .primerPanel:hover
+    {
+    font-size: 16px  !important;
+    font-weight: 650;
+    background-color: lightsteelblue !important;
+    
+    }
+.acordionPrimario
+    {
+    font-size: 16px  !important;
+    font-weight: 650;
+    }
+    
+.titulo
+    {
+    font-size: 18px  !important;
+    font-weight: 650;
+    }
+
+#pie {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 45px;
+    min-height: 45px !important;
+    width: 100% !important;
+    background-color: whitesmoke;
+    
+}
+
+.marcoProceso {
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    align-content: center;
+    background-color: rgba(0,0,0, 0.7);
+    background-size: cover;
+    z-index: 1;
+  }
+  
+ .barraProceso {
+    text-align: center;
+    align-content: center;
+    position: relative;
+    width: 120px;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4px 16px;
+    padding: 5px;
+    background-color:rgba(0,0,0, 0.3);
+    z-index: 1;
+  }
+
+  .irArriba {
+    flex: 1;
+    text-align: right;
+    align-items: right;
+    align-content: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 50px !important;
+    margin-right: 15px !important;
+    transition: all 1s ease-in-out;
+  }
+
+  .botonDerecho {
+    height: 50px !important;
+    width: 50px !important;
+    margin-right: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #035AA1;
+}
+
+.miIcon {
+    height: 36px !important;
+    width: 36px !important;
+    align-content: center;
+    margin-top: -13px !important;
+    margin-left: 1px !important;
+}
+
+
+
+  ::ng-deep .proceso {
+    margin: 0 auto;
+  }
+
+  ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: darkgrey;
+    }
+
+    ::ng-deep .tituloProceso {
+        font-size: 18px !important;
+        font-weight: 600 !important;
+        color: darkgrey;
+    }
+
+::ng-deep snack-bar-container.custom-class {
+    background-color: white !important; 
+    margin-top: -100px !important;
+  }
+  
+  ::ng-deep .custom-class .mat-simple-snackbar {
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
+    background-color: white !important; 
+    color: #035AA1;
+    white-space: normal;
+    line-height: 30px !important;
+  }
+
+  ::ng-deep .custom-class .mat-simple-snackbar.container {
+    max-width: 1200px;
+    width: 1200px;
+    background-color: rgba(3,90,161,0.1) !important; 
+    margin-top: -100px !important;
+
+  }
+
+   ::ng-deep snack-bar-container.custom-class-red {
+    background-color: red  !important; 
+    margin-top: -100px !important;
+  }
+  
+  ::ng-deep .custom-class-red .mat-simple-snackbar {
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
+    background-color: red !important; 
+    color: white;
+    white-space: normal;
+    line-height: 30px !important;
+  }
+
+::ng-deep .custom-class-red .mat-simple-snackbar.container {
+    max-width: 1200px;
+    width: 1200px;
+    background-color: rgba(3,90,161,0.1) !important; 
+    margin-top: -100px !important;
+
+  }

@@ -1,0 +1,135 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div class="cabecera">
+      <mat-icon class="iconoDialogo" svgIcon="propioEGrafico"></mat-icon>
+      <p class="tituloDialogo">PERSONALIZACIÓN DE LA GRÁFICA</p>
+    </div>
+    
+    <mat-card class="posicion">
+      <mat-card-content>
+        <div class ="lista">
+          
+          <div class="tituloLinea">Títulos para los gráficos</div>
+          <div class="segundaLinea">
+          <mat-form-field class="texto">
+            <input matInput [(ngModel)]="titulo" maxlength="50" placeholder="Título de la gráfica" autocomplete="off" [formControl]="titulo1">
+            <div class="ayuda" *ngIf="hayError01">Especifique un título para la gráfica</div>
+            <mat-hint class="ayuda2" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+            <mat-hint class="ayuda2" align="end">Quedan {{50 - titulo1.value.length}} carácter(es)</mat-hint>
+          </mat-form-field>
+           </div>
+        <div class="segundaLinea">
+          <mat-form-field class="texto">
+            <input matInput [(ngModel)]="titulox" maxlength="50" placeholder="Título en el eje de las Xs" autocomplete="off" [formControl]="titulo2">
+            <mat-hint class="ayuda2" align="start"><strong>Campo opcional</strong> </mat-hint>
+            <mat-hint class="ayuda2" align="end">Quedan {{50 - titulo2.value.length}} carácter(es)</mat-hint>
+          </mat-form-field>
+        </div>
+        <div class="segundaLinea">
+          <mat-form-field class="texto">
+            <input matInput [(ngModel)]="tituloy" maxlength="50" placeholder="Título en el eje de las Ys" autocomplete="off" [formControl]="titulo3">
+            <mat-hint class="ayuda2" align="start"><strong>Campo opcional</strong> </mat-hint>
+            <mat-hint class="ayuda2" align="end">Quedan {{50 - titulo3.value.length}} carácter(es)</mat-hint>
+          </mat-form-field>
+        </div>
+        <div class="segundaLinea">
+          <mat-form-field class="texto">
+            <input matInput [(ngModel)]="tituloz" maxlength="50" placeholder="Título en el eje de las Zs (si aplica)" autocomplete="off" [formControl]="titulo4" [(disabled)]="!soloejez">
+            <mat-hint class="ayuda2" align="start"><strong>Campo opcional</strong> </mat-hint>
+            <mat-hint class="ayuda2" align="end">Quedan {{50 - titulo4.value.length}} carácter(es)</mat-hint>
+          </mat-form-field>
+        </div>
+        <div class="tituloLinea">Tamaño de las fuentes</div>
+        <div class="terceraLinea">
+          <mat-form-field class="fuente">
+          <mat-select [(ngModel)]="f1" placeholder="Título principal">
+              <mat-option *ngFor="let fuente of fuentes" [(value)]="fuente.id">{{fuente.nombre}}</mat-option>
+          </mat-select>
+          <div class="ayuda" *ngIf="hayError11">Especifique</div>
+          </mat-form-field>
+             
+          <mat-form-field class="fuente">
+          <mat-select [(ngModel)]="f2" placeholder="Títulos de los ejes">
+              <mat-option *ngFor="let fuente of fuentes" [(value)]="fuente.id">{{fuente.nombre}}</mat-option>
+          </mat-select>
+          <div class="ayuda" *ngIf="hayError12">Especifique</div>
+          </mat-form-field>
+          <mat-form-field class="fuente">
+          <mat-select [(ngModel)]="f3" placeholder="Escala de valores">
+              <mat-option *ngFor="let fuente of fuentes" [(value)]="fuente.id">{{fuente.nombre}}</mat-option>
+          </mat-select>
+          <div class="ayuda" *ngIf="hayError13">Especifique</div>
+          </mat-form-field>
+          <mat-form-field class="fuente">
+              <mat-select [(ngModel)]="f4" placeholder="Etiquetas">
+                  <mat-option *ngFor="let fuente of fuentes" [(value)]="fuente.id">{{fuente.nombre}}</mat-option>
+              </mat-select>
+              <div class="ayuda" *ngIf="hayError14">Especifique</div>
+              </mat-form-field>
+      </div>
+      <div class="tituloLinea">Margenes externos del gráfico</div>
+      <div class="terceraLinea">
+        <mat-form-field class="fuente">
+        <mat-select [(ngModel)]="m1" placeholder="Izquierdo">
+            <mat-option *ngFor="let margen of margenes" [(value)]="margen.id">{{margen.nombre}}</mat-option>
+        </mat-select>
+        <div class="ayuda" *ngIf="hayError21">Especifique</div>
+        </mat-form-field>
+           
+        <mat-form-field class="fuente">
+        <mat-select [(ngModel)]="m2" placeholder="Superior">
+            <mat-option *ngFor="let margen of margenes" [(value)]="margen.id">{{margen.nombre}}</mat-option>
+        </mat-select>
+        <div class="ayuda" *ngIf="hayError22">Especifique</div>
+        </mat-form-field>
+        <mat-form-field class="fuente">
+        <mat-select [(ngModel)]="m3" placeholder="Derecho">
+            <mat-option *ngFor="let margen of margenes" [(value)]="margen.id">{{margen.nombre}}</mat-option>
+        </mat-select>
+        <div class="ayuda" *ngIf="hayError23">Especifique</div>
+        </mat-form-field>
+        <mat-form-field class="fuente">
+            <mat-select [(ngModel)]="m4" placeholder="Inferior">
+                <mat-option *ngFor="let margen of margenes" [(value)]="margen.id">{{margen.nombre}}</mat-option>
+            </mat-select>
+            <div class="ayuda" *ngIf="hayError24">Especifique</div>
+            </mat-form-field>
+      </div>  
+      <div class="tituloLinea">Tamaño del gráfico (0 = se ajusta al tamaño de la pantalla)</div>
+      <div class="tamanos">
+        <mat-form-field class="texto2">
+          <input matInput type="number" [(ngModel)]="ancho" maxlength="5" placeholder="Ancho (pixel)" autocomplete="off" [formControl]="ancho1">
+          <div class="ayuda" *ngIf="hayError31">Especifique</div>
+        </mat-form-field>
+        <mat-form-field class="texto2">
+          <input matInput type="number" [(ngModel)]="alto" maxlength="5" placeholder="Alto (pixel)" autocomplete="off" [formControl]="alto1">
+          <div class="ayuda" *ngIf="hayError32">Especifique</div>
+        </mat-form-field>
+      <div class="tituloLinea">Despreciar datos (se omiten las barras menos significativas)</div>
+      <mat-form-field class="texto2">
+        <input matInput type="number" [(ngModel)]="barras" maxlength="5" placeholder="Máximo barras" autocomplete="off" [formControl]="barras1">
+        <div class="ayuda" *ngIf="hayError33">Especifique</div>
+          </mat-form-field>
+          <mat-form-field class="texto2">
+            <input matInput type="number" [(ngModel)]="pct" maxlength="5" placeholder="Máximo %" autocomplete="off" [formControl]="pct1">
+            <div class="ayuda" *ngIf="hayError34">Especifique</div>
+          </mat-form-field>
+          <mat-checkbox class="checks" [(ngModel)]="checked1" color="primary">Agrupar valores despreciados en una sóla barra</mat-checkbox>
+      </div>
+      <div class="tituloULinea">Agregar acumulados a la gráfica</div>
+      <mat-checkbox class="checks" [(ngModel)]="checked2" color="primary" [disabled]="soloejez">Mes anterior</mat-checkbox>
+      <mat-checkbox class="checks" [(ngModel)]="checked3" color="primary" [disabled]="soloejez">Año anterior</mat-checkbox>
+      <mat-checkbox class="checks" [(ngModel)]="checked4" color="primary" [disabled]="soloejez">Mismo mes/Año anterior</mat-checkbox>
+      <mat-checkbox class="checks" [(ngModel)]="checked5" color="primary" [disabled]="soloejez">MTD</mat-checkbox>
+      <mat-checkbox class="checks" [(ngModel)]="checked6" color="primary" [disabled]="soloejez">YTD</mat-checkbox>
+      <mat-checkbox class="checks" [(ngModel)]="checked7" color="primary" [disabled]="soloejez">Aplicar  filtro a los acumulados</mat-checkbox>
+  </div>
+    </mat-card-content>
+    </mat-card>
+  
+  <div mat-dialog-actions class="pie">
+    <button class="botonSi" mat-raised-button (click)="validar()">Guardar
+      <mat-icon class="iconoRedonde" svgIcon="propioVobo"></mat-icon>
+    </button>
+    <button class="botonNo" mat-raised-button (click)="cancelar()">Cancelar</button>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="contenidoDemo" class="mat-typography">
+  <div class="cabecera">
+    <mat-icon class="iconoDialogo" svgIcon="propioChange"></mat-icon>
+    <p class="tituloDialogo">MANTENIMIENTO DE PAGERS (SMED)</p>
+  </div>
+  
+  <mat-card class="posicion">
+    <mat-card-content>
+      <div class ="lista">
+      <div class="camposDiv">
+      <mat-form-field class="maquina">
+        <input matInput [(ngModel)]="nombre" maxlength="30" placeholder="Nombre del Pager" autocomplete="off" [formControl]="nombre1" required>
+        <mat-error class="ayuda" *ngIf="nombre1.hasError('required') || hayError1">Indique el nombre del pager</mat-error>
+      </mat-form-field>      
+      </div>
+      <div class="camposDiv">
+          <mat-form-field class="maquina">
+            <input type="number" matInput [(ngModel)]="pager" maxlength="6" placeholder="Número del Pager en MMCall" autocomplete="off" [formControl]="pager1" required>
+            <mat-error class="ayuda" *ngIf="pager1.hasError('required') || hayError2">Indique el número del pager en MMCall</mat-error>
+          </mat-form-field>      
+      </div>
+      
+    </div>
+  </mat-card-content>
+  </mat-card>
+<div mat-dialog-actions class="pie">
+  <button class="botonSi" mat-raised-button (click)="validar()">
+    <mat-icon class="iconoRedonde" svgIcon="propioGuardar"></mat-icon>
+    Guardar
+  </button>
+  <button class="botonNo" mat-raised-button (click)="eliminar()" *ngIf="idParo>'0'">
+      <mat-icon class="iconoRedonde" svgIcon="propioEliminar"></mat-icon>
+      Eliminar
+    </button>
+  <button class="botonNo" mat-raised-button (click)="cancelar()">
+      <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+    Cancelar</button>
+</div>
+</div>

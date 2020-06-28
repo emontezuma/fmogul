@@ -1,0 +1,21 @@
+<div id="todo" ng-app="app" ng-controller="AppCtrl" class="mat-typography"> 
+    <div class="detalleOperaciones" > 
+        <mat-grid-list #gridCabecera class="cabeceras" [cols]="gridCols" rowHeight="220px">
+            <ng-container *ngFor="let responsable of responsables; let i = index">
+              <mat-grid-tile>
+               <div [ngClass]="{operacionFondo:!itemSeleccionado[i], operacionFondoSel:itemSeleccionado[i]}">
+                <button [ngClass]="{operacionTarjetaGris:responsable.tfallas==0, operacionTarjeta:!itemSeleccionado[i], operacionTarjetaSel:itemSeleccionado[i]}" [style.background-color]="responsable.colorhexa" [disabled]="responsable.tfallas==0" mat-button (click)="mostrarFallas(i)">
+                  <div class="elBoton" fxLayout="column" fxLayoutAlign="space-evenly center" >
+                    <div [ngClass]="{operacionCelula:responsable.tfallas>0,operacionCelulaGris:responsable.tfallas==0} "><div class="parrafo">{{ responsable.prefijo }}</div></div>
+                    <div [ngClass]="{operacionIcono:responsable.tfallas>0, operacionIconoGris:responsable.tfallas==0}"><img src="{{ responsable.imagen }}" class="operacionImagen"></div>
+                    <div [ngClass]="{operacionMadre:responsable.tfallas>0,operacionMadreGris:responsable.tfallas==0} "><div class="parrafo">{{ responsable.tfallas }} falla(s)</div></div>
+                  </div>
+                </button>
+              </div>
+             </mat-grid-tile>
+             </ng-container>
+        </mat-grid-list>
+    </div>
+  </div>
+  
+

@@ -1,0 +1,140 @@
+<div class="contenidoDemo" class="mat-typography">
+  <div class="cabecera">
+    <mat-icon class="iconoDialogo" svgIcon="propioUsuarios"></mat-icon>
+    <p class="tituloDialogo">MANTENIMIENTO DE USUARIOS</p>
+  </div>
+  
+  <mat-card class="posicion">
+    <mat-card-content>
+      <div class ="lista">
+
+          <div class="tituloLinea" *ngIf="idParo>'0'">ID asignado por el sistema: {{idParo}}</div>
+          <div class="cadenaLarga">
+            <mat-form-field class="textoCompleto">
+            <input matInput [(ngModel)]="referencia" maxlength="50" placeholder="Perfil de usuario" autocomplete="off" [formControl]="perfil1">
+            <mat-hint *ngIf="hayError1" class="ayuda" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+              <mat-hint class="ayuda2" align="end">Quedan {{50 - perfil1.value.length}} carácter(es)</mat-hint>
+          </mat-form-field>
+          </div>
+          
+          <div class="cadenaLarga">
+            <mat-form-field class="textoCompleto">
+            <input matInput [(ngModel)]="nombre" maxlength="50" placeholder="Nombre del usuario" autocomplete="off" [formControl]="nombre1" required (input)="prefijos()">
+            <mat-hint *ngIf="hayError2" class="ayuda" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+              <mat-hint class="ayuda2" align="end">Quedan {{50 - nombre1.value.length}} carácter(es)</mat-hint>
+          </mat-form-field>
+          </div>
+          <div class="cadenaLarga">
+            <mat-form-field class="textoCompleto">
+            <input matInput [(ngModel)]="correo" maxlength="100" placeholder="Correo electrónico" autocomplete="off" [formControl]="correo1" required>
+            <mat-hint *ngIf="hayError3" class="ayuda" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+              <mat-hint class="ayuda2" align="end">Quedan {{100 - correo1.value.length}} carácter(es)</mat-hint>
+          </mat-form-field>
+          </div>
+          <div class="cadenaLarga">
+              <mat-form-field class="textoCompleto">
+              <input matInput [(ngModel)]="prefijo" maxlength="30" placeholder="Prefijo (Nonbre abreviado)" autocomplete="off" [formControl]="prefijo1" required>
+              <mat-hint *ngIf="hayError6" class="ayuda" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+              <mat-hint class="ayuda2" align="end">Quedan {{30 - prefijo1.value.length}} carácter(es)</mat-hint>
+            </mat-form-field>
+            </div>
+          <div class="cadenaLarga">
+            <mat-form-field class="textoCompleto">
+                <mat-select [(value)]="estaRol" placeholder="Rol del usuario" required>
+                  <mat-option *ngFor="let tabla1 of tablas1" [(value)]="tabla1.id">{{tabla1.nombre}}  </mat-option>
+                </mat-select>
+                <mat-hint *ngIf="hayError4" class="ayuda" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+              </mat-form-field>
+            </div>
+            <div class="cadenaLarga">
+              <mat-form-field class="textoCompleto">
+                  <mat-select [(value)]="estaPol" placeholder="Política de seguridad" required>
+                    <mat-option *ngFor="let tabla2 of tablas2" [(value)]="tabla2.id">{{tabla2.nombre}}  </mat-option>
+                  </mat-select>
+                  <mat-hint *ngIf="hayError5" class="ayuda" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+              </mat-form-field>
+              </div>
+          <div class="tituloLinea">Propiedades del usuario</div>
+          <div class="cadenaLarga">
+            <mat-form-field class="textoCompleto">
+              <mat-select [(value)]="estaCia" placeholder="Compañía">
+                <mat-option *ngFor="let tabla3 of tablas3" [(value)]="tabla3.id">{{tabla3.prefijo}}  </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="cadenaLarga">
+            <mat-form-field class="textoCompleto">
+              <mat-select [(value)]="estaPlanta" placeholder="Planta">
+                <mat-option *ngFor="let tabla4 of tablas4" [(value)]="tabla4.id">{{tabla4.prefijo}}  </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="camposDiv">
+            <mat-form-field class="textoMitad">
+                <mat-select [(value)]="estaDpto" placeholder="Departamento">
+                  <mat-option *ngFor="let tabla5 of tablas5" [(value)]="tabla5.id">{{tabla5.prefijo}}  </mat-option>
+                </mat-select>
+                </mat-form-field>
+            <mat-form-field class="textoMitad">
+              <mat-select [(value)]="estaPuesto" placeholder="Puesto/Posición">
+                <mat-option *ngFor="let tabla6 of tablas6" [(value)]="tabla6.id">{{tabla6.prefijo}}  </mat-option>
+              </mat-select>
+              </mat-form-field>
+            </div>  
+          <div class="cadenaLarga">
+            <div class="etiColor">Color</div>
+            <dx-color-box class="colores" [(value)]="colorhexa" applyButtonText="Aceptar" cancelButtonText="Cancelar"></dx-color-box>
+            <mat-form-field class="textoMitad">
+            <input matInput [(ngModel)]="imagen" maxlength="250" placeholder="Imagen a mostrar" autocomplete="off">
+            <mat-hint class="ayuda2" align="start"><strong>Campo opcional</strong> </mat-hint>
+            </mat-form-field>
+            <div class="operacionIcono"><img src="{{imagen}}" class="operacionImagen"></div>
+          </div>
+          <mat-checkbox class="tipoFecha4" [(ngModel)]="tecnico" color="primary">Es un técnico (atención a solicitudes)</mat-checkbox>                
+          <mat-checkbox class="tipoFecha4" [(ngModel)]="estatus" color="primary">Usuario activo</mat-checkbox>                
+          <div class="cadenaFinal">
+              <div class="pies">Creado por: {{creador}}</div><div class="pies2">{{fcreacion}}</div>
+            </div>
+            <div class="cadenaFinal">
+              <div class="pies">Modificado por: {{modificador}}</div><div class="pies2">{{fmodificacion}}</div>
+            </div>
+            <div class="cadenaFinal">
+              <div class="pies">Último ingreso al sistema: </div><div class="pies2">{{fuingreso}}</div>
+            </div>
+            <div class="cadenaFinal">
+              <div class="pies">Último cambio de la contraseña: </div><div class="pies2">{{fucambio}}</div>
+            </div>
+            
+          
+
+      </div>
+  </mat-card-content>
+  </mat-card>
+
+  <div mat-dialog-actions class="pie2">
+      <button class="botonIni" mat-raised-button (click)="inicializar()">
+        <mat-icon class="iconoRedonde" svgIcon="propioiniPass"></mat-icon>
+        Inicializar la contraseña
+      </button>
+    </div>
+  <div mat-dialog-actions class="pie">
+    
+      <button class="botonSi" mat-raised-button (click)="validar()">
+        <mat-icon class="iconoRedonde" svgIcon="propioGuardar"></mat-icon>
+        Guardar
+      </button>
+      <button class="botonNo" mat-raised-button (click)="eliminar()" *ngIf="idParo>'0'  && estatusantes=='A' && referencia!='ADMIN'" >
+          <mat-icon class="iconoRedonde" svgIcon="propioInactivar"></mat-icon>
+          Inactivar
+        </button>
+        <button class="botonNo" mat-raised-button (click)="copiar()" *ngIf="idParo>'0'">
+            <mat-icon class="iconoRedonde" svgIcon="propioCopiar"></mat-icon>
+            Copiar
+          </button>
+      <button class="botonNo" mat-raised-button (click)="cancelar()">
+          <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+        Cancelar
+    </button>
+  </div>
+  
+</div>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="addmask" version="1.1" x="0px" y="0px" width="32" height="32" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" style="fill: rgb(3, 90, 161);" viewbox="0 0 32 32">
+<g class="addon_content" transform="translate(-6,-9) scale(1,1)">
+	<g>
+		<defs>
+			<path class="mask_container" id="263_find_mask" d="M-18-18v72h72v-72H-18z M25.34,18.67c-0.1,0.2-2.47,4.83-7.34,4.83s-7.24-4.63-7.34-4.83L10.32,18l0.34-0.67    c0.1-0.2,2.47-4.83,7.34-4.83s7.24,4.63,7.34,4.83L25.68,18L25.34,18.67z" transform="translate(-6,-9) scale(1,1)" style="fill: rgb(3, 90, 161);"></path>
+		</defs>
+		<clipPath id="263_find_mask_1_">
+			<use xlink:href="#263_find_mask" overflow="visible"></use>
+		</clipPath>
+		
+	</g>
+	<path id="263_find_addon" d="M18,14c-4,0-6,4-6,4s2,4,6,4s6-4,6-4S22,14,18,14z M17.8,19.99c-1.6-0.08-2.76-1.17-3.41-1.99  c0.65-0.82,1.811-1.91,3.41-1.99C16.79,16.11,16,16.97,16,18S16.79,19.89,17.8,19.99z M18.2,19.99C19.21,19.89,20,19.03,20,18  s-0.79-1.89-1.8-1.99c1.6,0.08,2.76,1.17,3.41,1.99C20.96,18.82,19.8,19.91,18.2,19.99z" style="fill: rgb(3, 90, 161);"></path>
+</g>
+<g id="263_find_icon_placeholder" clip-path="url(#263_find_mask_1_)">
+	<g class="icnplhld">
+                	  	<!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<g xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" preserveAspectRatio="none" class="svgmask" style="fill: rgb(3, 90, 161);">
+<path d="M21,2H3C1,2,1,4,1,4v12c0,2,2,2,2,2h7l-2,3v1h8v-1l-2-3h7c2,0,2-2,2-2V4C23,4,23,2,21,2z M3,4h18v10H3V4z" style="fill: rgb(3, 90, 161);"></path>
+</g>
+  
+                	</g>
+</g>
+</svg>

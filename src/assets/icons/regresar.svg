@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" width="32" height="32" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve" preserveAspectRatio="none" viewbox="0 0 32 32">
+
+<g>
+	<defs>
+		<circle id="57129405_SVGID_1__focus" cx="32" cy="32" r="26"></circle>
+	</defs>
+	<use xlink:href="#57129405_SVGID_1__focus" class="stshockcolor" style="fill: rgb(3, 90, 161); overflow: visible;" data-st="fill:#92B4E1;;overflow:visible;"></use>
+	<clipPath id="57129405_SVGID_2__focus">
+		<use xlink:href="#57129405_SVGID_1__focus" style="overflow:visible;"></use>
+	</clipPath>
+	<polygon class="st0" points="6,58.001 6,47.012 57.999,16.989 58,58  " style="opacity:0.2;clip-path:url(#57129405_SVGID_2__focus);fill:#020200;;"></polygon>
+</g>
+<g>
+	<g>
+		<path class="st3" d="M22.4,18.376l-7,12.124c-0.534,0.928-0.534,2.072,0,3l7,12.125c0.829,1.435,2.664,1.928,4.098,1.099    c1.435-0.829,1.926-2.663,1.098-4.099L23.194,35H46c1.656,0,3-1.343,3-3c0-1.656-1.344-3-3-3H23.194l4.402-7.624    c0.828-1.435,0.337-3.27-1.098-4.097c-0.472-0.274-0.987-0.403-1.497-0.403C23.964,16.876,22.957,17.414,22.4,18.376z" style="fill:#DEDCD9;;"></path>
+	</g>
+	<g class="st1" style="opacity:0.5;;">
+		<path class="st2" d="M22.4,18.376l-7,12.124c-0.534,0.928-0.534,2.072,0,3l7,12.125c0.829,1.435,2.664,1.928,4.098,1.099    c1.435-0.829,1.926-2.663,1.098-4.099L23.194,35H46c1.656,0,3-1.343,3-3c0-1.656-1.344-3-3-3H23.194l4.402-7.624    c0.828-1.435,0.337-3.27-1.098-4.097c-0.472-0.274-0.987-0.403-1.497-0.403C23.964,16.876,22.957,17.414,22.4,18.376z" style="fill:#FFFFFF;;"></path>
+	</g>
+</g>
+</svg>

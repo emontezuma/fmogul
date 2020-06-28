@@ -1,0 +1,73 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div class="cabecera">
+      <mat-icon class="iconoDialogo" svgIcon="propioAreas"></mat-icon>
+      <p class="tituloDialogo">MANTENIMIENTO DE ÁREAS</p>
+    </div>
+    
+    <mat-card class="posicion">
+      <mat-card-content>
+        <div class ="lista">
+          <div class="tituloLinea" *ngIf="idParo>'0'">ID asignado por el sistema: {{idParo}}</div>
+          <div class="cadenaLarga">
+            <mat-form-field class="textoCompleto">
+            <input matInput [(ngModel)]="nombre" maxlength="100" placeholder="Nombre del área" autocomplete="off" [formControl]="nombre1" (input)="prefijos()">
+            <div class="ayuda" *ngIf="hayError1">Especifique el nombre del área</div>
+            <mat-hint class="ayuda2" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+            <mat-hint class="ayuda2" align="end">Quedan {{100 - nombre1.value.length}} carácter(es)</mat-hint>
+            </mat-form-field>
+            <mat-form-field class="textoMitad">
+              <input matInput type="number" [(ngModel)]="secuencia" maxlength="4" placeholder="Secuencia" autocomplete="off" [formControl]="secuencia1" [disabled]="idParo=='0'">
+            </mat-form-field>
+          </div>
+          <div class="cadenaLarga">
+            <mat-form-field class="textoMitad">
+            <input matInput [(ngModel)]="referencia" maxlength="30" placeholder="Referencia" autocomplete="off">
+            <mat-hint class="ayuda2" align="start"><strong>Campo opcional</strong> </mat-hint>
+            </mat-form-field>
+            <mat-form-field class="textoMitad">
+            <input matInput [(ngModel)]="prefijo" maxlength="30" placeholder="Prefijo a mostrar" autocomplete="off" [formControl]="prefijo1">
+            <div class="ayuda" *ngIf="hayError2">Especifique el prefijo</div>
+            <mat-hint class="ayuda2" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="cadenaLarga">
+            <div class="etiColor">Color</div>
+            <dx-color-box class="colores" [(value)]="colorhexa" applyButtonText="Aceptar" cancelButtonText="Cancelar"></dx-color-box>
+            <mat-form-field class="textoMitad">
+            <input matInput [(ngModel)]="imagen" maxlength="250" placeholder="Imagen a mostrar" autocomplete="off">
+            <mat-hint class="ayuda2" align="start"><strong>Campo opcional</strong> </mat-hint>
+            </mat-form-field>
+            <div class="operacionIcono"><img src="{{imagen}}" class="operacionImagen"></div>
+          </div>
+          <mat-checkbox class="tipoFecha4" [(ngModel)]="estatus" color="primary">Área activa</mat-checkbox>                
+          <div class="cadenaFinal">
+              <div class="pies">Creado por: {{creador}}</div><div class="pies2">{{fcreacion}}</div>
+            </div>
+            <div class="cadenaFinal">
+              <div class="pies">Modificado por: {{modificador}}</div><div class="pies2">{{fmodificacion}}</div>
+            </div>
+            
+           </div>
+
+    </mat-card-content>
+    </mat-card>
+  
+    <div mat-dialog-actions class="pie">
+        <button class="botonSi" mat-raised-button (click)="validar()">
+          <mat-icon class="iconoRedonde" svgIcon="propioGuardar"></mat-icon>
+          Guardar
+        </button>
+        <button class="botonNo" mat-raised-button (click)="eliminar()" *ngIf="idParo>'0'  && estatusantes=='A'">
+            <mat-icon class="iconoRedonde" svgIcon="propioInactivar"></mat-icon>
+            Inactivar
+          </button>
+          <button class="botonNo" mat-raised-button (click)="copiar()" *ngIf="idParo>'0'">
+              <mat-icon class="iconoRedonde" svgIcon="propioCopiar"></mat-icon>
+              Copiar
+            </button>
+        <button class="botonNo" mat-raised-button (click)="cancelar()">
+            <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+          Cerrar
+      </button>
+    </div>
+</div>

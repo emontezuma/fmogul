@@ -1,0 +1,19 @@
+<div id="todo" ng-app="app" ng-controller="AppCtrl" class="mat-typography"> 
+  <div class="detalleOperaciones" > 
+    <mat-grid-list #gridCabecera class="cabeceras" [cols]="gridCols" rowHeight="220px">
+        <ng-container *ngFor="let celula of celulas; let i = index">
+          <mat-grid-tile>
+              <div [ngClass]="{operacionFondo:!itemSeleccionado[i], operacionFondoSel:itemSeleccionado[i]}">
+                <button [ngClass]="{operacionTarjeta:!itemSeleccionado[i], operacionTarjetaSel:itemSeleccionado[i]}" [style.background-color]="celula.colorhexa" mat-button (click)="mostrarMaquinas(i)">
+                  <div class="elBoton" fxLayout="column" fxLayoutAlign="space-evenly center" >
+                      <div class="operacionCelula"><div class="parrafo">{{ celula.prefijo }}</div></div>
+                      <div class="operacionIcono"><img src="{{ celula.imagen }}" class="operacionImagen"></div>
+                      <div class="operacionMadre"><div class="parrafo">{{ celula.tmaquinas }} máquina(s)</div></div>
+                    </div>
+              </button>
+              </div>
+            </mat-grid-tile>
+          </ng-container>
+      </mat-grid-list>
+  </div>
+</div>

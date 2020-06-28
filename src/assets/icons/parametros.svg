@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="addmask" version="1.1" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"  style="fill: rgb(3, 90, 161);" viewbox="0 0 32 32">
+<g class="addon_content" transform="translate(-7,-6) scale(0.9,0.9)">
+	<g>
+		<defs>
+			<path class="mask_container" id="272_checkmark_mask" d="M-36.97-35.5v144h144.01v-144H-36.97z M47.19,31.43L35.05,46.58c-0.71,0.89-1.78,1.43-2.92,1.49h-0.2    c-1.069,0-2.109-0.44-2.859-1.2l-5.93-6.07c-0.75-0.76-1.15-1.77-1.14-2.84s0.44-2.07,1.2-2.82C23.95,34.41,24.95,34,26,34    c1.08,0,2.1,0.43,2.86,1.21l2.779,2.84l9.311-11.62c0.77-0.96,1.91-1.5,3.13-1.5c0.9,0,1.79,0.31,2.5,0.879    C48.3,27.19,48.57,29.71,47.19,31.43z" transform="translate(-7,-6) scale(0.9,0.9)" style="fill: rgb(3, 90, 161);"></path>
+		</defs>
+		<clipPath id="272_checkmark_mask_1_">
+			<use xlink:href="#272_checkmark_mask" overflow="visible"></use>
+		</clipPath>
+	</g>
+	<path d="M31.933,46.073c-0.537,0-1.053-0.216-1.43-0.602l-5.935-6.069c-0.772-0.79-0.758-2.057,0.032-2.828  c0.789-0.772,2.056-0.758,2.828,0.031l4.356,4.455l10.729-13.382c0.693-0.862,1.951-1,2.812-0.31c0.862,0.691,1,1.95,0.31,2.812  L33.493,45.324c-0.358,0.446-0.891,0.719-1.462,0.747C31.998,46.072,31.965,46.073,31.933,46.073z" style="fill: rgb(3, 90, 161);"></path>
+</g>
+<g id="272_checkmark_icon_placeholder" clip-path="url(#272_checkmark_mask_1_)">
+	<g class="icnplhld">
+                	  	<!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<g version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" preserveAspectRatio="none" class="svgmask">
+<path d="M43,8H5c-1.657,0-3,1.343-3,3v26c0,1.657,1.343,3,3,3h38c1.657,0,3-1.343,3-3V11C46,9.343,44.657,8,43,8z M17,10.5
+	c0.828,0,1.5,0.672,1.5,1.5s-0.672,1.5-1.5,1.5s-1.5-0.672-1.5-1.5S16.172,10.5,17,10.5z M12,10.5c0.828,0,1.5,0.672,1.5,1.5
+	s-0.672,1.5-1.5,1.5s-1.5-0.672-1.5-1.5S11.172,10.5,12,10.5z M7,10.5c0.828,0,1.5,0.672,1.5,1.5S7.828,13.5,7,13.5
+	S5.5,12.828,5.5,12S6.172,10.5,7,10.5z M44,37c0,0.553-0.447,1-1,1H5c-0.552,0-1-0.447-1-1V16h40V37z" style="fill: rgb(3, 90, 161);"></path>
+</g>
+  
+                	</g>
+</g>
+</svg>

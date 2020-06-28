@@ -1,0 +1,59 @@
+<div id="todo" ng-app="app" ng-controller="AppCtrl" class="mat-typography">
+  <div>
+    <mat-grid-list id="cabecera" #gridAcciones class="acciones" [cols]="gridCols" rowHeight="56px">
+      <mat-grid-tile>
+        <div class="accion">
+          <button [ngClass]="{itemBoton:!seleccion01, itemBotonSeleccionado:seleccion01}" mat-button (click)="opcion10()">
+            <mat-icon class="itemIcon" svgIcon="propioCelula"></mat-icon>
+            Por célula
+          </button>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="accion">
+          <button [ngClass]="{itemBoton:!seleccion02, itemBotonSeleccionado:seleccion02}" mat-button (click)="opcion20()">
+            <mat-icon class="itemIcon" svgIcon="propioMaquinas"></mat-icon>
+            Por máquina
+          </button>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="accion">
+          <button [ngClass]="{itemBoton:!seleccion03, itemBotonSeleccionado:seleccion03}" mat-button (click)="opcion30()">
+            <mat-icon class="itemIcon" svgIcon="propioAreas"></mat-icon>
+            Por área
+          </button>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile class="buscador">
+          <div>
+            <mat-form-field floatLabel="never">
+              <input #txtBuscar matInput class="etiquetas"type="text" [(ngModel)]="textoBuscar" (keydown.enter)="filtrar()">
+              <mat-placeholder class="etiquetas">Filtrar</mat-placeholder>
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+        
+      <mat-grid-tile class="gridBotones">
+        <button class="botonDerecho" mat-fab color (click)="buscar()" matTooltip = "{{ toolTipBuscar }}" matTooltipClass = "toolTip">
+          <mat-icon class="miIcon" svgIcon="propioBuscar"></mat-icon>
+        </button>
+        <button class="botonDerecho" mat-fab color (click)="soloAlarmados()" matTooltip = "{{ toolTipFiltrar }}" matTooltipClass = "toolTip">
+          <mat-icon class="miIcon" [svgIcon]="iconoAlarma"></mat-icon>
+        </button>
+        <button class="botonDerecho" mat-fab color (click)="descargar()" matTooltip = "{{ toolTipDescargar }}" matTooltipClass = "toolTip">
+            <mat-icon class="miIcon" svgIcon="propioDescargar"></mat-icon>
+          </button>
+        <button class="botonDerecho" mat-fab color (click)="refrescar()" matTooltip = "{{ toolTipRefrescar }}" matTooltipClass = "toolTip">
+          <mat-icon class="miIcon" svgIcon="propioRefrescar"></mat-icon>
+        </button>
+        
+      </mat-grid-tile>        
+      
+    </mat-grid-list>   
+  </div>
+
+  <div class="contenidoPagina" [@routerTransition2]="getState(o)">
+    <router-outlet #o="outlet"></router-outlet>
+  </div>
+</div>

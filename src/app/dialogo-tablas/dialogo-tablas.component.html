@@ -1,0 +1,51 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div class="cabecera">
+      <p class="tituloDialogo">{{titFiltro}}</p>
+    </div>
+  
+    <mat-card class="posicion">
+      <mat-card-content>
+
+<div class="prueba">
+    <mat-radio-group [(ngModel)]="tRegistros">
+        <mat-radio-button class="tipoFecha" value="1" color="primary">{{todosRegs}}</mat-radio-button>
+        <mat-radio-button class="tipoFecha" value="2" color="primary">Tomar de la lista</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="lista">
+      <ng-container class="lista">
+      <mat-selection-list [(ngModel)]="selecciones" [disabled]="tRegistros=='1'" color="primary">
+          <mat-list-option *ngFor="let dato of datos; let i = index" [(value)]="dato.id" [selected]="dato.sel>'0'" checkboxPosition="before" color="primary">
+          <div class="cajaLista">
+            <div class="iconoLista"><mat-icon class="iconoRedonde" svgIcon="propioCelula"></mat-icon></div>
+            <div class="textoLista">{{dato.prefijo}}</div>
+          </div>
+          </mat-list-option>
+        </mat-selection-list>
+      </ng-container>
+  </div>
+  <div class="seleccion">
+      <div class="selector"><mat-form-field class="tipoFecha3">
+        <mat-select [(ngModel)]="miSeleccion" (selectionChange)="seleccion($event)" [disabled]="tRegistros=='1'">
+        <mat-option value="1">Marcar todos</mat-option>
+        <mat-option value="2">Desmarcar todos</mat-option>
+      </mat-select>
+      </mat-form-field>
+    </div>
+      <div class="filtrar"><mat-form-field *ngIf="verBuscar">
+        <input #txtBuscar matInput class="etiquetas"type="text" [(ngModel)]="textoBuscar" (keydown.enter)="filtrar()">
+        <mat-placeholder class="etiquetas">Buscar</mat-placeholder>
+      </mat-form-field>
+    </div>
+  </div>
+
+</mat-card-content>
+
+</mat-card>
+<div mat-dialog-actions class="pie">
+    <button class="botonSi" mat-raised-button (click)="validar()">Aceptar
+        <mat-icon class="iconoRedonde" svgIcon="propioVobo"></mat-icon>
+      </button>
+      <button class="botonNo" mat-raised-button (click)="cancelar()">Cancelar</button>
+    </div>
+</div>

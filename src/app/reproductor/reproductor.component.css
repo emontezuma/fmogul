@@ -1,0 +1,61 @@
+.marquee {
+    color: #035AA1 !important;
+    margin: 30px auto;
+    display: block;
+    width: 100%;
+    height: 60px;
+ }
+
+ .marquesina li {
+     display: inline-block;
+     font-size: 40px;
+     line-height: 40px;
+     min-width: 50%;
+
+ }
+
+ #pie {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 45px;
+    min-height: 45px !important;
+    width: 100% !important;
+    background-color: whitesmoke;
+    
+}
+
+
+
+.botonCronos 
+{
+    height: 50px !important;
+    background-color: rgb(250, 183, 2) !important;
+    -ms-transform: skew(-40deg); /* IE 9 */
+    -webkit-transform: skew(-40deg); /* Safari */
+    transform: skew(-40deg);
+}
+
+.mensajeBarra {
+    flex: 1 1 auto;
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+
+.logoCronos 
+{
+    width: 220px !important;
+    height: 50px !important;
+    top: 0 !important;
+    left: 0;
+    margin-top: -20px !important;
+    margin-left: -30px !important;
+    -ms-transform: skewX(40deg); /* IE 9 */
+    -webkit-transform: skewX(40deg); /* Safari */
+    transform: skewX(40deg);
+    padding: 20px;
+}

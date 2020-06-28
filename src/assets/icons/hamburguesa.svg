@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="32" height="32" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve" preserveAspectRatio="none" viewbox="0 0 32 32">
+
+<g>
+	<defs>
+		<path id="57185080_SVGID_1__focus" d="M52,33c0,1.657-1.343,3-3,3H15c-1.657,0-3-1.343-3-3v-2c0-1.657,1.343-3,3-3h34c1.657,0,3,1.343,3,3V33z     M52,45c0-1.656-1.343-3-3-3H15c-1.657,0-3,1.344-3,3v2c0,1.657,1.343,3,3,3h34c1.657,0,3-1.343,3-3V45z M52,17    c0-1.657-1.343-3-3-3H15c-1.657,0-3,1.343-3,3v2c0,1.657,1.343,3,3,3h34c1.657,0,3-1.343,3-3V17z"></path>
+	</defs>
+	<use xlink:href="#57185080_SVGID_1__focus" class="stshockcolor" style="fill: rgb(3, 90, 161); overflow: visible;" data-st="fill:#75A2D8;;overflow:visible;"></use>
+	<clipPath id="57185080_SVGID_2__focus">
+		<use xlink:href="#57185080_SVGID_1__focus" style="overflow:visible;"></use>
+	</clipPath>
+	<g class="st1" style="clip-path:url(#57185080_SVGID_2__focus);;">
+		<polygon class="st0" points="42.393,14 12,14 12,50 21.608,50   " style="opacity:0.3;fill:#FFFFFF;;"></polygon>
+	</g>
+</g>
+</svg>

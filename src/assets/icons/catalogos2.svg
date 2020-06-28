@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" width="32" height="32" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve" preserveAspectRatio="none" viewbox="0 0 32 32">
+
+<g>
+	<defs>
+		<path id="575339250_SVGID_1_" d="M52,58c0,1.657-1.343,3-3,3H15c-1.657,0-3-1.343-3-3V6c0-1.657,1.343-3,3-3h34c1.657,0,3,1.343,3,3V58z"></path>
+	</defs>
+	<use xlink:href="#575339250_SVGID_1_" class="stshockcolor" style="fill: rgb(3, 90, 161); overflow: visible;" data-st="fill:#A28156;;overflow:visible;"></use>
+	<clipPath id="575339250_SVGID_2_">
+		<use xlink:href="#575339250_SVGID_1_" style="overflow:visible;"></use>
+	</clipPath>
+	<g class="st4" style="clip-path:url(#575339250_SVGID_2_);;">
+		<polygon class="st1" points="52,3 52,73.495 11.298,3   " style="opacity:0.15;fill:#F7D11A;;"></polygon>
+		<polygon class="st3" points="52,3 52,73.495 11.298,3   " style="opacity:0.15;fill:#FFFFFF;;"></polygon>
+	</g>
+	<g class="st4" style="clip-path:url(#575339250_SVGID_2_);;">
+		<defs>
+			<path id="575339250_SVGID_3_" d="M48,39H16V25h32V39z M48,7H16v14h32V7z M48,43H16v14h32V43z"></path>
+		</defs>
+		<use xlink:href="#575339250_SVGID_3_" style="overflow:visible;opacity:0.3;fill:#FFFFFF;"></use>
+		<clipPath id="575339250_SVGID_4_">
+			<use xlink:href="#575339250_SVGID_3_" style="overflow:visible;opacity:0.3;"></use>
+		</clipPath>
+		<g class="st5" style="clip-path:url(#575339250_SVGID_4_);;">
+			<polygon class="st0" points="52,3 52,73.495 11.298,3    " style="opacity:0.3;fill:#FFFFFF;;"></polygon>
+			<g>
+				<g class="st6" style="opacity:0.6;;">
+					<path class="stshockcolor" d="M40,25l-1.731,3c-0.357,0.619-1.018,1-1.732,1h-9.072c-0.714,0-1.375-0.381-1.732-1L24,25H40z M24,7       l1.732,3c0.357,0.619,1.018,1,1.732,1h9.072c0.715,0,1.375-0.381,1.732-1L40,7H24z M24,43l1.732,3c0.357,0.619,1.018,1,1.732,1       h9.072c0.715,0,1.375-0.381,1.732-1L40,43H24z" style="fill: rgb(3, 90, 161);" data-st="fill:#A28156;;"></path>
+				</g>
+				<g class="st2" style="opacity:0.15;;">
+					<path d="M40,25l-1.731,3c-0.357,0.619-1.018,1-1.732,1h-9.072c-0.714,0-1.375-0.381-1.732-1L24,25H40z M24,7l1.732,3       c0.357,0.619,1.018,1,1.732,1h9.072c0.715,0,1.375-0.381,1.732-1L40,7H24z M24,43l1.732,3c0.357,0.619,1.018,1,1.732,1h9.072       c0.715,0,1.375-0.381,1.732-1L40,43H24z"></path>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,21 @@
+<div id="todo" ng-app="app" ng-controller="AppCtrl" class="mat-typography">
+    <div class="contenidoPagina" [@flyInOut]>
+        <router-outlet #o="outlet"></router-outlet>
+    </div>
+
+    <mat-toolbar id="pie" *ngIf="marquesina.length>0" class="mat-elevation-y3">
+        <mat-toolbar-row>
+            <marquee direction="left" scrollamount="8">
+                <ul class="marquesina">
+                    <li>
+                        {{ marquesina}}
+                    </li>
+                </ul>
+            </marquee>
+        <button class = "botonCronos" mat-raised-button (click) = "irCronos()">
+            <img class="logoCronos" src="{{ iconoCronos }}">
+        </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+</div>

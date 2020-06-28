@@ -1,0 +1,40 @@
+<div class="contenidoDemo" class="mat-typography">
+  <div mat-dialog-title class="cabecera">
+    <mat-icon class="iconoDialogo" svgIcon="propioLlamadas"></mat-icon>
+      <p class="tituloDialogo">GENERAR SOLICITUD DE ATENCIÓN</p>
+    </div>
+
+  <div mat-dialog-title class="quien">
+      Requester: {{data.requester}}
+    </div>
+  <div mat-dialog-content class="contenido" *ngIf="visible">
+    Por favor detalle de la situación que está observando en su máquina
+    </div>
+    <br>
+    <div class="formulario" >
+      <mat-card class="posicion">
+          <mat-card-content>
+            <mat-form-field class="campo">
+              <textarea matInput #campo1 maxlength="200" cdkTextareaAutosize
+              cdkAutosizeMinRows="3"
+              cdkAutosizeMaxRows="3" value="" [(ngModel)]="data.detalle">
+              </textarea>
+              <mat-placeholder class="etiquetas">Información adicional de la falla</mat-placeholder>
+              <mat-hint class="ayuda" align="start"><strong>Este campo es opcional</strong> </mat-hint>
+              <mat-hint class="ayuda" align="end">Quedan {{200 - campo1.value.length}} carácter(es)</mat-hint>
+            </mat-form-field>
+          </mat-card-content>
+      </mat-card>
+  </div>
+  <div mat-dialog-actions class="pie">
+    <button class="botonSi" mat-raised-button [mat-dialog-close]="data" (click)="aceptar()">
+        <mat-icon class="iconoRedonde" svgIcon="propioEnLlamada"></mat-icon>
+        Generar la solicitud
+    </button>
+    <button class="botonNo" mat-raised-button [mat-dialog-close]="data" (click)="cancelar()">
+        <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+        Cancelar</button>
+  </div>
+
+  
+</div>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="addmask" version="1.1"  x="0px" y="0px" width="32" height="32" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" viewbox="0 0 32 32">
+<g class="icnplhld">
+                	  	<!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<g xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve" preserveAspectRatio="none" class="svgmask">
+
+<g>
+	<defs>
+		<path id="57870618_SVGID_1__focus" d="M23,58h-6l3.751-14h6L23,58z M41,58h6l-3.751-14h-6L41,58z M35,8c0-1.104-0.896-2-2-2h-2    c-1.104,0-2,0.896-2,2v4c0,1.104,0.896,2,2,2h2c1.104,0,2-0.896,2-2V8z"></path>
+	</defs>
+	<use xlink:href="#57870618_SVGID_1__focus" class="stshockcolor" style="fill: rgb(147, 104, 78); overflow: visible;" data-st="fill:#A6A69F;;overflow:visible;"></use>
+	<clipPath id="57870618_SVGID_2__focus">
+		<use xlink:href="#57870618_SVGID_1__focus" style="overflow:visible;"></use>
+	</clipPath>
+	<g class="st1" style="clip-path:url(#57870618_SVGID_2__focus);;">
+		<polygon class="st4" points="44.856,50 19.144,50 23.763,58 40.237,58   " style="opacity:0.3;fill:#231F20;;"></polygon>
+	</g>
+</g>
+<g>
+	<defs>
+		<rect id="57870618_SVGID_3__focus" x="8" y="15" width="48" height="30"></rect>
+	</defs>
+	<use xlink:href="#57870618_SVGID_3__focus" style="overflow:visible;fill:#DEDCD9;"></use>
+	<clipPath id="57870618_SVGID_4__focus">
+		<use xlink:href="#57870618_SVGID_3__focus" style="overflow:visible;"></use>
+	</clipPath>
+	<g class="st2" style="clip-path:url(#57870618_SVGID_4__focus);;">
+		<polygon class="st0" points="32.906,50 4,50 4,10 56,10   " style="opacity:0.3;fill:#FFFFFF;;"></polygon>
+	</g>
+</g>
+<g>
+	<defs>
+		<path id="57870618_SVGID_5__focus" d="M60,15H4v-5h56V15z M60,45H4v5h56V45z"></path>
+	</defs>
+	<use xlink:href="#57870618_SVGID_5__focus" class="stshockcolor" style="fill: rgb(147, 104, 78); overflow: visible;" data-st="fill:#A6A69F;;overflow:visible;"></use>
+	<clipPath id="57870618_SVGID_6__focus">
+		<use xlink:href="#57870618_SVGID_5__focus" style="overflow:visible;"></use>
+	</clipPath>
+	<g class="st3" style="clip-path:url(#57870618_SVGID_6__focus);;">
+		<polygon class="st0" points="32.906,50 4,50 4,10 56,10   " style="opacity:0.3;fill:#FFFFFF;;"></polygon>
+	</g>
+</g>
+</g>
+  
+                	</g>
+<g class="addon_content" transform="translate(-5,-9) scale(0.8,0.8)">
+	<g id="57_zoom_zoom_x2F_details">
+		<g>			
+				<rect x="52.163" y="50.262" transform="matrix(0.7068 -0.7074 0.7074 0.7068 -22.3944 54.0927)" fill="#93C1CF" width="3.803" height="7.606"></rect>
+			
+				<rect x="52.163" y="50.262" transform="matrix(0.7068 -0.7074 0.7074 0.7068 -22.3944 54.0927)" opacity="0.15" width="3.803" height="7.606"></rect>
+		</g>
+		<circle fill="#DEDCD9" fill-opacity="0.8" cx="45" cy="45" r="9"></circle>
+		<path fill="#4F4F4F" d="M63.137,58.969l0.021-0.021l-7.498-5.976l-2.689,2.688   l5.977,7.498l0.021-0.021C59.502,63.67,60.239,64,61.053,64C62.681,64,64,62.681,64,61.053C64,60.239,63.67,59.502,63.137,58.969z"></path>
+		<path fill="#93C1CF" d="M57,44.999C57,51.627,51.627,57,44.999,57   C38.372,57,33,51.627,33,44.999C33,38.372,38.372,33,44.999,33C51.627,33,57,38.372,57,44.999z M45,37c-4.418,0-8,3.583-8,7.999   C37,49.418,40.582,53,45,53c4.419,0,8-3.582,8-8.001C53,40.583,49.419,37,45,37z"></path>
+	</g>
+</g>
+</svg>

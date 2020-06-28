@@ -1,0 +1,51 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div class="cabecera">
+        <mat-icon class="iconoDialogo" svgIcon="propioReportes"></mat-icon>
+        <p class="tituloDialogo">Reporte de mantenimiento (Cierre de llamada)</p>
+      </div>
+    
+        <mat-card class="posicion">
+            <mat-card-content>
+              <div class ="lista">
+               <mat-form-field class="parte">
+                <mat-select [(ngModel)]="fallaOriginal" placeholder="Falla confirmada" [formControl]="fallaF" required>
+                  <mat-option *ngFor="let falla of fallas" [(value)]="falla.id">{{falla.prefijo}}  </mat-option>
+                </mat-select>
+                <mat-hint class="ayudas" *ngIf="hayError1" align="start"><strong>Este campo es obligatorio</strong> </mat-hint>
+              </mat-form-field>
+              
+              <mat-form-field class="parte">
+                <mat-select [(value)]="tipoFalla" placeholder="Tipo de mantenimiento" [formControl]="tipoF" required>
+                  <mat-option value="1">CORRECTIVO</mat-option>
+                  <mat-option value="2">MEJORA</mat-option>
+                  <mat-option value="3">APOYO</mat-option>
+                  <mat-option value="4">PREVENTIVO</mat-option>
+                  <mat-option value="5">PREDICTIVO</mat-option>
+                  <mat-option value="6">OTRO</mat-option>
+                </mat-select>
+                <mat-hint class="ayudas" *ngIf="hayError2" align="start"><strong>Este campo es obligatorio</strong> </mat-hint>
+                </mat-form-field>
+                <br>
+                <mat-form-field class="detalle">
+                <textarea matInput #detalle maxlength="200" cdkTextareaAutosize
+                cdkAutosizeMinRows="4" cdkAutosizeMaxRows="4" value="" [(ngModel)]="detalleFalla" [formControl]="detalleF" required >{{detalleFalla}}</textarea>
+                <mat-placeholder class="etiquetas">Acciones correctivas</mat-placeholder>
+                
+                <mat-hint class="ayudas" *ngIf="hayError3" align="start"><strong>Este campo es obligatorio</strong> </mat-hint>
+                <mat-hint class="ayuda" align="end">Quedan {{200 - detalle.value.length}} carácter(es)</mat-hint>
+              </mat-form-field>
+              </div>
+            </mat-card-content>
+        </mat-card>
+    <div mat-dialog-actions class="pie">
+      <button class="botonSi" mat-raised-button (click)="validar()">Cerrar llamada y generar reporte
+          <mat-icon class="iconoRedonde" svgIcon="propioVobo"></mat-icon>
+      </button>
+      <div class="tiempo">
+          {{ tiempoRestante }}
+        </div>
+    </div>
+    <div class="footer">
+      No podrá cerrar esta ventana hasta completar y guardar el formulario
+    </div>
+  </div>

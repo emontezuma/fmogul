@@ -1,0 +1,25 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div class="cabecera">
+      <mat-icon class="iconoDialogo" svgIcon="propioFiltrar"></mat-icon>
+      <p class="tituloDialogo">NUEVA CONSULTA</p>
+    </div>
+  
+    <mat-card class="posicion">
+      <mat-card-content>
+      <mat-form-field class="etiquetas">
+      <input matInput class="etiquetas" maxlength="50" type="text"  [formControl]="nombreC" required>
+      <mat-placeholder class="etiquetas">Nombre de la consulta</mat-placeholder>
+        <mat-error class="ayuda" *ngIf="nombreC.hasError('required') || hayError">Especifique el nombre de la consulta</mat-error>
+        <mat-hint class="ayuda" align="start"><strong>Este campo es obligatorio</strong> </mat-hint>
+        <mat-hint class="ayuda" align="end">Quedan {{50 - nombreC.value.length}} carácter(es)</mat-hint>
+      </mat-form-field>
+       </mat-card-content>
+    </mat-card>
+  
+  <div mat-dialog-actions class="pie">
+    <button class="botonSi" mat-raised-button (click)="validar()">Aceptar
+      <mat-icon class="iconoRedonde" svgIcon="propioVobo"></mat-icon>
+    </button>
+    <button class="botonNo" mat-raised-button (click)="cancelar()">Cancelar</button>
+  </div>
+</div>

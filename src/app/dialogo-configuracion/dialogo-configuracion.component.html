@@ -1,0 +1,120 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div class="cabecera">
+      <mat-icon class="iconoDialogo" svgIcon="propioParametros"></mat-icon>
+      <p class="tituloDialogo">PARÁMETROS DEL SISTEMA</p>
+    </div>
+    
+    <mat-card class="posicion">
+      <mat-card-content>
+        <div class ="lista">
+          
+          <div class="tituloLinea">Información general</div>
+          <div class="cadenaLarga">
+          <mat-form-field class="textoCompleto">
+            <input matInput [(ngModel)]="nPlanta" maxlength="100" placeholder="Nombre de la planta" autocomplete="off" [formControl]="nPlanta1">
+            <div class="ayuda" *ngIf="hayError01">Especifique el nombre de la planta</div>
+            <mat-hint class="ayuda2" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+            <mat-hint class="ayuda2" align="end">Quedan {{100 - nPlanta1.value.length}} carácter(es)</mat-hint>
+            </mat-form-field>
+            <mat-form-field class="textoTercio">
+              <input matInput maxlength="50" placeholder="Serial de MMCall" disabled [value]="serial">
+            </mat-form-field>
+           </div>
+        <div class="cadenaLarga">
+          <mat-form-field class="textoMitad">
+              <input matInput [(ngModel)]="clave" maxlength="50" placeholder="Clave única (Cronos)" autocomplete="off" [formControl]="clave1">
+              <div class="ayuda" *ngIf="hayError08">Especifique la clave de Cronos</div>
+              <mat-hint class="ayuda2" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+            </mat-form-field>
+            <mat-form-field class="textoMitad">
+                <input matInput type="number" [(ngModel)]="tiempoCierre" maxlength="6" placeholder="Cierre de reporte" autocomplete="off" [formControl]="tiempoCierre1">
+                <mat-hint class="ayuda2" align="start"><strong>Expresado en segundos</strong> </mat-hint>
+              </mat-form-field>
+        </div>
+        
+        <div class="tituloLinea">Información para los gráficos</div>
+        <div class="cadenaLarga">
+            <mat-form-field class="textoMitad">
+              <input matInput type="number" [(ngModel)]="mttr" maxlength="9" placeholder="MTTR esperado" autocomplete="off" [formControl]="mttr1" (input)="calculoMTTR()">
+              <span class="gris" matSuffix>{{ mttrH }}</span>
+              <div class="ayuda" *ngIf="hayError02">Especifique el valor</div>
+              <mat-hint class="ayuda2" align="start"><strong>Expresado en segundos</strong> </mat-hint>
+            </mat-form-field>
+            <mat-form-field class="textoMitad">
+              <input matInput [(ngModel)]="mttrlbl" maxlength="30" placeholder="Texto a escribir en el gráfico" autocomplete="off" [formControl]="mttrlbl1">
+              <div class="ayuda" *ngIf="hayError03">Especifique el texto</div>
+            </mat-form-field>
+          </div>
+          <div class="cadenaLarga">
+            <mat-form-field class="textoMitad">
+              <input matInput type="number" [(ngModel)]="mtbf" maxlength="9" placeholder="MTBF esperado" autocomplete="off" [formControl]="mtbf1" (input)="calculoMTBF()">
+              <span class="gris" matSuffix>{{ mtbfH }}</span>
+              <div class="ayuda" *ngIf="hayError04">Especifique el valor</div>
+              <mat-hint class="ayuda2" align="start"><strong>Expresado en segundos</strong> </mat-hint>
+            </mat-form-field>
+            <mat-form-field class="textoMitad">
+              <input matInput [(ngModel)]="mtbflbl" maxlength="30" placeholder="Texto a escribir en el gráfico" autocomplete="off" [formControl]="mtbflbl1">
+              <div class="ayuda" *ngIf="hayError05">Especifique el texto</div>
+            </mat-form-field>
+          </div>
+          <div class="cadenaLarga">
+              <mat-form-field class="textoMitad">
+                <input matInput type="number" [(ngModel)]="pareto" maxlength="9" placeholder="PCT divisor del pareto de fallas" autocomplete="off" [formControl]="pareto1">
+                
+                <div class="ayuda" *ngIf="hayError06">Especifique el valor</div>
+                <mat-hint class="ayuda2" align="start"><strong>Expresado en porcentaje</strong> </mat-hint>
+              </mat-form-field>
+              <mat-form-field class="textoMitad">
+                <input matInput [(ngModel)]="paretolbl" maxlength="30" placeholder="Texto a escribir en el gráfico" autocomplete="off" [formControl]="paretolbl1">
+                <div class="ayuda" *ngIf="hayError07">Especifique el texto</div>
+              </mat-form-field>
+            </div>
+            <div class="tituloLinea">Disponibilidad general por día (Aplica a todas las máquinas)</div>
+            <div class="cadenaLarga">
+              <mat-form-field class="textoCuarto">
+                <input matInput type="number" [(ngModel)]="lunes" maxlength="9" placeholder="Lunes" autocomplete="off" [formControl]="lunes1">
+                <mat-hint class="ayuda2" align="start"><strong>En segundos</strong> </mat-hint>
+              </mat-form-field>
+              <mat-form-field class="textoCuarto">
+                <input matInput type="number" [(ngModel)]="martes" maxlength="9" placeholder="Martes" autocomplete="off" [formControl]="martes1">
+                <mat-hint class="ayuda2" align="start"><strong>En segundos</strong> </mat-hint>
+              </mat-form-field>
+              <mat-form-field class="textoCuarto">
+                <input matInput type="number" [(ngModel)]="miercoles" maxlength="9" placeholder="Miércoles" autocomplete="off" [formControl]="miercoles1">
+                <mat-hint class="ayuda2" align="start"><strong>En segundos</strong> </mat-hint>
+              </mat-form-field>
+              <mat-form-field class="textoCuarto">
+                <input matInput type="number" [(ngModel)]="jueves" maxlength="9" placeholder="Jueves" autocomplete="off" [formControl]="jueves1">
+                <mat-hint class="ayuda2" align="start"><strong>En segundos</strong> </mat-hint>
+              </mat-form-field>
+                    
+            </div>
+            <div class="cadenaLarga">
+                <mat-form-field class="textoCuarto">
+                  <input matInput type="number" [(ngModel)]="viernes" maxlength="9" placeholder="Viernes" autocomplete="off" [formControl]="viernes1">
+                  <mat-hint class="ayuda2" align="start"><strong>En segundos</strong> </mat-hint>
+                </mat-form-field>
+                <mat-form-field class="textoCuarto">
+                  <input matInput type="number" [(ngModel)]="sabado" maxlength="9" placeholder="Sábado" autocomplete="off" [formControl]="sabado1">
+                  <mat-hint class="ayuda2" align="start"><strong>En segundos</strong> </mat-hint>
+                </mat-form-field>
+                <mat-form-field class="textoCuarto">
+                  <input matInput type="number" [(ngModel)]="domingo" maxlength="9" placeholder="Domingo" autocomplete="off" [formControl]="domingo1">
+                  <mat-hint class="ayuda2" align="start"><strong>En segundos</strong> </mat-hint>
+                </mat-form-field>
+              </div>
+
+  </div>
+    </mat-card-content>
+    </mat-card>
+  
+  <div mat-dialog-actions class="pie">
+    <button class="botonSi" mat-raised-button (click)="validar()">
+      <mat-icon class="iconoRedonde" svgIcon="propioGuardar"></mat-icon>
+      Guardar
+    </button>
+    <button class="botonNo" mat-raised-button (click)="cancelar()">
+        <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+      Cancelar</button>
+  </div>
+</div>

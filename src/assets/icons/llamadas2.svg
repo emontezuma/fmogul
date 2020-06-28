@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="addmask" version="1.1" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"  style="fill: rgb(3, 90, 161);" viewbox="0 0 32 32">
+<g class="addon_content" transform="translate(0,-19) scale(1,1)">
+	<g>
+		<defs>
+			<path class="mask_container" id="272_clock_mask" d="M-37-37v144h144V-37H-37z M35,48c-7.17,0-13-5.83-13-13s5.83-13,13-13s13,5.83,13,13S42.17,48,35,48z" transform="translate(0,-19) scale(1,1)" style="fill: rgb(3, 90, 161);"></path>
+		</defs>
+		<clipPath id="272_clock_mask_1_">
+			<use xlink:href="#272_clock_mask" overflow="visible"></use>
+		</clipPath>
+	</g>
+	<path d="M35,24c-6.07,0-11,4.93-11,11s4.93,11,11,11s11-4.93,11-11S41.07,24,35,24z M40.06,40.07c-0.3,0.29-0.68,0.43-1.06,0.43  c-0.39,0-0.77-0.14-1.06-0.44l-4-4C33.66,35.78,33.5,35.4,33.5,35v-7c0-0.83,0.67-1.5,1.5-1.5s1.5,0.67,1.5,1.5v6.38l3.56,3.561  C40.64,38.53,40.64,39.48,40.06,40.07z" style="fill: rgb(3, 90, 161);"></path>
+</g>
+<g id="272_clock_icon_placeholder" clip-path="url(#272_clock_mask_1_)">
+	<g class="icnplhld"><!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<g version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve" preserveAspectRatio="none" class="svgmask" style="fill: rgb(3, 90, 161);">
+<path d="M42.408,35.545l-6.826-4.171c-1.237-0.756-1.932-1.073-3.077-0.479c-1.145,0.596-2.246,2.417-4.24,2.417
+	s-4.876-1.771-8.341-5.237c-3.465-3.465-5.237-6.347-5.237-8.34c0-1.995,1.822-3.096,2.417-4.241
+	c0.594-1.145,0.276-1.84-0.479-3.077L12.454,5.59C11.698,4.354,11.04,4,10.149,4C9.301,4,8.223,4.56,6.906,5.508
+	C5.589,6.457,4,8.325,4,10.785s0.692,11.644,11.131,22.082s19.622,11.132,22.082,11.132s4.328-1.589,5.277-2.906
+	c0.948-1.317,1.508-2.395,1.508-3.243C43.998,36.959,43.645,36.301,42.408,35.545z" style="fill: rgb(3, 90, 161);"></path>
+</g></g>
+</g>
+</svg>

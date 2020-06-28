@@ -1,0 +1,68 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div class="cabecera">
+      <mat-icon class="iconoDialogo" svgIcon="propioAtenciones"></mat-icon>
+      <p class="tituloDialogo">MANTENIMIENTO DE PAROS</p>
+    </div>
+    
+    <mat-card class="posicion">
+      <mat-card-content>
+        <div class ="lista">
+          <div class="camposDiv">
+            <mat-form-field class="tipoDiv">
+              <mat-select [(value)]="esteTipo" placeholder="Tipo de paro" required>
+                <mat-option value="0">PLANEADO</mat-option>
+                <mat-option value="1">NO PLANEADO</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="fechaDiv">
+              <input #fechaP matInput [(ngModel)]="estaFecha" [matDatepicker]="picker1" placeholder="Fecha del paro" autocomplete="off" disabled="true">
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle> 
+              <mat-datepicker #picker1 disabled="false"></mat-datepicker>
+            </mat-form-field>
+          </div>
+          
+    <div class="camposDiv">
+      <mat-form-field class="maquina">
+          <mat-select [(value)]="esteParo" placeholder="Nombre del paro" required>
+            <mat-option *ngFor="let nParo of nParos" [(value)]="nParo.id">{{nParo.prefijo}}  </mat-option>
+          </mat-select>
+          <mat-error class="ayuda" *ngIf="hayError1">Seleccione el nombre del paro</mat-error>
+          <mat-hint class="ayuda" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+      </mat-form-field>
+      <mat-form-field class="maquina">
+        <input matInput type="number" [(ngModel)]="tiempoParo" maxlength="6" placeholder="Tiempo total del paro" autocomplete="off" [formControl]="tiempoParo1" (input)="convertir()">
+        <span class="gris" matSuffix>{{ tiempoParoH }}</span>
+        <mat-error class="ayuda" *ngIf="tiempoParo1.hasError('required') || hayError2">Seleccione la máquina asociada</mat-error>
+        <mat-hint class="ayuda2" align="start"><strong>Expresado en segundos</strong> </mat-hint>
+      </mat-form-field>      
+      </div>
+      <div class="camposDiv">
+        <mat-form-field class="maquina">
+            <mat-select [(value)]="estaMaquina" placeholder="Máquina asociada" required>
+              <mat-option *ngFor="let maquina of maquinas" [(value)]="maquina.id">{{maquina.prefijo}}  </mat-option>
+            </mat-select>
+            <mat-error class="ayuda" *ngIf="hayError3">Seleccione la máquina asociada</mat-error>
+            <mat-hint class="ayuda" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+            </mat-form-field>
+        </div>
+      <div class="camposDiv">
+      <mat-checkbox class="tipoFecha4" [(ngModel)]="checked" color="primary">Contabilizar este paro en la disponibilidad de la máquina</mat-checkbox>
+    </div>
+    </div>
+    </mat-card-content>
+    </mat-card>
+  <div mat-dialog-actions class="pie">
+    <button class="botonSi" mat-raised-button (click)="validar()">
+      <mat-icon class="iconoRedonde" svgIcon="propioGuardar"></mat-icon>
+      Guardar
+    </button>
+    <button class="botonNo" mat-raised-button (click)="eliminar()" *ngIf="idParo>'0'">
+        <mat-icon class="iconoRedonde" svgIcon="propioEliminar"></mat-icon>
+        Eliminar
+      </button>
+      
+    <button class="botonNo" mat-raised-button (click)="cancelar()">
+        <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+      Cancelar</button>
+  </div>
+</div>

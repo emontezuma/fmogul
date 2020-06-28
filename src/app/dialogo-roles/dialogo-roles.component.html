@@ -1,0 +1,83 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div class="cabecera">
+      <mat-icon class="iconoDialogo" svgIcon="propioRoles"></mat-icon>
+      <p class="tituloDialogo">MANTENIMIENTO DE ROLES</p>
+    </div>
+    
+    <mat-card class="posicion">
+      <mat-card-content>
+        <div class ="lista">
+          <div class="segundaLinea">
+          <mat-form-field class="textoCompleto">
+            <input matInput [(ngModel)]="titulo" maxlength="30" placeholder="Nombre del rol" autocomplete="off" [formControl]="titulo1">
+            <div class="ayuda" *ngIf="hayError1">Especifique un nombre para el rol</div>
+            <mat-hint class="ayuda2" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+            <mat-hint class="ayuda2" align="end">Quedan {{30 - titulo1.value.length}} carácter(es)</mat-hint>
+          </mat-form-field>
+           </div>
+           <mat-checkbox class="tipoFecha4" [(ngModel)]="estatus" color="primary">Rol activo</mat-checkbox>                
+         <div class="tituloLinea">Acceso a opciones generales</div>
+         <div class="terceraLinea">
+            <mat-checkbox class="checks" [(ngModel)]="checked2" color="primary">Generar solicitudes de atención (solicitante)</mat-checkbox>
+            <mat-checkbox class="checks" [(ngModel)]="checked3" color="primary">Atender solicitudes de atención (técnios)</mat-checkbox>
+            <mat-checkbox class="checks" [(ngModel)]="checked4" color="primary">Generar cambios (SMED)</mat-checkbox>
+            <mat-checkbox class="checks" [(ngModel)]="checked5" color="primary">Visualizar el panel de control</mat-checkbox>
+            <mat-checkbox class="checks" [(ngModel)]="checked6" color="primary">Visualizar Gráficas</mat-checkbox>
+            <mat-checkbox class="checks" [(ngModel)]="checked21" color="primary">Exportar movimientos en formato CSV</mat-checkbox>
+          </div>
+          <div class="tituloLinea">Acceso a catálogos (recomendado a administradores)</div>
+          <div class="terceraLinea">
+             <mat-checkbox class="checks" [(ngModel)]="checked7" color="primary">Catálogo de células</mat-checkbox>
+             <mat-checkbox class="checks" [(ngModel)]="checked8" color="primary">Catálogo de máquinas</mat-checkbox>
+             <mat-checkbox class="checks" [(ngModel)]="checked9" color="primary">Catálogo de áreas</mat-checkbox>
+             <mat-checkbox class="checks" [(ngModel)]="checked10" color="primary">Catálogo de fallas</mat-checkbox>
+             <mat-checkbox class="checks" [(ngModel)]="checked11" color="primary">Catálogo de tablas generales</mat-checkbox>
+             <mat-checkbox class="checks" [(ngModel)]="checked12" color="primary">Catálogo de paros</mat-checkbox>
+             <mat-checkbox class="checks" [(ngModel)]="checked13" color="primary">Catálogo de pagers (para SMED)</mat-checkbox>
+             <mat-checkbox class="checks" [(ngModel)]="checked14" color="primary">Catálogo de # de parte (para SMED)</mat-checkbox>
+             <mat-checkbox class="checks" [(ngModel)]="checked15" color="primary">Catálogo de turnos</mat-checkbox>
+            </div>
+            <div class="tituloLinea">Acceso a configuración (solo para administradores)</div>
+            <div class="terceraLinea">
+               <mat-checkbox class="checks" [(ngModel)]="checked16" color="primary">Mantenimiento de roles</mat-checkbox>
+               <mat-checkbox class="checks" [(ngModel)]="checked17" color="primary">Mantenimiento de políticas de seguridad de contraseñas</mat-checkbox>
+               <mat-checkbox class="checks" [(ngModel)]="checked18" color="primary">Mantenimiento de usuarios</mat-checkbox>
+               <mat-checkbox class="checks" [(ngModel)]="checked19" color="primary">Configurar la aplicación</mat-checkbox>
+               <mat-checkbox class="checks" [(ngModel)]="checked20" color="primary">Licenciamiento y claves de la aplicación</mat-checkbox>
+               <mat-checkbox class="checks" [(ngModel)]="checked22" color="primary">Configurar el reproductor</mat-checkbox>
+               <mat-checkbox class="checks" [(ngModel)]="checked23" color="primary">Contabilizar reportes</mat-checkbox>
+            </div>
+          
+         
+        
+        <div class="cadenaFinal">
+            <div class="pies">Creado por: {{creador}}</div><div class="pies2">{{fcreacion}}</div>
+          </div>
+          <div class="cadenaFinal">
+            <div class="pies">Modificado por: {{modificador}}</div><div class="pies2">{{fmodificacion}}</div>
+          </div>
+          
+         </div>
+  
+  </mat-card-content>
+  </mat-card>
+  
+  <div mat-dialog-actions class="pie">
+      <button class="botonSi" mat-raised-button (click)="validar()">
+        <mat-icon class="iconoRedonde" svgIcon="propioGuardar"></mat-icon>
+        Guardar
+      </button>
+      <button class="botonNo" mat-raised-button (click)="eliminar()" *ngIf="idParo>'0'  && estatusantes=='A'">
+          <mat-icon class="iconoRedonde" svgIcon="propioInactivar"></mat-icon>
+          Inactivar
+        </button>
+        <button class="botonNo" mat-raised-button (click)="copiar()" *ngIf="idParo>'0'">
+            <mat-icon class="iconoRedonde" svgIcon="propioCopiar"></mat-icon>
+            Copiar
+          </button>
+      <button class="botonNo" mat-raised-button (click)="cancelar()">
+          <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+        Cerrar
+    </button>
+  </div>
+  </div>

@@ -1,0 +1,135 @@
+
+.seleccion .mat-select-panel {
+    background: rgba(3,90,161,0.1); 
+  }
+  
+.cabecera {
+    width: 100% !important;
+    height: 32px !important; 
+    padding: 2px;
+    color: #035AA1 !important;
+    background-color: rgba(3,90,161,0.1); 
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    }
+
+    .iconoDialogo {
+        text-align: left !important;
+        height: 32px;
+        widows: 32px;
+        flex: 1;
+    }
+   
+    .tituloDialogo {
+        flex: 15;
+        text-align: center;
+        margin: auto;
+    }
+
+
+.noticia {
+    width: 100% !important;
+    height: 28px !important; 
+    padding: 2px;
+    color: #035AA1 !important;
+    background-color: rgba(3,90,161,0.1); 
+    font-size: 17px !important;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.contenido {
+    font-size: 17px !important;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+
+.pie {
+    display: flex;
+}
+
+.botonSi {
+    font-size: 17px !important;
+    background-color: lightgreen;
+    font-weight: 600;
+    flex: 5;
+    }
+
+    .tiempo {
+        flex: 3
+    }
+
+.botonNo {
+    font-size: 17px !important;
+    }
+
+
+.detalle, .parte, .pager {
+    width: 95%;
+    font-size: 19px !important;
+}
+    
+    
+    .ayuda, .etiquetas {
+        font-size: 15px !important;
+    }
+
+    .ayudas {
+        font-size: 15px !important;
+        color: red;
+    }
+
+    .etiquetas {
+        font-size: 20px !important;
+        color:  #035AA1;
+    }
+    
+
+    .mat-focused .etiquetas {
+        color:  red;
+        font-size: 20px !important;
+        font-weight: 600;
+    }
+    
+    
+    .posicion
+    { margin-top: 5px !important;
+        margin-bottom: 10px !important;
+        }
+    .lista {
+        height: 300px !important;
+        overflow-x: hidden;
+        overflow-y: auto;
+     }
+    
+
+    .footer {
+        width: 100% !important;
+        height: 22px !important; 
+        padding: 2px;
+        color: red !important;
+        background-color: rgba(255,0,0,0.2); 
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        margin-top: 20px !important;
+        }
+
+        .tiempo {
+            height: 22px !important; 
+            padding: 2px;
+            color: red !important;
+            font-size: 19px !important;
+            font-weight: 500 !important;
+            justify-content: right;
+            text-align: right; 
+            align-items: top;
+            }
+    

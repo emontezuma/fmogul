@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" width="32" height="32" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve" preserveAspectRatio="none" viewbox="0 0 32 32">
+
+<g>
+	<g>
+		<defs>
+			<rect id="574330412_SVGID_3_" x="40.916" y="37.53" transform="matrix(0.707 -0.7072 0.7072 0.707 -18.3513 44.3098)" width="6.775" height="13.547"></rect>
+		</defs>
+		<use xlink:href="#574330412_SVGID_3_" class="stshockcolor" style="fill-rule: evenodd; clip-rule: evenodd; fill: rgb(3, 90, 161);" data-st="fill-rule:evenodd;clip-rule:evenodd;fill:#93C1CF;;"></use>
+		<use xlink:href="#574330412_SVGID_3_" class="st4" style="opacity:0.15;fill-rule:evenodd;clip-rule:evenodd;;"></use>
+	</g>
+	<g>
+		<defs>
+			<path id="574330412_SVGID_1_" d="M49,27c0,12.15-9.85,22-22,22S5,39.15,5,27S14.85,5,27,5S49,14.85,49,27z M27,11c-8.836,0-16,7.164-16,16     s7.164,16,16,16s16-7.164,16-16S35.836,11,27,11z"></path>
+		</defs>
+		<use xlink:href="#574330412_SVGID_1_" class="stshockcolor" style="fill-rule: evenodd; clip-rule: evenodd; fill: rgb(3, 90, 161); overflow: visible;" data-st="fill-rule:evenodd;clip-rule:evenodd;fill:#93C1CF;;overflow:visible;"></use>
+		<clipPath id="574330412_SVGID_2_">
+			<use xlink:href="#574330412_SVGID_1_" style="overflow:visible;"></use>
+		</clipPath>
+		<g class="st2" style="clip-path:url(#574330412_SVGID_2_);;">
+			<rect x="27" y="5" class="st0" width="22" height="44.241" style="opacity:0.3;fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;;"></rect>
+		</g>
+	</g>
+	<path class="st1" d="M60.462,53.038L60.5,53L47.145,42.355l-4.79,4.79L53,60.5l0.038-0.038C53.988,61.412,55.301,62,56.75,62   c2.899,0,5.25-2.351,5.25-5.25C62,55.301,61.412,53.988,60.462,53.038z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#4F4F4F;;"></path>
+</g>
+</svg>

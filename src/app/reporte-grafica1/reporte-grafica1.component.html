@@ -1,0 +1,56 @@
+<div id="todo" ng-app="app" ng-controller="AppCtrl" class="mat-typography">
+  <div>
+    <mat-grid-list id="cabecera" #gridAcciones class="acciones" [cols]="gridCols" rowHeight="56px">
+      <mat-grid-tile>
+        <div class="accion">
+          <button [ngClass]="{itemBoton:!seleccion01, itemBotonSeleccionado:seleccion01}" mat-button (click)="opcion10()">
+            <mat-icon class="itemIcon" svgIcon="propioMTTR"></mat-icon>
+            Tiempo de reparación (MTTR)
+          </button>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="accion">
+          <button [ngClass]="{itemBoton:!seleccion02, itemBotonSeleccionado:seleccion02}" mat-button (click)="opcion20()">
+            <mat-icon class="itemIcon" svgIcon="propioMTBF"></mat-icon>
+            Tiempo entre fallas (MTBF)
+          </button>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+      
+        <div class="accion">
+          <button [ngClass]="{itemBoton:!seleccion03, itemBotonSeleccionado:seleccion03}" mat-button (click)="opcion30()">
+            <mat-icon class="itemIcon" svgIcon="propioReloj2"></mat-icon>
+            Pareto de Fallas
+          </button>
+        </div>
+      </mat-grid-tile>
+        <mat-grid-tile class="gridBotones">
+            <button class="botonDerecho" mat-fab color (click)="editar()" matTooltip = "{{ toolEdTT }}" matTooltipClass = "toolTip" *ngIf="puedeEditar" [disabled]="graficando">
+                <mat-icon class="miIcon" svgIcon="propioEGrafico"></mat-icon>
+              </button>
+        <button class="botonDerecho" mat-fab color (click)="anterior()" matTooltip = "{{ toolAntTT }}" matTooltipClass = "toolTip" [disabled]="graficando">
+          <mat-icon class="miIcon" svgIcon="propioIzq"></mat-icon>
+        </button>
+        <button class="botonDerecho" mat-fab color (click)="siguiente()" matTooltip = "{{ toolSigTT }}" matTooltipClass = "toolTip" [disabled]="graficando">
+          <mat-icon class="miIcon" svgIcon="propioDer"></mat-icon>
+        </button>
+        <button class="botonDerecho" mat-fab color (click)="filtrar()" matTooltip = "{{ toolFilTT }}" matTooltipClass = "toolTip" [disabled]="graficando">
+          <mat-icon class="miIcon" svgIcon="propioFiltrar"></mat-icon>
+        </button>
+        <button class="botonDerecho" mat-fab color (click)="descargar_imagen()" matTooltip = "{{ toolDesTT }}" matTooltipClass = "toolTip">
+          <mat-icon class="miIcon" svgIcon="propioDI"></mat-icon>
+        </button>
+        <button class="botonDerecho" mat-fab color (click)="descargar_data()" matTooltip = "{{ toolDatTT }}" matTooltipClass = "toolTip">
+            <mat-icon class="miIcon" svgIcon="propioDD"></mat-icon>
+          </button>
+      </mat-grid-tile>        
+      
+    </mat-grid-list>   
+  </div>
+
+  <div class="contenidoPagina" [@routerTransition2]="getState(o)">
+    <router-outlet #o="outlet"></router-outlet>
+  </div>
+</div>

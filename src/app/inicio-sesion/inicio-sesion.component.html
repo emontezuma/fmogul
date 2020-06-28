@@ -1,0 +1,45 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div class="cabecera">
+      
+    <mat-icon class="iconoDialogo" svgIcon="propioCerrado"></mat-icon>
+      <p class="tituloDialogo">INICIO DE SESIÓN</p>
+    </div>
+  
+      <div class="formulario" >
+        <mat-card class="posicion">
+            <mat-card-content>
+                <div class ="lista">
+                    <div class="cadenaLarga">
+                      <mat-form-field class="textoCompleto">
+                      <input matInput [(ngModel)]="nombre" maxlength="50" placeholder="Perfil de usuario" autocomplete="off" [formControl]="nombre1" required>
+                      <mat-hint *ngIf="hayError1" class="ayuda" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+                      </mat-form-field>
+                    </div>
+                    <div class="cadenaLarga">
+                        <mat-form-field class="textoCompleto">
+                        <input matInput type="password" [(ngModel)]="clave" maxlength="50" placeholder="Contraseña" autocomplete="off" [formControl]="clave1" required>
+                        <mat-hint *ngIf="hayError2" class="ayuda" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+                        </mat-form-field>
+                      </div>
+                 
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div mat-dialog-actions class="pie">
+      <button class="botonSi" mat-raised-button (click)="validar()">
+          <mat-icon class="iconoRedonde" svgIcon="propioVobo"></mat-icon>
+          Iniciar sesión
+      </button>
+      <button class="botonNo" mat-raised-button (click)="cancelar()">
+          <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+          Salir</button>
+    </div>
+    <div mat-dialog-actions class="pie">
+        <button class="botonDos" mat-button (click)="enviarMail()">
+            <mat-icon class="iconoRedonde" svgIcon="propioiniPass"></mat-icon>
+            Olvidé mi contraseña
+        </button>
+      </div>
+    
+  </div>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="addmask" version="1.1" x="0px" y="0px" width="32" height="32" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve"  style="fill: rgb(3, 90, 161);" viewbox="0 0 32 32">
+<g class="addon_content">
+	<g>
+		<defs>
+			<path class="mask_container" id="55_reload_SVGID_1_" d="M-29.5-29.5v120h120v-120H-29.5z M30.5,40c-5.25,0-9.5-4.25-9.5-9.5s4.25-9.5,9.5-9.5s9.5,4.25,9.5,9.5    S35.75,40,30.5,40z" transform="translate(0,0)" style="fill: rgb(3, 90, 161);"></path>
+		</defs>
+		<clipPath id="55_reload_mask_1_">
+			<use xlink:href="#55_reload_SVGID_1_" overflow="visible"></use>
+		</clipPath>
+		
+	</g>
+	<path id="55_reload_addon" fill-rule="evenodd" clip-rule="evenodd" d="M38.06,26.62c-2.14-4.17-7.26-5.82-11.439-3.68  c-4.17,2.14-5.82,7.26-3.68,11.439c2.14,4.17,7.26,5.82,11.439,3.68C38.56,35.92,40.2,30.8,38.06,26.62z M35.73,32.19  c-0.931,2.88-4.03,4.47-6.91,3.54c-2.891-0.931-4.48-4.03-3.551-6.91c0.44-1.37,1.37-2.45,2.54-3.11L27,24l0.19,0.04l4.489,1.06  l-0.02,0.03l-0.99,1.89L29.68,28.9l-0.199,0.38l-0.82-1.74c-0.68,0.42-1.22,1.08-1.49,1.91c-0.6,1.85,0.42,3.84,2.271,4.43  c1.85,0.601,3.829-0.42,4.43-2.27c0.53-1.65-0.22-3.4-1.7-4.19l0.95-1.75C35.4,26.9,36.55,29.63,35.73,32.19z" style="fill: rgb(3, 90, 161);"></path>
+</g>
+<g id="55_reload_icon_placeholder" clip-path="url(#55_reload_mask_1_)">
+	<g class="icnplhld"><!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<g xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve" preserveAspectRatio="none" class="svgmask" style="fill: rgb(3, 90, 161);">
+<g id="55152633_Shape_5_xA0_Clipping_Path_1_">
+	<g>
+		<path d="M20,25c5.929,0,9-8.295,9-12S28.893,2,20,2c-8.893,0-9,7.295-9,11S14.071,25,20,25z M34.821,28.893    c-2.224-1.481-8.893-4.446-8.893-4.446S23.784,27,20,27s-5.929-2.554-5.929-2.554s-6.669,2.965-8.893,4.446    C2.956,30.375,2,38,2,38h36C38,38,37.438,30.637,34.821,28.893z" style="fill: rgb(3, 90, 161);"></path>
+	</g>
+</g>
+</g></g>
+</g>
+</svg>

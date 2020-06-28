@@ -1,0 +1,71 @@
+.cabecera {
+    width: 100% !important;
+    height: 32px !important; 
+    padding: 2px;
+    color: #035AA1 !important;
+    background-color: rgba(3,90,161,0.1); 
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    justify-content: center; 
+    align-items: center;
+    display: flex;
+    }
+
+    .cabeceraAlarma {
+        width: 100% !important;
+        height: 32px !important; 
+        padding: 2px;
+        color: red !important;
+        background-color: rgba(255,0,0,0.2); 
+        font-size: 22px !important;
+        font-weight: 600 !important;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        }
+        
+.contenido {
+    font-size: 18px !important;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    }
+
+
+    .pie {
+        margin-top: 25px !important;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        background-color: whitesmoke !important;
+        height: 40px !important;
+    }
+
+.botonSi {
+    font-size: 20px !important;
+    background-color: lightgreen;
+    font-weight: 600;
+    height: 45px;;
+    }
+
+    .botonOtro {
+        font-size: 20px !important;
+        height: 45px;;
+        }
+
+.botonNo {
+    font-size: 18px !important;
+    }
+
+ .iconoDialogo {
+     text-align: left !important;
+     height: 32px;
+     widows: 32px;
+     flex: 1;
+ }
+
+ .tituloDialogo {
+     flex: 15;
+     text-align: center;
+     margin: auto;
+ }

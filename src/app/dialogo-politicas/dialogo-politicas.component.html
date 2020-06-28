@@ -1,0 +1,94 @@
+<div class="contenidoDemo" class="mat-typography">
+  <div class="cabecera">
+    <mat-icon class="iconoDialogo" svgIcon="propioPoliticas"></mat-icon>
+    <p class="tituloDialogo">MANTENIMIENTO DE POLITICAS</p>
+  </div>
+  
+  <mat-card class="posicion">
+    <mat-card-content>
+      <div class ="lista">
+        <div class="segundaLinea">
+        <mat-form-field class="textoCompleto">
+          <input matInput [(ngModel)]="titulo" maxlength="30" placeholder="Nombre de la política" autocomplete="off" [formControl]="titulo1">
+          <div class="ayuda" *ngIf="hayError1">Especifique un nombre para la política</div>
+          <mat-hint class="ayuda2" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+          <mat-hint class="ayuda2" align="end">Quedan {{30 - titulo1.value.length}} carácter(es)</mat-hint>
+        </mat-form-field>
+         </div>
+      <div class="terceraLinea">
+        <mat-checkbox class="checksmitad" [(ngModel)]="checked1" color="primary">Para usuarios de un sólo uso</mat-checkbox>
+        <mat-form-field class="texto2">
+          <input matInput type="number" [(ngModel)]="caducidad" maxlength="4" placeholder="Días de uso (0=Indefinido)" autocomplete="off" [formControl]="caducidad1">
+        </mat-form-field>  
+           
+       </div>
+       <div class="terceraLinea">
+        <mat-checkbox class="checkstotal" [(ngModel)]="checked2" color="primary">El perfil requiere una contraseña</mat-checkbox>
+      </div>
+      <div class="terceraLinea">
+        <mat-checkbox class="checksmitad" [(ngModel)]="checked3" color="primary">La contraseña se vence</mat-checkbox>
+        <mat-form-field class="texto2">
+          <input matInput type="number" [(ngModel)]="diasvencimiento" maxlength="3" placeholder="Días de vencimiento (0=nunca vence)" autocomplete="off" [formControl]="diasvencimiento1">
+        </mat-form-field>  
+       </div>
+       <div class="terceraLinea">
+        <mat-form-field class="texto2">
+          <input matInput type="number" [(ngModel)]="aviso" maxlength="2" placeholder="Dias antes para avisar (0=no avisar)" autocomplete="off" [formControl]="aviso1">
+        </mat-form-field>  
+        <mat-form-field class="texto2">
+            <input matInput type="number" [(ngModel)]="usadas" maxlength="1" placeholder="Intentos para reusar contraseña (0=De inmediato)" autocomplete="off" [formControl]="usadas1">
+          </mat-form-field>
+       </div>
+       <div class="tituloLinea">Complejidad de la contraseña</div>
+       <div class="terceraLinea">
+          <mat-checkbox class="checksmitad" [(ngModel)]="checked4" color="primary">Debe contener números</mat-checkbox>
+          <mat-checkbox class="checksmitad" [(ngModel)]="checked5" color="primary">Debe combinar letras en mayús./minús.</mat-checkbox>
+        </div>
+        <div class="terceraLinea">
+          <mat-checkbox class="checksmitad" [(ngModel)]="checked6" color="primary">Debe contener car. especiales</mat-checkbox>
+          <mat-form-field class="texto2">
+          <input matInput type="number" [(ngModel)]="largo" maxlength="2" placeholder="Largo mínimo (0=cualquier)" autocomplete="off" [formControl]="largo1">
+        </mat-form-field>  
+       </div>
+     
+       <div class="cadenaLarga">
+        <div class="etiColor">Color</div>
+        <dx-color-box class="colores" [(value)]="colorhexa" applyButtonText="Aceptar" cancelButtonText="Cancelar"></dx-color-box>
+        <mat-form-field class="textoMitad">
+        <input matInput [(ngModel)]="imagen" maxlength="30" placeholder="Imagen a mostrar" autocomplete="off">
+        <mat-hint class="ayuda2" align="start"><strong>Campo opcional</strong> </mat-hint>
+        </mat-form-field>
+        <div class="operacionIcono"><img src="{{imagen}}" class="operacionImagen"></div>
+      </div>
+      <mat-checkbox class="tipoFecha4" [(ngModel)]="estatus" color="primary">Política activa</mat-checkbox>                
+      <div class="cadenaFinal">
+          <div class="pies">Creado por: {{creador}}</div><div class="pies2">{{fcreacion}}</div>
+        </div>
+        <div class="cadenaFinal">
+          <div class="pies">Modificado por: {{modificador}}</div><div class="pies2">{{fmodificacion}}</div>
+        </div>
+        
+       </div>
+
+</mat-card-content>
+</mat-card>
+
+<div mat-dialog-actions class="pie">
+    <button class="botonSi" mat-raised-button (click)="validar()">
+      <mat-icon class="iconoRedonde" svgIcon="propioGuardar"></mat-icon>
+      Guardar
+    </button>
+    <button class="botonNo" mat-raised-button (click)="eliminar()" *ngIf="idParo>'0' && estatusantes=='A'">
+        <mat-icon class="iconoRedonde" svgIcon="propioInactivar"></mat-icon>
+        Inactivar
+      </button>
+      <button class="botonNo" mat-raised-button (click)="copiar()" *ngIf="idParo>'0'">
+          <mat-icon class="iconoRedonde" svgIcon="propioCopiar"></mat-icon>
+          Copiar
+        </button>
+    <button class="botonNo" mat-raised-button (click)="cancelar()">
+        <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+      Cerrar
+  </button>
+</div>
+</div>

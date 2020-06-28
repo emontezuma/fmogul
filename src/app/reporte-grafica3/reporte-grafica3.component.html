@@ -1,0 +1,11 @@
+<div class="todo">
+    <div class="grafico" *ngIf="hayGrafico">
+      <dx-chart
+      id="chart" [dataSource]="valores" [customizePoint]="calcularColor">
+      <dxo-legend [visible]="false"></dxo-legend>
+      <dxo-loading-indicator [show]="true" text="Recuperando datos..."></dxo-loading-indicator>
+      
+      
+  </dx-chart>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" width="32" height="32" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve" preserveAspectRatio="none" viewbox="0 0 32 32">
+
+<g>
+	<defs>
+		<circle id="57129420_SVGID_1__focus" cx="32" cy="32" r="26"></circle>
+	</defs>
+	<use xlink:href="#57129420_SVGID_1__focus" class="stshockcolor" style="overflow: visible; fill: rgb(3, 90, 161);" data-st="fill:#BCD676;overflow:visible;"></use>
+	<clipPath id="57129420_SVGID_2__focus">
+		<use xlink:href="#57129420_SVGID_1__focus" style="overflow:visible;"></use>
+	</clipPath>
+	<polygon class="st0" points="58,6 47.011,6 16.989,58 58,58  " style="opacity:0.2;clip-path:url(#57129420_SVGID_2__focus);fill:#020200;;"></polygon>
+	<g class="st2" style="clip-path:url(#57129420_SVGID_2__focus);;">
+		<polygon class="st3" points="43.232,17 29.001,33.234 21.07,27 15.07,34 29.754,46.03 50,22.933   " style="fill:#DEDCD9;;"></polygon>
+		<polygon class="st1" points="43.232,17 29.001,33.234 21.07,27 15.07,34 29.754,46.03 50,22.933   " style="opacity:0.5;fill:#FFFFFF;;"></polygon>
+	</g>
+</g>
+</svg>

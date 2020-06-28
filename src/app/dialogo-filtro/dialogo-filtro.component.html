@@ -1,0 +1,104 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div class="cabecera">
+      <mat-icon class="iconoDialogo" svgIcon="propioFiltrar"></mat-icon>
+      <p class="tituloDialogo">FILTRAR LOS DATOS DE LA GRÁFICA</p>
+    </div>
+  
+    <mat-card class="posicion">
+      <mat-card-content>
+          <div class ="lista">
+        
+          <mat-checkbox class="tipoFecha4" [(ngModel)]="checked" color="primary">Consulta por defecto</mat-checkbox>
+          <br>
+          <div class="primeraLinea">
+            <div class="seleccion">
+            <mat-form-field class="tipoFecha3">
+            <mat-select [(ngModel)]="miConsulta" placeholder="Buscar Consulta guardada" (selectionChange)="cambiarConsulta($event)">
+              <mat-option *ngFor="let consulta of consultas" [(value)]="consulta.id">{{consulta.nombre}}</mat-option>
+            </mat-select>
+            <div class="ayuda" *ngIf="hayErrorNombre">Especifique el nombre de la consulta</div>
+            </mat-form-field>
+          </div>
+            <div class="botonNuevo"><button class="botonNuevo" mat-raised-button (click)="agregar()">Nueva consulta
+              <mat-icon class="iconoRedonde" svgIcon="propioAgregar"></mat-icon>
+            </button>
+            </div>
+        </div>
+          <mat-form-field class="tipoFecha">
+            <mat-select [(ngModel)]="miPeriodo" placeholder="Indíque período" (selectionChange)="cambiarPeriodo($event)" >
+              <mat-option *ngFor="let periodo of periodos" [(value)]="periodo.id">{{periodo.nombre}}</mat-option>
+            </mat-select>
+            <div class="ayuda" *ngIf="hayErrorPeriodo">Período inválido</div>
+            
+          </mat-form-field>
+
+          <mat-form-field class="tipoFecha2">
+          <input #fechaDesde matInput [(ngModel)]="fecha1" [matDatepicker]="picker1" placeholder="Fecha de inicio" autocomplete="off" disabled>
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle> 
+          <div class="ayuda" *ngIf="hayErrorFechaD">Fecha inválida</div>
+          <mat-datepicker #picker1 [disabled]="!habFecha"></mat-datepicker>
+        </mat-form-field>
+  
+        <mat-form-field class="tipoFecha2">
+            <input #fechaHasta matInput [(ngModel)]="fecha2" [matDatepicker]="picker2" placeholder="Fecha de fin" autocomplete="off" disabled>
+            <div class="ayuda" *ngIf="hayErrorFechaH">Fecha inválida</div>
+            <mat-datepicker-toggle matSuffix [for]="picker2" ></mat-datepicker-toggle>
+            <mat-datepicker #picker2 [disabled]="!habFecha"></mat-datepicker>
+          </mat-form-field>
+  
+          <div class="tipoFecha5">Filtro avanzado</div> 
+          <div class="listaTablas">
+              <div class="hijoTabla"><button class="botonTabla" mat-raised-button (click)="celulas()">{{totCelulas}}
+                <mat-icon class="iconoRedonde" svgIcon={{iconomiTabla1}}></mat-icon>
+              </button>
+            </div>
+              <div class="hijoTabla"><button class="botonTabla" mat-raised-button (click)="maquinas()">{{totMaquinas}}
+                <mat-icon class="iconoRedonde" svgIcon={{iconomiTabla2}}></mat-icon>
+              </button>
+            </div>
+              <div class="hijoTabla"><button class="botonTabla" mat-raised-button (click)="areas()">{{totAreas}}
+                <mat-icon class="iconoRedonde" svgIcon={{iconomiTabla3}}></mat-icon>
+              </button>
+            </div>
+              <div class="hijoTabla"><button class="botonTabla" mat-raised-button (click)="fallas()">{{totFallas}}
+                <mat-icon class="iconoRedonde" svgIcon={{iconomiTabla4}}></mat-icon>
+              </button>
+            </div>
+              <div class="hijoTabla"><button class="botonTabla" mat-raised-button (click)="maquinasT()">{{totMaquinasTipo}}
+                <mat-icon class="iconoRedonde" svgIcon={{iconomiTabla5}}></mat-icon>
+              </button>
+              </div>
+              <div class="hijoTabla"><button class="botonTabla" mat-raised-button (click)="maquinasA1()">{{totMaquinasAgr1}}
+                <mat-icon class="iconoRedonde" svgIcon={{iconomiTabla6}}></mat-icon>
+              </button>
+              </div>
+              <div class="hijoTabla"><button class="botonTabla" mat-raised-button (click)="maquinasA2()">{{totMaquinasAgr2}}
+                <mat-icon class="iconoRedonde" svgIcon={{iconomiTabla7}}></mat-icon>
+              </button>
+            </div>
+            <div class="hijoTabla"><button class="botonTabla" mat-raised-button (click)="fallasA1()">{{totFallasAgr1}}
+                <mat-icon class="iconoRedonde" svgIcon={{iconomiTabla8}}></mat-icon>
+              </button>
+            </div>
+            <div class="hijoTabla"><button class="botonTabla" mat-raised-button (click)="fallasA2()">{{totFallasAgr2}}
+                <mat-icon class="iconoRedonde" svgIcon={{iconomiTabla9}}></mat-icon>
+              </button>
+            </div>
+            <div class="hijoTabla"><button class="botonTabla" mat-raised-button (click)="tecnicos()">{{totFallasTec}}
+                <mat-icon class="iconoRedonde" svgIcon={{iconomiTabla10}}></mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+       </mat-card-content>
+    </mat-card>
+  <div mat-dialog-actions class="pie">
+    <button class="botonSi" mat-raised-button (click)="validar()">Aplicar filtro
+      <mat-icon class="iconoRedonde" svgIcon="propioVobo"></mat-icon>
+    </button>
+    <button class="botonRojo" mat-raised-button (click)="quitar()">Quitar filtro
+        <mat-icon class="iconoRedonde" svgIcon="propioQFiltro"></mat-icon>
+      </button>
+    <button class="botonNo" mat-raised-button (click)="cancelar()">Cancelar</button>
+  </div>
+</div>

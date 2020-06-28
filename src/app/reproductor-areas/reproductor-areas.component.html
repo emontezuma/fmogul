@@ -1,0 +1,62 @@
+<div id="todo" ng-app="app" ng-controller="AppCtrl" class="mat-typography"> 
+  <div class="detalleOperaciones"> 
+    <mat-grid-list id="gOperaciones" #gridOperaciones class="acciones" [cols]="gridCols" rowHeight="380px">
+      <ng-container *ngFor="let celula of celulas; let i = index">
+        <mat-grid-tile [@flyInOut] *ngIf="!verAlarmados || celula.reportesllamada+celula.reportesreparacion>0 ">
+            <button [ngClass]="{operacionTarjetaRoj:celula.reportesllamada>0, operacionTarjetaAma:celula.reportesreparacion>0 && celula.reportesllamada==0, operacionTarjeta:celula.reportesllamada+celula.reportesreparacion==0}" [style.background-color]="celula.color" mat-button (click)="seleccionarMaquina(i)">
+              <div class="elBoton" fxLayout="column" fxLayoutAlign="space-evenly center" >
+                  <div class="operacionCelula"><div class="parrafo">{{ celula.prefijo }}</div></div>
+                  <div class="cajade3">
+                  <div class="operacionIcono"><img src="{{ celula.imagen }}" class="operacionImagen"></div>
+                  </div>
+                  <div class="cajade3">
+                    <div class="parrafo">KPI</div>
+                    <div class="parrafo">MTD</div>
+                    <div class="parrafo">YTD</div>
+                  </div>
+                  <div class="cajade3">
+                      <div class="parrafo2">Reportes</div>
+                      <div class="parrafo2">{{celula.reportesmtd}}</div>
+                      <div class="parrafo2">{{celula.reportesytd}}</div>
+                    </div>
+                    <div class="cajade3">
+                      <div class="parrafo2">MTTR</div>
+                      <div [ngClass]="{parrafo2:mttrstd>celula.mttrmtd || celula.mttrmtd=='N/A', parrafo3:mttrstd<=celula.mttrmtd}">{{celula.mttrmtd}}</div>
+                      <div [ngClass]="{parrafo2:mtbfstd>celula.mttrytd || celula.mttrytd=='N/A', parrafo3:mttrstd<=celula.mttrytd}">{{celula.mttrytd}}</div>
+                    </div>
+                    <div class="cajade3">
+                        <div class="parrafo2">MTBF</div>
+                        <div [ngClass]="{parrafo2:mtbfstd<=celula.mtbfmtd || celula.mtbfmtd=='N/A', parrafo3:mtbfstd>celula.mtbfmtd}">{{celula.mtbfmtd}}</div>
+                        <div [ngClass]="{parrafo2:mtbfstd<=celula.mtbfytd || celula.mtbfytd=='N/A', parrafo3:mtbfstd>celula.mtbfytd}">{{celula.mtbfytd}}</div>
+                      </div>
+                      <div class="cajade2" *ngIf="celula.reportesllamada>0">
+                        <!-- A<div class="miIconoE"><mat-icon class="miIconE" svgIcon="propioEnLlamada"></mat-icon></div>-->
+                        <div class="parrafo4">({{celula.reportesllamada}})</div>
+                        <div class="parrafo6">{{celula.strllamada}}</div>
+                        <div class="parrafo7">{{celula.allamadaarea}}</div>
+                      </div>
+                      <!---<div class="cajade2" *ngIf="celula.reportesllamada>0">
+                        <div class="parrafo7">Área: {{celula.allamadaarea}}</div>
+                      </div>-->
+
+                      <div class="cajade4" *ngIf="celula.reportesreparacion>0">
+                        <!-- A<div class="miIconoE"><mat-icon class="miIconE" svgIcon="propioEnLlamada"></mat-icon></div>-->
+                        <div class="parrafo5">({{celula.reportesreparacion}})</div>
+                        <div class="parrafo7">{{celula.strreparacion}}</div>
+                        <div class="parrafo8">{{celula.areparacionarea}}</div>
+                      </div>
+                      <!--<div class="cajade4" *ngIf="celula.reportesreparacion>0">
+                          <div class="miIconoE"><mat-icon class="miIconE" svgIcon="propioConTecnicoAzul"></mat-icon></div>
+                          <div class="parrafo5">({{celula.reportesreparacion}})</div>
+                          <div class="parrafo7">{{celula.strreparacion}}</div>
+                        </div>
+                        <div class="cajade4" *ngIf="celula.reportesreparacion>0">
+                          <div class="parrafo8">Área: {{celula.areparacionarea}}</div>
+                        </div>-->
+              </div>
+            </button>
+          
+        </mat-grid-tile>
+      </ng-container>
+    </mat-grid-list>
+</div>

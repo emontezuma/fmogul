@@ -1,0 +1,340 @@
+.miIcon {
+    height: 36px !important;
+    width: 36px !important;
+    align-content: center;
+    margin-top: -13px !important;
+    margin-left: 1px !important;
+}
+
+.operacionTitulo {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+.buscador {
+    max-width: 75% !important;
+  }
+
+.noBuscador {
+    max-width: 50% !important;
+}
+
+  ::ng-deep .casillas, .ayuda, .etiquetas {
+    font-size: 16px;
+}
+
+::ng-deep .mat-focused .etiquetas {
+    color: darkgrey;
+    font-size: 18px !important;
+}
+ 
+::ng-deep .mat-focused .etiquetas {
+    color: darkgrey;
+    font-size: 18px !important;
+}
+
+::ng-deep .etiquetas {
+    font-size: 18px !important;
+}
+::ng-deep .mat-focused .etiquetas {
+    color: #035AA1;
+    font-size: 18px !important;
+}
+
+.botonDerecho {
+    height: 50px !important;
+    width: 50px !important;
+    margin-right: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #035AA1;
+}
+
+#todo {
+    margin: 0px;
+    padding: 0px;
+}
+
+#cabecera {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #035AA1;
+    border-radius: 0px 0px 8px 8px;
+    background-color:whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 5px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.itemIcon {
+    margin-left: -15px;
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .itemIconGris {
+    margin-left: -15px;
+    width: 36px !important;
+    height: 36px !important;
+    filter: grayscale(1);
+    opacity: 0.2;
+    
+}
+  
+.miniIcon {
+    float: right;
+    margin-top: 7px !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: -12px;
+    animation-name: mIcon;
+    animation-duration: 1s;
+
+  }
+
+  
+
+  @keyframes mIcon {
+    0%  {width: 40px; height: 40px;}
+    50%  {width: 32px; height: 32px;}
+    100%  {width: 24px; height: 24px;}
+}
+
+
+.titulo {
+    font-size: 22px !important;
+    font-weight: 700;
+}
+
+.itemLabel {
+    font-size: 22px !important;
+    font-weight: 500;
+}
+
+.itemBoton {
+    border-style: solid;
+    border-width: 1px;
+    border-color: gainsboro !important;
+    height: 42px !important;
+    margin-top: 2px !important;
+    border-radius: 4px 16px;
+    width: 100%;
+    text-align: left;
+    font-size: 22px !important;
+    font-weight: 500;
+}
+
+.accion {
+    margin-top: 2px !important;
+    width: 95%;
+    height: 53px !important;
+    align-content: center;
+    vertical-align: middle;
+}
+
+
+
+
+#todo {
+    position: relative;
+    width: 100%;    
+    height: 100%;
+}
+
+.detalleOperaciones {
+    align-content: center;
+    text-align: center;
+}
+
+.operacionTarjeta {
+    margin-top: 10px;
+    background-color: white;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #035AA1;
+    border-radius: 4px 16px;
+    height: 95%;
+    width: 95%;
+}
+
+.operacionFondo {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.operacionTitulo {
+    flex: 1;
+    margin-top: 100px !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #035AA1 !important;
+    
+}
+
+.elBoton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    
+}
+
+.operacionMadre {
+    width: 100% !important;
+    color: #035AA1;
+    background-color: rgb(221,240,254); 
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    display: flex;
+    justify-content: center; 
+    align-items: top;
+    max-height: 40px !important;
+    min-height: 40px !important;
+    height: 40px !important;
+    flex: 1;
+    margin-top: 5px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #035AA1;    
+}
+
+.operacionMadreR {
+    width: 100% !important;
+    color: red;
+    background-color: rgb(250, 210, 210);
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    display: flex;
+    justify-content: center; 
+    align-items: top;
+    max-height: 40px !important;
+    min-height: 40px !important;
+    height: 40px !important;
+    flex: 1;
+    margin-top: 5px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    
+}
+
+
+.operacionMadre > .parrafo {
+        padding: 2px;
+        flex: 1;
+        width: 100%;
+        min-width: 0;
+        line-height: 20px;
+        white-space: normal;
+        overflow: hidden;
+        color: #035AA1;
+        margin: auto;
+        
+            }
+
+    .operacionMadre2 {
+        width: 100% !important;
+        font-size: 18px !important;
+        font-weight: 500 !important;
+        display: flex;
+        justify-content: center; 
+        align-items: top;
+        max-height: 36px !important;
+        min-height: 36px !important;
+        height: 36px !important;
+        flex: 1;
+        margin-top: -3px;
+        overflow: hidden;
+        color: gray;
+        }
+    
+        
+
+    .operacionCelula {
+        width: 100% !important;
+        color: white;
+        background-color:  #035AA1;  
+        font-size: 18px !important;
+        font-weight: 600 !important;
+        display: flex;
+        justify-content: center; 
+        align-items: top;
+        max-height: 40px !important;
+        min-height: 40px !important;
+        height: 40px !important;
+        flex: 1;
+        margin-bottom: 5px;
+        overflow: hidden;
+        border-style: solid;
+        border-width: 1px;
+        border-color: darkblue;
+        }
+    
+        .operacionCelula > .parrafo {
+            flex: 1;
+            width: 100%;
+            min-width: 0;
+            line-height: 20px;
+            white-space: normal;
+            overflow: hidden;
+            color: white;
+            margin: auto;
+                }
+    
+            
+
+.operacionEstatus {
+    font-weight: 600 !important;
+    font-size: 16px !important;
+}
+
+.operacionUltimaFalla {
+    font-size: 14px !important;
+    margin-top: -10px;
+}
+
+
+.operacionImagen {
+    height: 72px;
+    width: 72px;
+}
+
+.operacionIcono {
+    padding: 5px;
+}
+
+
+.cajaIconE {
+    flex: 1;
+    margin-top: 60px !important;
+    width: 100% !important;
+    padding: 5px;
+    position: absolute; 
+    
+}
+
+.nombreCelula {
+    border-style: solid;
+    border-width: 4px;
+    border-color: #035AA1;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: whitesmoke !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    padding: 5px;
+    
+}
+  .mat-icon svg
+{
+   fill : #fff;
+}
+
+.miIconE svg
+{
+    fill : black !important;
+ }
+ 

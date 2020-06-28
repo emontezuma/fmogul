@@ -1,0 +1,139 @@
+<div class="contenidoDemo" class="mat-typography">
+  <div class="cabecera">
+    <mat-icon class="iconoDialogo" svgIcon="propioPlayConfig"></mat-icon>
+    <p class="tituloDialogo">CONFIGURAR EL REPRODUCTOR</p>
+  </div>
+  
+  <mat-card class="posicion">
+    <mat-card-content>
+      <div class ="lista">
+        
+        <div class="tituloLinea">Gráficas y panel (hasta 10 vistas)</div>
+          <div class="cadenaLarga">
+            <mat-form-field class="parte3">
+              <mat-select [(ngModel)]="f1" placeholder="Vista #1">
+                <mat-option *ngFor="let fuente of fuentes" [(value)]="fuente.id">{{fuente.nombre}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field class="textoCuarto">
+              <input matInput type="number" [(ngModel)]="d1" maxlength="3" placeholder="Duración (seg)" autocomplete="off">
+            </mat-form-field>
+          </div>
+          <div class="cadenaLarga">
+            <mat-form-field class="parte3">
+            <mat-select [(ngModel)]="f2" placeholder="Vista #2">
+              <mat-option *ngFor="let fuente of fuentes" [(value)]="fuente.id">{{fuente.nombre}}</mat-option>
+            </mat-select>
+            </mat-form-field>
+            <mat-form-field class="textoCuarto">
+              <input matInput type="number" [(ngModel)]="d2" maxlength="3" placeholder="Duración (seg)" autocomplete="off">
+            </mat-form-field>
+          </div>
+          <div class="cadenaLarga">
+              <mat-form-field class="parte3">
+              <mat-select [(ngModel)]="f3" placeholder="Vista #3">
+                <mat-option *ngFor="let fuente of fuentes" [(value)]="fuente.id">{{fuente.nombre}}</mat-option>
+              </mat-select>
+              </mat-form-field>
+              <mat-form-field class="textoCuarto">
+                <input matInput type="number" [(ngModel)]="d3" maxlength="3" placeholder="Duración (seg)" autocomplete="off">
+              </mat-form-field>
+            </div>
+            <div class="cadenaLarga">
+                <mat-form-field class="parte3">
+                <mat-select [(ngModel)]="f4" placeholder="Vista #4">
+                  <mat-option *ngFor="let fuente of fuentes" [(value)]="fuente.id">{{fuente.nombre}}</mat-option>
+                </mat-select>
+                </mat-form-field>
+                <mat-form-field class="textoCuarto">
+                  <input matInput type="number" [(ngModel)]="d4" maxlength="3" placeholder="Duración (seg)" autocomplete="off">
+                </mat-form-field>
+              </div>
+              <div class="cadenaLarga">
+                  <mat-form-field class="parte3">
+                  <mat-select [(ngModel)]="f5" placeholder="Vista #5">
+                    <mat-option *ngFor="let fuente of fuentes" [(value)]="fuente.id">{{fuente.nombre}}</mat-option>
+                  </mat-select>
+                  </mat-form-field>
+                  <mat-form-field class="textoCuarto">
+                    <input matInput type="number" [(ngModel)]="d5" maxlength="3" placeholder="Duración (seg)" autocomplete="off">
+                  </mat-form-field>
+                </div>
+                <div class="cadenaLarga">
+                    <mat-form-field class="parte3">
+                    <mat-select [(ngModel)]="f6" placeholder="Vista #6">
+                      <mat-option *ngFor="let fuente of fuentes" [(value)]="fuente.id">{{fuente.nombre}}</mat-option>
+                    </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="textoCuarto">
+                      <input matInput type="number" [(ngModel)]="d6" maxlength="3" placeholder="Duración (seg)" autocomplete="off">
+                    </mat-form-field>
+                  </div>
+                  <div class="cadenaLarga">
+                      <mat-form-field class="parte3">
+                      <mat-select [(ngModel)]="f7" placeholder="Vista #7">
+                        <mat-option *ngFor="let fuente of fuentes" [(value)]="fuente.id">{{fuente.nombre}}</mat-option>
+                      </mat-select>
+                      </mat-form-field>
+                      <mat-form-field class="textoCuarto">
+                        <input matInput type="number" [(ngModel)]="d7" maxlength="3" placeholder="Duración (seg)" autocomplete="off">
+                      </mat-form-field>
+                    </div>
+                    <div class="cadenaLarga">
+                        <mat-form-field class="parte3">
+                        <mat-select [(ngModel)]="f8" placeholder="Vista #8">
+                          <mat-option *ngFor="let fuente of fuentes" [(value)]="fuente.id">{{fuente.nombre}}</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                        <mat-form-field class="textoCuarto">
+                          <input matInput type="number" [(ngModel)]="d8" maxlength="3" placeholder="Duración (seg)" autocomplete="off">
+                        </mat-form-field>
+                      </div>
+                      <div class="cadenaLarga">
+                          <mat-form-field class="parte3">
+                          <mat-select [(ngModel)]="f9" placeholder="Vista #9">
+                            <mat-option *ngFor="let fuente of fuentes" [(value)]="fuente.id">{{fuente.nombre}}</mat-option>
+                          </mat-select>
+                          </mat-form-field>
+                          <mat-form-field class="textoCuarto">
+                            <input matInput type="number" [(ngModel)]="d9" maxlength="3" placeholder="Duración (seg)" autocomplete="off">
+                          </mat-form-field>
+                        </div>
+                        <div class="cadenaLarga">
+                            <mat-form-field class="parte3">
+                            <mat-select [(ngModel)]="f10" placeholder="Vista #10">
+                              <mat-option *ngFor="let fuente of fuentes" [(value)]="fuente.id">{{fuente.nombre}}</mat-option>
+                            </mat-select>
+                            </mat-form-field>
+                            <mat-form-field class="textoCuarto">
+                              <input matInput type="number" [(ngModel)]="d10" maxlength="3" placeholder="Duración (seg)" autocomplete="off">
+                            </mat-form-field>
+                          </div>
+          <div class="cadenaLarga">
+          <mat-form-field class="detalle">
+              <textarea matInput #detalle maxlength="2000" cdkTextareaAutosize
+              cdkAutosizeMinRows="4" cdkAutosizeMaxRows="6" [(ngModel)]="marquesina" [formControl]="detalleF" ></textarea>
+              <mat-placeholder class="etiquetas">Mensaje de marquesina</mat-placeholder>
+              <mat-hint class="ayuda" align="end">Quedan {{2000 - detalleF.value.length}} carácter(es)</mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="cadenaLarga">
+            <mat-checkbox class="tipoFecha4" [(ngModel)]="estatus">Reproducir desde la carpeta de imagenes</mat-checkbox>                
+            <mat-form-field class="textoCuarto">
+            <input matInput type="number" [(ngModel)]="d12" maxlength="3" placeholder="Duración (seg)" autocomplete="off">
+            </mat-form-field>
+          </div>
+     </div>
+  </mat-card-content>
+  </mat-card>
+
+<div mat-dialog-actions class="pie">
+  <button class="botonSi" mat-raised-button (click)="validar()">
+    <mat-icon class="iconoRedonde" svgIcon="propioGuardar"></mat-icon>
+    Guardar
+  </button>
+  <button class="botonNo" mat-raised-button (click)="cancelar()">
+      <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+    Cancelar</button>
+</div>
+</div>

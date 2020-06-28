@@ -1,0 +1,52 @@
+<div id="todo" ng-app="app" ng-controller="AppCtrl" class="mat-typography"> 
+    <div>
+        <mat-grid-list id="cabecera" #gridAcciones class="acciones" [cols]="gridCols2" rowHeight="56px">
+          <mat-grid-tile>
+            <div class="accion">
+              <button class="itemBoton" mat-button (click)="agregarParo()">
+                <mat-icon class="itemIcon" svgIcon="propioNpartes"></mat-icon>
+                Nueva parte 
+              </button>
+            </div>
+          </mat-grid-tile>
+          <mat-grid-tile class="buscador">
+            <div>
+              <mat-form-field floatLabel="never">
+                <input #txtBuscar matInput class="etiquetas"type="text" [(ngModel)]="textoBuscar" (keydown.enter)="filtrar()">
+                <mat-placeholder class="etiquetas">Filtrar</mat-placeholder>
+              </mat-form-field>
+            </div>
+          </mat-grid-tile>
+          <mat-grid-tile class="gridBotones">
+            <button class="botonDerecho" mat-fab color (click)="buscar()" matTooltip = "{{ toolTipBuscar }}" matTooltipClass = "toolTip">
+              <mat-icon class="miIcon" svgIcon="propioBuscar"></mat-icon>
+            </button>
+            <button class="botonDerecho" mat-fab color (click)="refrescar()" matTooltip = "{{ toolTipRefrescar }}" matTooltipClass = "toolTip">
+              <mat-icon class="miIcon" svgIcon="propioRefrescar"></mat-icon>
+            </button>
+            <button class="botonDerecho" mat-fab color (click)="descargar()" matTooltip = "{{ toolTipDescargar }}" matTooltipClass = "toolTip">
+              <mat-icon class="miIcon" svgIcon="propioDescargar"></mat-icon>
+            </button>
+          </mat-grid-tile>        
+        </mat-grid-list>   
+      </div>
+  
+    <div class="detalleOperaciones" > 
+      <mat-grid-list #gridCabecera class="cabeceras" [cols]="gridCols" rowHeight="270px">
+          <ng-container *ngFor="let celula of celulas; let i = index">
+            <mat-grid-tile>
+                <div class="operacionFondo">
+                  <button class="operacionTarjeta" mat-button (click)="paro(celula.id)">
+                    <div class="elBoton" fxLayout="column" fxLayoutAlign="space-evenly center" >
+                        <div class="operacionCelula"><div class="parrafo">#Parte: {{ celula.referencia }}</div></div>
+                        <div class="operacionIcono"><img src="{{ imagen }}" class="operacionImagen"></div>
+                        <div class="operacionMadre"><div class="parrafo">Máquina(s): {{ celula.tmaquinas }}</div></div>
+                      </div>
+                </button>
+                </div>
+              </mat-grid-tile>
+            </ng-container>
+        </mat-grid-list>
+    </div>
+  </div>
+  

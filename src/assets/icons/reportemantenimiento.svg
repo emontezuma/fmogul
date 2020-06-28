@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="addmask" version="1.1"  x="0px" y="0px" width="32" height="32" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve" style="fill: rgb(3, 90, 161);" viewbox="0 0 32 32">
+<g class="addon_content" transform="translate(-13,10) scale(1.2000000000000002,1.2000000000000002)">
+	<g>
+		<defs>
+			<path class="mask_container" id="257_gear_mask" d="M-23-41v96h96v-96H-23z M25,16c-4.97,0-9-4.03-9-9s4.03-9,9-9s9,4.03,9,9S29.97,16,25,16z" transform="translate(-13,10) scale(1.2000000000000002,1.2000000000000002)" style="fill: rgb(3, 90, 161);"></path>
+		</defs>
+		<clipPath id="257_gear_mask_1_">
+			<use xlink:href="#257_gear_mask" overflow="visible"></use>
+		</clipPath>
+	</g>
+	<path id="257_gear_addon" d="M32,8V6h-2.1C29.77,5.36,29.52,4.77,29.18,4.24l1.48-1.48l-1.42-1.42l-1.48,1.48C27.23,2.48,26.64,2.23,26,2.1V0  h-2v2.1C23.36,2.23,22.77,2.48,22.24,2.82l-1.48-1.48l-1.42,1.42l1.48,1.48C20.48,4.77,20.23,5.36,20.1,6H18v2h2.1  c0.131,0.64,0.381,1.23,0.721,1.76l-1.48,1.48l1.42,1.42l1.48-1.48c0.529,0.34,1.12,0.59,1.76,0.721V14h2v-2.1  c0.64-0.131,1.23-0.381,1.76-0.721l1.48,1.48l1.42-1.42l-1.48-1.48C29.52,9.23,29.77,8.64,29.9,8H32z M25,10c-1.65,0-3-1.35-3-3  s1.35-3,3-3s3,1.35,3,3S26.65,10,25,10z" style="fill: rgb(3, 90, 161);"></path>
+</g>
+<g id="257_gear_icon_placeholder" clip-path="url(#257_gear_mask_1_)">
+	<g class="icnplhld"><!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<g xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve" class="svgmask">
+<g>
+	<path d="M23,0H6C4,0,4,2,4,2v28c0,2,2,2,2,2h22c2,0,2-2,2-2V7L23,0z M22,2h0.17L28,7.83V8h-5c-0.81,0-0.99-0.55-1-1V2z M28,29.96   c0,0.01,0,0.021-0.01,0.04H6.04C6.03,30,6.02,30,6,29.99V2.04C6,2.03,6,2.02,6.01,2H20v5c0,1.21,0.8,3,3,3h5V29.96z" style="fill: rgb(3, 90, 161);"></path>
+</g>
+<path d="M24,20v-2h-2.1c-0.131-0.64-0.381-1.23-0.721-1.76l1.48-1.48l-1.42-1.42l-1.48,1.48c-0.529-0.34-1.12-0.59-1.76-0.72V12h-2  v2.1c-0.64,0.13-1.23,0.38-1.76,0.72l-1.48-1.48l-1.42,1.42l1.48,1.48c-0.34,0.53-0.59,1.12-0.72,1.76H10v2h2.1  c0.13,0.64,0.38,1.23,0.72,1.76l-1.48,1.48l1.42,1.42l1.48-1.48c0.53,0.34,1.12,0.59,1.76,0.721V26h2v-2.1  c0.64-0.131,1.23-0.381,1.76-0.721l1.48,1.48l1.42-1.42l-1.48-1.48c0.34-0.529,0.59-1.12,0.721-1.76H24z M17,22c-1.65,0-3-1.35-3-3  s1.35-3,3-3c1.65,0,3,1.35,3,3S18.65,22,17,22z" style="fill: rgb(3, 90, 161);"></path>
+</g>
+</g>
+</g>
+</svg>

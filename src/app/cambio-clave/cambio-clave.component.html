@@ -1,0 +1,55 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div class="cabecera">
+      
+    <mat-icon class="iconoDialogo" svgIcon="propioiniPass"></mat-icon>
+      <p class="tituloDialogo">CAMBIO DE CONTRASEÑA</p>
+    </div>
+  
+      <div class="formulario" >
+        <mat-card class="posicion">
+            <mat-card-content>
+                <div class ="lista">
+                    <div class="cadenaLarga">
+                      <mat-form-field class="textoCompleto">
+                      <input #txtClave matInput [type]="vermiClave ? 'text' : 'password'" [(ngModel)]="clave" maxlength="50" placeholder="Contraseña actual" autocomplete="off" [formControl]="clave1" required>
+                      <button matSuffix mat-icon-button (click)="verClave()">
+                          <mat-icon svgIcon="propioVerClave"></mat-icon>
+                      </button>
+                      
+                      <mat-hint *ngIf="hayError1" class="ayuda" align="start"><strong>{{MensajeError}}</strong> </mat-hint>
+                      </mat-form-field>
+                    </div>
+                    <div class="cadenaLarga">
+                        <mat-form-field class="textoCompleto">
+                        <input matInput [type]="vermiClave2 ? 'text' : 'password'"  [(ngModel)]="clave2" maxlength="50" placeholder="Nueva contraseña" autocomplete="off" [formControl]="clave21" required>
+                        <button matSuffix mat-icon-button (click)="verClave2()">
+                            <mat-icon svgIcon="propioVerClave"></mat-icon>
+                        </button>
+                        
+                        <mat-hint *ngIf="hayError2" class="ayuda" align="start"><strong>Campo obligatorio</strong> </mat-hint>
+                        </mat-form-field>
+                      </div>
+                      <div class="cadenaLarga">
+                          <mat-form-field class="textoCompleto">
+                          <input txtClave2 matInput [type]="vermiClave3 ? 'text' : 'password'"  [(ngModel)]="clave3" maxlength="50" placeholder="Confirmación de la contraseña" autocomplete="off" [formControl]="clave31" required>
+                          <button matSuffix mat-icon-button (click)="verClave3()">
+                              <mat-icon svgIcon="propioVerClave"></mat-icon>
+                          </button>
+                          
+                          <mat-hint *ngIf="hayError3" class="ayuda" align="start"><strong>{{MensajeError2}}</strong> </mat-hint>
+                          </mat-form-field>
+                        </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div mat-dialog-actions class="pie">
+      <button class="botonSi" mat-raised-button (click)="validar()">
+          <mat-icon class="iconoRedonde" svgIcon="propioVobo"></mat-icon>
+          Aceptar
+      </button>
+      <button class="botonNo" mat-raised-button (click)="cancelar()">
+          <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+          Cancelar</button>
+    </div>
+  </div>

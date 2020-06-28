@@ -1,0 +1,62 @@
+<div class="contenidoDemo" class="mat-typography">
+  <div class="cabecera">
+    
+  <mat-icon class="iconoDialogo" svgIcon="propioChange"></mat-icon>
+    <p class="tituloDialogo">GENERAR MENSAJE PARA SMED</p>
+  </div>
+
+    <div class="formulario" >
+      <mat-card class="posicion">
+          <mat-card-content>
+              <div class ="lista">
+            <mat-form-field class="parte">
+              <mat-select [(value)]="miPager" placeholder="Número de pager (permite selección múltiple)" [formControl]="pagersF" multiple required>
+                <mat-option *ngFor="let pager of pagers" [(value)]="pager.pager">{{pager.nombre}}</mat-option>
+              </mat-select>
+              <div class="ayuda" *ngIf="hayError1">Seleccione un pager de la lista</div>
+              <mat-hint class="ayuda" align="start"><strong>Este campo es obligatorio</strong> </mat-hint>
+            </mat-form-field>
+            <br>
+            
+            <mat-form-field class="parte">
+              <mat-select [(value)]="miMaquina" placeholder="Especifique la máquina" (selectionChange)="cambiarMaquina($event)" [formControl]="maquinaF"  required>
+                <mat-option *ngFor="let maquina of maquinas" [(value)]="maquina.id">{{maquina.prefijo}}</mat-option>
+              </mat-select>
+              <div class="ayuda" *ngIf="hayError2">Seleccione la máquina</div>
+              <mat-hint class="ayuda" align="start"><strong>Este campo es obligatorio</strong> </mat-hint>
+            </mat-form-field>
+            
+                
+
+            <mat-form-field class="parte">
+              <mat-select [(value)]="miParte" placeholder="Número de parte" (selectionChange)="cambiarParte($event)" [formControl]="parteF" required>
+                <mat-option *ngFor="let parte of partes" [(value)]="parte.id">{{parte.referencia}}</mat-option>
+              </mat-select>
+              <div class="ayuda" *ngIf="hayError3">Seleccione el Número de parte</div>
+              <mat-hint class="ayuda" align="start"><strong>Este campo es obligatorio</strong> </mat-hint>
+              </mat-form-field>
+
+              <mat-form-field class="detalle">
+              <input matInput [(ngModel)]="miDetalle" maxlength="37" placeholder="Mensaje a enviar" autocomplete="off" [disabled]="desabilitar" required>
+              <div class="ayuda" *ngIf="hayError4">Especifique el mensaje a enviar</div>
+              <mat-hint class="ayuda" align="end">Quedan {{37 - detalleF.value.length}} carácter(es)</mat-hint>
+              </mat-form-field>
+              
+              
+              
+            </div>
+          </mat-card-content>
+      </mat-card>
+  </div>
+  <div mat-dialog-actions class="pie">
+    <button class="botonSi" mat-raised-button (click)="validar()">
+        <mat-icon class="iconoRedonde" svgIcon="propioVobo"></mat-icon>
+        Generar mensaje SMED
+    </button>
+    <button class="botonNo" mat-raised-button (click)="cancelar()">
+        <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+        Cancelar</button>
+  </div>
+
+  
+</div>

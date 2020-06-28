@@ -1,0 +1,18 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div [ngClass]="{cabecera:data.tipoMensaje=='NORMAL',cabeceraAlarma:data.tipoMensaje=='ALARMA'}" mat-dialog-title>
+      <mat-icon class="iconoDialogo" svgIcon="{{iconoSel}}"></mat-icon>
+      <p class="tituloDialogo">{{data.cabecera}}</p>
+    </div>
+    <div mat-dialog-content class="contenido" >
+      {{data.contenido}}
+      </div>
+      <br>
+    <div mat-dialog-actions class="pie">
+      <button class="botonSi" mat-raised-button [mat-dialog-close]="data" (click)="aceptar()">{{data.boton1}}
+          <mat-icon class="iconoRedonde" svgIcon="propioVobo"></mat-icon>
+      </button>
+      <button *ngIf="data.botones>1" class="botonOtro" mat-raised-button (click)="cancelar()">{{data.boton2}}</button>
+    </div>
+  
+    
+  </div>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" width="32" height="32" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve" preserveAspectRatio="none" viewbox="0 0 32 32">
+
+<g>
+	<defs>
+		<circle id="57129450_SVGID_1__focus" cx="32" cy="32" r="26"></circle>
+	</defs>
+	<use xlink:href="#57129450_SVGID_1__focus" class="stshockcolor" style="fill: rgb(3, 90, 161); overflow: visible;" data-st="fill:#75A2D9;;overflow:visible;"></use>
+	<clipPath id="57129450_SVGID_2__focus">
+		<use xlink:href="#57129450_SVGID_1__focus" style="overflow:visible;"></use>
+	</clipPath>
+	<polygon class="st0" points="6,58.001 6,47.012 57.999,16.989 58,58  " style="opacity:0.2;clip-path:url(#57129450_SVGID_2__focus);fill:#020200;;"></polygon>
+</g>
+<g>
+	<path class="st3" d="M37,19c0,2.761-2.238,5-5,5c-2.761,0-5-2.239-5-5s2.239-5,5-5C34.762,14,37,16.239,37,19z M35,33.625v-6.09   L29,31v19l10.39-6H35V33.625z" style="fill:#DEDCD9;;"></path>
+	<g class="st1" style="opacity:0.5;;">
+		<path class="st2" d="M37,19c0,2.761-2.238,5-5,5c-2.761,0-5-2.239-5-5s2.239-5,5-5C34.762,14,37,16.239,37,19z M35,33.625v-6.09    L29,31v19l10.39-6H35V33.625z" style="fill:#FFFFFF;;"></path>
+	</g>
+</g>
+</svg>

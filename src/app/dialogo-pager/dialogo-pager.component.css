@@ -1,0 +1,244 @@
+.tipoDiv {
+    flex: 1;
+    width: 45%;
+    font-size: 20px !important;
+  }
+
+.fechaDiv {
+    flex: 1;
+    width: 45%;
+    font-size: 17px !important;
+    margin-left: 10px;
+  }
+
+  .maquina {
+    flex: 1;
+    width: 90%;
+    font-size: 17px !important;
+    margin-left: 10px;
+  }
+
+.seleccion .mat-select-panel {
+    background: rgba(3,90,161,0.1); 
+  }
+
+::ng-deep .mat-dialog-content {
+    overflow-x: hidden !important;
+}
+
+.posicion
+{ margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.lista {
+    height: 190px !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+ }
+
+ table {
+    width: 100%;
+  }
+
+.cabecera {
+    width: 100% !important;
+    height: 32px !important; 
+    padding: 2px;
+    color: #035AA1 !important;
+    background-color: rgba(3,90,161,0.1); 
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    }
+
+    .pie {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        background-color: whitesmoke !important;
+        height: 40px !important;
+    }
+
+.botonSi {
+    font-size: 20px !important;
+    background-color: lightgreen;
+    font-weight: 600;
+    height: 45px;
+    }
+
+    .botonNo {
+        font-size: 20px !important;
+        height: 45px;;
+        }
+
+    .gris {
+        background-color: whitesmoke;
+        padding: 2px;
+
+    }
+
+    .textoCompleto {
+        font-size: 17px !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        width: 65%;
+        margin-left: 5px;
+      }
+
+      .textoTercio {
+        font-size: 17px !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        width: 30%;
+        margin-left: 10px;
+      }
+      .textoMitad {
+        font-size: 17px !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        width: 45%;
+        margin-left: 10px;
+      }
+      .textoCuarto {
+        font-size: 17px !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        width: 24%;
+        margin-left: 10px;
+      }
+
+      .tipoFecha4 {
+        margin-top: 10px !important;
+        margin-left: 10px !important;
+        width: 100%;
+        font-size: 17px !important;
+      }
+
+    .ayuda {
+        font-size: 16px !important;
+    }
+
+    .ayuda2 {
+        font-size: 14px !important;
+    }
+
+    .etiquetas {
+        font-size: 17px !important;
+        color:  #035AA1;
+    }
+    
+
+    .mat-focused .etiquetas {
+        color:  red;
+        font-size: 19px !important;
+        font-weight: 600;
+    }
+    
+    .iconoDialogo {
+        text-align: left !important;
+        height: 32px;
+        widows: 32px;
+        flex: 1;
+    }
+   
+    .tituloDialogo {
+        flex: 15;
+        text-align: center;
+        margin: auto;
+    }
+
+    .primeraLinea {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        margin-top: 10px;
+    }
+    
+    .cadenaLarga {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        margin-top: 10px;
+    }
+
+    .camposDiv {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        margin-top: 10px;
+    }
+
+    
+    .fuente1 {
+        flex: 1;
+        margin-left: 5px;
+    }
+
+    .terceraLinea {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        margin-top: 5px;        
+    }
+
+    .tituloLinea {
+        margin-top: 10px;
+        background-color: whitesmoke;
+        width: 100%;
+        font-size: 17px !important;
+        font-weight: 600;
+        padding: 3px;
+    }
+    .tituloULinea {
+        margin-top: 10px;
+        background-color: whitesmoke;
+        width: 100%;
+        font-size: 17px !important;
+        font-weight: 600;
+        padding: 3px;
+        margin-bottom: 10px;
+    }
+
+    .fuente {
+        flex: 1;
+        margin-left: 5px;
+        width: 20% !important;
+    }
+
+    .checks {
+        margin-left: 10px !important;
+    }
+
+   .iconoRedonde
+   {
+       margin-top: -5px;
+   }
+
+   ::ng-deep .form {
+    min-height: 690px;
+}
+::ng-deep .form .dx-field-value {
+    text-align: right;
+}
+::ng-deep .dx-fieldset-header {
+    padding: 10px 0;
+}
+::ng-deep .color-block {
+    width: 360px;
+    height: 254px;
+    background-color: #f05b41;
+    position: relative;
+}
+::ng-deep .hero-color-box{
+    position: absolute;
+    right: 0;
+    left: 400px;
+    top: 110px;
+}

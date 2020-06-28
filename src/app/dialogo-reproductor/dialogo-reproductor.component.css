@@ -1,0 +1,183 @@
+
+.seleccion .mat-select-panel {
+    background: rgba(3,90,161,0.1); 
+  }
+  
+
+  .cadenaLarga {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    margin-top: 10px;
+}
+
+.textoCuarto {
+    font-size: 17px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    width: 24%;
+    margin-left: 10px;
+  }
+
+  .parte3 {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    width: 70%;
+    margin-left: 10px;
+  }
+
+.cabecera {
+    width: 100% !important;
+    height: 32px !important; 
+    padding: 2px;
+    color: #035AA1 !important;
+    background-color: rgba(3,90,161,0.1); 
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    }
+
+    .iconoDialogo {
+        text-align: left !important;
+        height: 32px;
+        widows: 32px;
+        flex: 1;
+    }
+   
+    .tituloDialogo {
+        flex: 15;
+        text-align: center;
+        margin: auto;
+    }
+
+
+.noticia {
+    width: 100% !important;
+    height: 28px !important; 
+    padding: 2px;
+    color: #035AA1 !important;
+    background-color: rgba(3,90,161,0.1); 
+    font-size: 17px !important;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.contenido {
+    font-size: 17px !important;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+
+.pie {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: whitesmoke !important;
+    height: 40px !important;
+}
+
+.tipoFecha4 {
+    margin-top: 10px !important;
+    margin-left: 10px !important;
+    width: 70%;
+    font-size: 15px !important;
+  }
+  
+
+.botonSi {
+font-size: 20px !important;
+background-color: lightgreen;
+font-weight: 600;
+height: 45px;
+}
+
+.botonNo {
+    font-size: 20px !important;
+    height: 45px;
+    }
+
+.gris {
+    background-color: whitesmoke;
+    padding: 2px;
+
+}
+
+
+
+.detalle, .parte, .pager {
+    width: 95%;
+    font-size: 19px !important;
+}
+    
+    
+    .ayuda, .etiquetas {
+        font-size: 15px !important;
+    }
+
+    .ayudas {
+        font-size: 15px !important;
+        color: red;
+    }
+
+    .etiquetas {
+        font-size: 20px !important;
+        color:  #035AA1;
+    }
+    
+
+    .mat-focused .etiquetas {
+        color:  red;
+        font-size: 20px !important;
+        font-weight: 600;
+    }
+    
+    .tituloLinea {
+        margin-top: 10px;
+        background-color: whitesmoke;
+        width: 100%;
+        font-size: 17px !important;
+        font-weight: 600;
+        padding: 3px;
+    }
+
+    .posicion
+    { margin-top: 5px !important;
+        margin-bottom: 10px !important;
+        }
+    .lista {
+        height: 300px !important;
+        overflow-x: hidden;
+        overflow-y: auto;
+     }
+    
+
+    .footer {
+        width: 100% !important;
+        height: 22px !important; 
+        padding: 2px;
+        color: red !important;
+        background-color: rgba(255,0,0,0.2); 
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        margin-top: 20px !important;
+        }
+
+        .tiempo {
+            height: 22px !important; 
+            padding: 2px;
+            color: red !important;
+            font-size: 19px !important;
+            font-weight: 500 !important;
+            justify-content: right;
+            text-align: right; 
+            align-items: top;
+            }
+    

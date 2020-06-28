@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" width="32" height="32" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve" viewbox="0 0 32 32">
+
+<g>
+	<defs>
+		<circle id="57129422_SVGID_1__grid" cx="32" cy="32" r="24"></circle>
+	</defs>
+	<use xlink:href="#57129422_SVGID_1__grid" class="stshockcolor" style="fill:#C7441C;;overflow:visible;" data-st="fill:#C7441C;;overflow:visible;"></use>
+	<clipPath id="57129422_SVGID_2__grid">
+		<use xlink:href="#57129422_SVGID_1__grid" style="overflow:visible;"></use>
+	</clipPath>
+	<g class="st2" style="clip-path:url(#57129422_SVGID_2__grid);;">
+		<path class="st0" d="M10.345,44.393c-6.886-11.922-2.799-27.167,9.123-34.048c11.92-6.884,27.165-2.799,34.048,9.123    L10.345,44.393z" style="opacity:0.3;fill:#FFFFFF;;"></path>
+	</g>
+</g>
+<g>
+	<defs>
+		<circle id="57129422_SVGID_3__grid" cx="32" cy="32" r="18.926"></circle>
+	</defs>
+	<use xlink:href="#57129422_SVGID_3__grid" style="overflow:visible;fill:#DEDCD9;"></use>
+	<clipPath id="57129422_SVGID_4__grid">
+		<use xlink:href="#57129422_SVGID_3__grid" style="overflow:visible;"></use>
+	</clipPath>
+	<g class="st3" style="clip-path:url(#57129422_SVGID_4__grid);;">
+		<path class="st1" d="M32,29.888l10.648,0.76C43.396,30.648,44,31.253,44,32s-0.604,1.352-1.352,1.352L32,34.112    c-0.747,0-1.352-1.365-1.352-2.112S31.253,29.888,32,29.888z" style="opacity:0.5;fill:#231F20;;"></path>
+		<path class="st1" d="M32,15.981c0.747,0,1.352,0.605,1.352,1.352L34.112,32c0,0.747-1.365,1.352-2.112,1.352    c-0.747,0-2.112-0.604-2.112-1.352l0.76-14.667C30.648,16.587,31.253,15.981,32,15.981z" style="opacity:0.5;fill:#231F20;;"></path>
+		<g>
+			<circle class="st5" cx="32" cy="32" r="2.704" style="fill:#DEDCD9;;"></circle>
+			<circle class="st4" cx="32" cy="32" r="2.704" style="opacity:0.6;;"></circle>
+		</g>
+		<path class="st0" d="M18.189,39.903c-4.404-7.627-1.79-17.38,5.837-21.785c7.628-4.404,17.381-1.79,21.784,5.837L18.189,39.903z" style="opacity:0.3;fill:#FFFFFF;;"></path>
+	</g>
+</g>
+</svg>

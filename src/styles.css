@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,body, #st-full-pg {
+    height: 100%;
+    margin: 0;
+ }
+
+::-webkit-scrollbar {
+    width: 20px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-button {
+    background: rgba(3,90,161,0.1) !important;
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-color: #035AA1 !important;
+
+}
+::-webkit-scrollbar-track-piece {
+    background:whitesmoke;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(3,90,161,0.4);;
+}
+
+.filter-option > .mat-pseudo-checkbox {
+    display: none !important;
+  }
+  
+  .filter-sidenav .mat-list-item-content {
+    padding: 0 10px !important;
+    font-size: 0.875rem !important;
+  }
+  
+  .filter-sidenav .mat-select-trigger {
+    font-size: 1rem !important;
+  }

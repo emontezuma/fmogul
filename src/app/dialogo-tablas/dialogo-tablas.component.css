@@ -1,0 +1,144 @@
+
+
+.posicion {
+    margin-bottom: 10px;
+    padding-bottom: -10px;
+
+}
+.cabecera {
+    width: 100% !important;
+    height: 32px !important; 
+    padding: 2px;
+    color: #035AA1 !important;
+    background-color: rgba(3,90,161,0.1); 
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    }
+
+    .pie {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        background-color: whitesmoke !important;
+        height: 40px !important;
+    }
+
+.botonSi {
+    font-size: 20px !important;
+    background-color: lightgreen;
+    font-weight: 600;
+    height: 45px;
+    }
+
+    .botonOtro {
+        font-size: 20px !important;
+        height: 45px;;
+        }
+
+    .botonNo {
+        font-size: 20px !important;
+        height: 45px;;
+        }
+
+
+        .tituloDialogo {
+            flex: 15;
+            text-align: center;
+            margin: auto;
+        }
+
+        .prueba {
+            background-color: whitesmoke !important;
+            padding: 2px;
+            margin-bottom: 5px;
+        
+        }
+        .tipoFecha {
+            font-size: 20px !important;
+            height: 30px !important;
+            margin-left: 10px !important;
+          }
+
+          .tipoFecha3 {
+            flex: 2;
+            width: 95%;
+            font-size: 18px !important;
+          }
+
+          .lista .mat-list-item {
+            height: 40px;
+          }
+
+          .lista {
+             height: 300px;
+             overflow: auto; 
+             border-style: solid;
+            border-width: 2px;
+            border-color: lightgray;
+            border-radius: 2px 2px;
+          }
+
+          .cajaLista {
+              display: flex;
+              align-content: center;
+              align-items: center;
+          }
+
+          .iconoLista {
+            flex: 1;
+        }
+
+        .textoLista {
+            flex: 11;
+            font-size: 20px !important;
+
+        }
+
+        .buscador {
+            max-width: 40% !important;
+          }
+        
+        .noBuscador {
+            max-width: 50% !important;
+        }
+        
+          ::ng-deep .casillas, .ayuda, .etiquetas {
+            font-size: 16px;
+        }
+        
+        ::ng-deep .mat-focused .etiquetas {
+            color: darkgrey;
+            font-size: 18px !important;
+        }
+         
+        ::ng-deep .mat-focused .etiquetas {
+            color: darkgrey;
+            font-size: 18px !important;
+        }
+        
+        ::ng-deep .etiquetas {
+            font-size: 18px !important;
+        }
+        ::ng-deep .mat-focused .etiquetas {
+            color: #035AA1;
+            font-size: 18px !important;
+        }
+
+        .seleccion {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+        }
+
+        .selector {
+            flex: 1;
+        }
+        
+        .filtrar {
+            flex: 2;
+            margin-left: 10px;
+        }

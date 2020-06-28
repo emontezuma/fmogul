@@ -1,0 +1,45 @@
+<div class="contenidoDemo" class="mat-typography">
+    <div class="cabecera">
+      <mat-icon class="iconoDialogo" svgIcon="propioDescargar"></mat-icon>
+      <p class="tituloDialogo">DESCARGAR HISTÓRICO DE REPORTES</p>
+    </div>
+  
+    <mat-card class="posicion">
+      <mat-card-content>
+          <div class ="lista">
+        
+          <mat-form-field class="tipoFecha">
+            <mat-select [(ngModel)]="miPeriodo" placeholder="Período" (selectionChange)="cambiarPeriodo($event)" >
+              <mat-option *ngFor="let periodo of periodos" [(value)]="periodo.id">{{periodo.nombre}}</mat-option>
+            </mat-select>
+            <div class="ayuda" *ngIf="hayErrorPeriodo">Período inválido</div>
+          </mat-form-field>
+
+          <mat-form-field class="tipoFecha2">
+          <input #fechaDesde matInput [(ngModel)]="fecha1" [matDatepicker]="picker1" placeholder="Fecha de inicio" autocomplete="off" disabled>
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle> 
+          <div class="ayuda" *ngIf="hayErrorFechaD">Fecha inválida</div>
+          <mat-datepicker #picker1 [disabled]="!habFecha"></mat-datepicker>
+        </mat-form-field>
+  
+        <mat-form-field class="tipoFecha2">
+            <input #fechaHasta matInput [(ngModel)]="fecha2" [matDatepicker]="picker2" placeholder="Fecha de fin" autocomplete="off" disabled>
+            <div class="ayuda" *ngIf="hayErrorFechaH">Fecha inválida</div>
+            <mat-datepicker-toggle matSuffix [for]="picker2" ></mat-datepicker-toggle>
+            <mat-datepicker #picker2 [disabled]="!habFecha"></mat-datepicker>
+          </mat-form-field>
+  
+        </div>
+       </mat-card-content>
+    </mat-card>
+  <div mat-dialog-actions class="pie">
+    <button class="botonSi" mat-raised-button (click)="validar()">
+      <mat-icon class="iconoRedonde" svgIcon="propioDescargar"></mat-icon>
+      Generar el reporte
+    </button>
+    <button class="botonNo" mat-raised-button (click)="cancelar()">
+        <mat-icon class="iconoRedonde" svgIcon="propioCancelar"></mat-icon>
+      Cancelar
+  </button>
+  </div>
+</div>

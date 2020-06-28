@@ -1,0 +1,28 @@
+<div id="todo" ng-app="app" ng-controller="AppCtrl" class="mat-typography"> 
+    <div class="regresar" *ngIf="vieneArbol">
+       <button class="botonDerecho" mat-fab color (click)="regresar()" matTooltip = "{{ toolTipRegresar }}" matTooltipClass = "toolTip">
+        <mat-icon class="miIcon" svgIcon="propioRegresar"></mat-icon>
+      </button>
+    </div>
+    
+    <div class="detalleOperaciones" *ngIf="!sinRegistros"> 
+      <mat-grid-list id="gOperaciones" #gridOperaciones class="acciones" [cols]="gridCols" rowHeight="220px">
+        <ng-container *ngFor="let falla of fallas; let i = index">
+          <mat-grid-tile>
+            <div [ngClass]="{operacionFondo:!itemSeleccionado[i], operacionFondoSel:itemSeleccionado[i]}">
+              <button [ngClass]="{operacionTarjeta:!itemSeleccionado[i], operacionTarjetaSel:itemSeleccionado[i]}" [style.background-color]="falla.colorhexa" mat-button (click)="seleccionarFalla(i)">
+                <div class="elBoton" fxLayout="column" fxLayoutAlign="space-evenly center" >
+                  <div class="operacionCelula"><div class="parrafo">{{ falla.prefijopadre }}</div></div>
+                  <div class="operacionIcono"><img src="{{ falla.imagen }}" class="operacionImagen"></div>
+                  <div class="operacionMadre"><div class="parrafo">{{ falla.prefijo }}</div></div>
+                  
+                </div>
+              </button>
+            </div>
+          </mat-grid-tile>
+        </ng-container>
+      </mat-grid-list>
+  </div>
+  
+  
+  

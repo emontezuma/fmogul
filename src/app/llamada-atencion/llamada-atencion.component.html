@@ -1,0 +1,61 @@
+<div id="todo" (keyup.control.b)="buscar()"  (keyup.f9)="changeOver()" ng-app="app" ng-controller="AppCtrl" class="mat-typography">
+    <div>
+      <mat-grid-list id="cabecera" #gridAcciones class="acciones" [cols]="gridCols" rowHeight="56px">
+        <mat-grid-tile>
+          <div class="accion">
+            <button [ngClass]="{itemBoton:!seleccion01, itemBotonSeleccionado:seleccion01}" mat-button (click)="opcion10()">
+              <mat-icon class="itemIcon" svgIcon="propioMaquinas"></mat-icon>
+              <mat-icon class="miniIcon" svgIcon="propioVobo" *ngIf="completo01"></mat-icon>
+              Máquina
+            </button>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="accion">
+            <button [ngClass]="{itemBoton:!seleccion02, itemBotonSeleccionado:seleccion02}" [disabled]="!habilitar02" mat-button (click)="opcion20()">
+              <mat-icon [ngClass]="{itemIcon:habilitar02, itemIconGris:!habilitar02}" svgIcon="propioRespFalla"></mat-icon>
+              <mat-icon class="miniIcon" svgIcon="propioVobo" *ngIf="completo02"></mat-icon>
+              Falla
+            </button>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="accion">
+            <button [ngClass]="{itemBoton:!seleccion03, itemBotonSeleccionado:seleccion03}" [disabled]="!habilitar03" mat-button (click)="opcion30()">
+              <mat-icon [ngClass]="{itemIcon:habilitar02, itemIconGris:!habilitar02}"  svgIcon="propioLlamadas"></mat-icon>
+              <mat-icon class="miniIcon" svgIcon="propioVobo" *ngIf="completo03"></mat-icon>
+              Llamada
+            </button>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile class="buscador">
+          <div>
+            <mat-form-field floatLabel="never" *ngIf="vistaActual!=21">
+              <input #txtBuscar matInput class="etiquetas"type="text" [(ngModel)]="textoBuscar" (keydown.enter)="filtrar()">
+              <mat-placeholder class="etiquetas">Filtrar</mat-placeholder>
+            </mat-form-field>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile class="gridBotones">
+          <button class="botonDerecho" mat-fab color (click)="buscar()" matTooltip = "{{ toolTipBuscar }}" matTooltipClass = "toolTip" *ngIf="vistaActual!=21">
+            <mat-icon class="miIcon" svgIcon="propioBuscar"></mat-icon>
+          </button>
+          <button class="botonDerecho" mat-fab color (click)="vista()" matTooltip = "{{ toolTipVista }}" matTooltipClass = "toolTip" *ngIf="vistaActual!=21">
+            <mat-icon class="miIcon" [svgIcon]="iconoVista"></mat-icon>
+          </button>
+          <button class="botonDerecho" mat-fab color (click)="ordenar()" matTooltip = "{{ toolTipOrden }}" matTooltipClass = "toolTip" *ngIf="vistaActual!=21">
+            <mat-icon class="miIcon" [svgIcon]="iconoOrden"></mat-icon>
+          </button>
+          <button class="botonDerecho" mat-fab color (click)="refrescar()" matTooltip = "{{ toolTipRefrescar }}" matTooltipClass = "toolTip" *ngIf="vistaActual!=21">
+            <mat-icon class="miIcon" svgIcon="propioRefrescar"></mat-icon>
+          </button>
+          
+        </mat-grid-tile>        
+        
+      </mat-grid-list>   
+    </div>
+
+    <div class="contenidoPagina" [@routerTransition2]="getState(o)">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
+  </div>

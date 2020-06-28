@@ -1,0 +1,197 @@
+.seleccion .mat-select-panel {
+    background: rgba(3,90,161,0.1); 
+  }
+  
+.tab {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.contenidoDemo {
+    display: flex;
+}
+
+.cabecera {
+    width: 100% !important;
+    height: 32px !important; 
+    padding: 2px;
+    color: #035AA1 !important;
+    background-color: rgba(3,90,161,0.1); 
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    }
+
+    .pie {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        background-color: whitesmoke !important;
+        height: 40px !important;
+    }
+
+.botonSi {
+    font-size: 20px !important;
+    background-color: lightgreen;
+    font-weight: 600;
+    height: 45px;
+    }
+
+    .botonRojo {
+        font-size: 20px !important;
+        background-color: #FFAFB5;
+        height: 45px;
+        }
+
+    .botonNo {
+        font-size: 20px !important;
+        height: 45px;;
+        }
+    .detalle, .parte, .pager {
+        width: 100%;
+        font-size: 17px !important;
+      }
+    
+      .tipoFecha2 {
+        width: 30%;
+        font-size: 17px !important;
+        height: 30px !important;
+        margin-left: 10px;
+      }
+
+      .tipoFecha {
+        width: 30%;
+        font-size: 17px !important;
+      }
+    
+      .tipoFecha3 {
+        width: 100%;
+        font-size: 17px !important;
+      }
+
+      .tipoFecha4 {
+        margin-top: -20px !important;
+        width: 100%;
+        font-size: 17px !important;
+      }
+
+      .tipoFecha5 {
+        flex: 1;
+        width: 100%;
+        padding: 5px;
+        background-color: whitesmoke;
+        margin-bottom: 10px !important;
+        font-size: 18px !important;
+        font-weight: 600;
+      }
+
+    .ayuda {
+        font-size: 16px !important;
+        color: red;
+    }
+
+    .etiquetas {
+        font-size: 17px !important;
+        color:  #035AA1;
+    }
+    
+
+    .mat-focused .etiquetas {
+        color:  red;
+        font-size: 19px !important;
+        font-weight: 600;
+    }
+    
+    
+    ::ng-deep .posicion {
+        text-align: left !important;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .tabTit {
+        font-size: 18px !important;
+        font-weight: 500;
+        text-align: left;   
+        padding-left: 5px;
+    }
+
+    .iconoDialogo {
+        text-align: left !important;
+        height: 32px;
+        widows: 32px;
+        flex: 1;
+    }
+   
+    .tituloDialogo {
+        flex: 15;
+        text-align: center;
+        margin: auto;
+    }
+
+    .listaTablas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .hijoTabla {
+        flex: 1;
+        padding: 2px;
+        margin: 2px;
+    }
+    .botonTabla {
+        font-size: 17px !important;   
+        margin: 2px;
+        margin-left: 10px;
+    }
+
+    .botonNuevo {
+        flex: 1;
+        font-size: 17px !important;   
+        margin: 2px;
+    }
+
+    .primeraLinea {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .seleccion {
+        flex: 3;
+        
+    }
+
+    .lista {
+        height: 80px !important;
+        overflow-x: hidden;
+        overflow-y: auto;
+     }
+    
+
+    
+     ::ng-deep snack-bar-container.custom-class-red {
+        background-color: red  !important; 
+        margin-top: -100px !important;
+      }
+      
+      ::ng-deep .custom-class-red .mat-simple-snackbar {
+        font-size: 24px;
+        text-align: center;
+        justify-content: center;
+        background-color: red !important; 
+        color: white;
+        white-space: normal;
+        line-height: 30px !important;
+      }
+    
+    ::ng-deep .custom-class-red .mat-simple-snackbar.container {
+        max-width: 1200px;
+        width: 1200px;
+        background-color: rgba(3,90,161,0.1) !important; 
+        margin-top: -100px !important;
+    
+      }
+      

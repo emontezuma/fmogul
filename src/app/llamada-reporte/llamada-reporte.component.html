@@ -1,0 +1,68 @@
+<div id="todo" ng-app="app" ng-controller="AppCtrl" class="mat-typography"> 
+    <div class="detalleOperaciones" > 
+      <mat-grid-list #gridCabecera class="cabeceras" [cols]="gridCols" rowHeight="220px">
+        
+        <mat-grid-tile >
+          <div class="operacionFondo">
+            <button class="operacionTarjeta" [style.background-color]="celula.colorhexa" mat-button (click)="noFuncion()">
+              <div class="elBoton" fxLayout="column" fxLayoutAlign="space-evenly center" >
+                <div class="operacionCelula" ><div class="parrafo">{{ celula.nombre }}</div></div>
+                <div class="operacionIcono"><img src="{{ celula.imagen }}" class="operacionImagen"></div>
+                <div class="operacionMadre" ><div class="parrafo">{{ celula.elemento }}</div></div>
+            </div>
+          </button>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile >
+      <div class="operacionFondo">
+        <button class="operacionTarjeta" [style.background-color]="maquina.colorhexa" mat-button (click)="noFuncion()">
+          <div class="elBoton" fxLayout="column" fxLayoutAlign="space-evenly center" >
+            <div class="operacionCelula" ><div class="parrafo">{{ maquina.nombre }}</div></div>
+            <div class="operacionIcono"><img src="{{ maquina.imagen }}" class="operacionImagen"></div>
+            <div class="operacionMadre" ><div class="parrafo">{{ maquina.elemento }}</div></div>
+          </div>
+        </button>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile >
+        <div class="operacionFondo">
+          <button class="operacionTarjeta" [style.background-color]="area.colorhexa" mat-button (click)="noFuncion()">
+            <div class="elBoton" fxLayout="column" fxLayoutAlign="space-evenly center" >
+              <div class="operacionCelula" ><div class="parrafo">{{ area.nombre }}</div></div>
+              <div class="operacionIcono"><img src="{{ area.imagen }}" class="operacionImagen"></div>
+              <div class="operacionMadre" ><div class="parrafo">{{ area.elemento }}</div></div>
+            </div>
+          </button>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile >
+          <div class="operacionFondo">
+            <button class="operacionTarjeta" [style.background-color]="falla.colorhexa" mat-button (click)="noFuncion()">
+              <div class="elBoton" fxLayout="column" fxLayoutAlign="space-evenly center" >
+                <div class="operacionCelula" ><div class="parrafo">{{ falla.nombre }}</div></div>
+                <div class="operacionIcono"><img src="{{ falla.imagen }}" class="operacionImagen"></div>
+                <div class="operacionMadre" ><div class="parrafo">{{ falla.elemento }}</div></div>
+              </div>
+            </button>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="botonRecuadro">
+            <button class="botonBoton" mat-fab (click)="validarRelacionCall()">
+              <mat-icon class="itemIcon" svgIcon="propioLlamadaB"></mat-icon>
+              <div class="botonDescripcion" >¡Llamar!</div>
+            </button>
+          </div>
+      </mat-grid-tile>
+      <mat-grid-tile *ngIf="botonChange">
+          <div class="botonRecuadro">
+            <button class="botonBoton2" mat-fab (click)="enviarSMS()">
+              <mat-icon class="itemIcon" svgIcon="propioChange"></mat-icon>
+              <div class="botonDescripcion2" >Cambio</div>
+            </button>
+          </div>
+      </mat-grid-tile>
+      </mat-grid-list>
+  </div>
+</div>
+

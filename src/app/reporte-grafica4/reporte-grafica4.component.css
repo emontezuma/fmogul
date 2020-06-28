@@ -1,0 +1,50 @@
+
+.grafico {
+    position: relative;
+    display: flex;
+    margin: auto auto;
+    align-content: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 90% !important;
+    height: 70% !important; 
+}
+
+
+  .dxo-tooltip {
+    z-index: 1000;
+}
+
+  ::ng-deep #chart {
+    background-color: white !important;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #035AA1;
+    border-radius: 4px 16px; 
+
+}
+
+  ::ng-deep snack-bar-container.custom-class-red {
+    background-color: red  !important; 
+    margin-top: -100px !important;
+  }
+  
+  ::ng-deep .custom-class-red .mat-simple-snackbar {
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
+    background-color: red !important; 
+    color: white;
+    white-space: normal;
+    line-height: 30px !important;
+  }
+
+::ng-deep .custom-class-red .mat-simple-snackbar.container {
+    max-width: 1200px;
+    width: 1200px;
+    background-color: rgba(3,90,161,0.1) !important; 
+    margin-top: -100px !important;
+
+  }
+  

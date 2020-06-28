@@ -1,0 +1,78 @@
+<div id="todo" ng-app="app" ng-controller="AppCtrl" class="mat-typography"> 
+    <div class="regresar" *ngIf="vieneArbol">
+       <button class="botonDerecho" mat-fab color (click)="regresar()" matTooltip = "{{ toolTipRegresar }}" matTooltipClass = "toolTip">
+        <mat-icon class="miIcon" svgIcon="propioRegresar"></mat-icon>
+      </button>
+     </div>
+    <div class="detalleOperaciones" *ngIf="!sinRegistros"> 
+      <mat-grid-list id="gOperaciones" #gridOperaciones class="acciones" [cols]="gridCols" [rowHeight]="largoLate">
+        <div [@flyInOut]="reporte.animado ? 'void' : '*'" *ngFor="let reporte of reportes;  let i = index" >
+          <mat-grid-tile>
+            <div class="operacionFondo">
+              <mat-card class="operacionTarjeta">
+                <div mat-card class="elBoton" >
+                  <div class="container" >
+                    <div class="tituloReporte" >Reporte</div>
+                    <div class="valorReporte" > {{ reporte.id }}</div>
+                  </div>
+                  <div class="container">
+                      <div class="titulo" >Fecha</div>
+                      <div class="valor" >{{ reporte.fechaAtencion }}</div>
+                    </div>
+                  <div class="container">
+                    <div class="titulo" >Célula</div>
+                    <div class="valor" >{{ reporte.celulaprefijo }}</div>
+                  </div>
+                  <div class="container">
+                    <div class="titulo" >Máquina</div>
+                    <div class="valor" >{{ reporte.maquinaprefijo }}</div>
+                  </div>
+                  <div class="container">
+                    <div class="titulo" >Operador</div>
+                    <div class="valor" >{{ reporte.username }}</div>
+                  </div>
+                  <div class="container">
+                    <div class="titulo" >Departamento</div>
+                    <div class="valor" >{{ reporte.areaprefijo }}</div>
+                  </div>
+                  <div class="container">
+                    <div class="titulo" >Falla reportada</div>
+                    <div class="valorFalla" >{{ reporte.fallaprefijo }}</div>
+                  </div>
+                  <div class="container">
+                    <div class="titulo" >Detalle de la falla</div>
+                    <div class="valorDetalle" >{{ reporte.detalle }}</div>
+                  </div>
+                  <div class="container">
+                    <div class="titulo" >Estatus</div>
+                    <div class="valor" >{{ reporte.estatusPalabra }}</div>
+                  </div>
+                  <div class="container">
+                    <div class="titulo" >Tiempo llamada</div>
+                    <div class="tiempoLlamada" >
+                      <mat-icon class="iconoTelefono" svgIcon="propioReloj"></mat-icon>
+                      <p class="tiempoLlamadaSTR" >{{ reporte.tiempoLlamada }}</p>
+                    </div>
+                  </div>
+                  
+                  <div *ngIf="verLate" class="container">
+                    <div class="titulo" >Tiempo atención</div>
+                    <mat-icon class="iconoTelefono" svgIcon="propioReloj"></mat-icon>
+                    <div class="tiempoLlamada" >{{ reporte.tiempoAtencion }}</div>
+                  </div>
+                  <div class="containerBotones">
+                    <button class="botonLate" mat-raised-button  (click)="botonLate(i)">Atender
+                      <mat-icon class="iconoRedonde" svgIcon="propioConTecnicoAzul"></mat-icon>
+                    </button>
+                    <button class="botonCancel" mat-raised-button (click)="botonCancel(i)">Cerrar y reporte
+                      <mat-icon class="iconoRedonde" svgIcon="propioVobo"></mat-icon>
+                    </button>
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+          </mat-grid-tile>
+        </div>
+      </mat-grid-list>
+  </div>
+  
